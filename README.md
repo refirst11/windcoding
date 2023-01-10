@@ -15,16 +15,16 @@ Swap the Ctrl key with CapsLock.
 | ------------- | ------------- |
 | Ctrl + a  | Cursor Start of Line |
 | Ctrl + e  | Cursor End of Line |
-| Ctrl + f  | → Cursor Forward|
 | Ctrl + b  | ← Cursor Back |
+| Ctrl + f  | → Cursor Forward|
 | Ctrl + p  | ↑ Cursor up line |
 | Ctrl + n  | ↓ Cursor down line |
 | Ctrl + d  | Delete Forward  Char |
 | Ctrl + h  | Delete Back Char |
-| Shift + Alt + ←  | Backward selection  |
-| Shift + Alt + → | Forward selection |
-| Shift + Win + ←  | Backward word selection |
-| Shift + Win + → | Forward word selection |
+| Shift + Alt + ←  | Backward Selection  |
+| Shift + Alt + → | Forward Selection |
+| Shift + Win + ←  | Backward word Selection |
+| Shift + Win + → | Forward word Selection |
 | Alt + z | Undo |
 | Alt + Shift + z | Redo  |
 | Alt + x | Cutting |
@@ -39,9 +39,9 @@ Swap the Ctrl key with CapsLock.
 ## VSCODE
 | Commands  | Expected Output |
 | ------------- | ------------- |
-| Alt + Shift + L | Match selection |
+| Alt + Shift + L | Match Selection |
 | Alt + / |  Comment out |
-| Alt + d |  Word select |
+| Alt + d |  Word Selection |
 | Ctrl + c |  Stop Program |
 
 
