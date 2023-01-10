@@ -41,8 +41,6 @@
 !c::Send ^{c} ; Copy / コピー
 !v::Send ^{v} ; Paste / 貼り付け
 
-
-
 #If WinNotActive,ahk_class CASCADIA_HOSTING_WINDOW_CLASS || WinNotActive,ahk_exe Code.exe  ;  
 	^c::Send {} ;
 #If WinNotActive
