@@ -1,6 +1,6 @@
 # Use Macintosh edit on Windows
-Created to improve efficiency for Windows programmers and writers.
-Mac's Command and Win's Alt are exchanged, and Unix-style cursor movement is possible with Ctrl.
+Created to improve efficiency for Windows programmers and writers.  
+Mac's Command and Win's Alt are exchanged, and Unix-style cursor movement is possible with Ctrl.  
 Assuming running Visual Studio Code and CMD (Command Prompt).
 
 ## what system requirements is?
