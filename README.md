@@ -4,8 +4,8 @@ Mac's Command and Win's Alt are exchanged, and Unix-style cursor movement is pos
 Assuming running Visual Studio Code and CMD (Command Prompt).
 
 ## what system requirements is?
-Windows OS and AutoHotkey.exe
-Swap the Ctrl key with CapsLock.
+Windows OS and AutoHotkey.exe  
+ →Swap the Ctrl key to CapsLock.
 
 ### Usage
 
