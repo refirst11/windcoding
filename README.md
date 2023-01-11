@@ -38,7 +38,7 @@ Windows OS and AutoHotkey.exe
 | Commands  | Expected Output |
 | ------------- | ------------- |
 | Alt + Shift + L | Match Selection |
-| Alt + / |  Comment Out |
+| Alt + / |  Comment out |
 | Alt + d |  Word Selection |
 | Ctrl + c |  Stop Program |
 
