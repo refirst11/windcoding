@@ -49,6 +49,8 @@
 !x::Send ^{x} ; Cut / 切り取り
 !c::Send ^{c} ; Copy / コピー
 !v::Send ^{v} ; Paste / 貼り付け
+!Down::Send {End} ; ↓ End / 一番下
+!Up::Send {Home} ; Top / 一番上
 
 
 #If WinNotActive,ahk_class CASCADIA_HOSTING_WINDOW_CLASS || WinNotActive,ahk_exe Code.exe  ;  
