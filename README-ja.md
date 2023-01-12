@@ -1,4 +1,4 @@
-# Windows for Mac users
+## Windows for Mac users
 Windows 開発者やデザイナー、ライターなどの効率を向上させるために作成されました。  
 または、Mac を試してみたい場合は、ぴったりです。  
 MacのCommandとWinのAltを入れ替えて、CtrlでUnix流のカーソル移動が可能。  
@@ -9,7 +9,7 @@ Windows OS と AutoHotkey.exe
   →CtrlキーをCapsLockに入れ替えます。  
 
 ＃＃＃ 使用法
-| コマンド | 出力 |
+| 入力 | 出力 |
 | ------------- | ------------- |
 | Ctrl + a | カーソル行頭 |
 | Ctrl + e | カーソル行末 |
@@ -41,7 +41,7 @@ Windows OS と AutoHotkey.exe
 
 
 #### VSコード
-| コマンド | 出力 |
+| 入力 | 出力 |
 | ------------- | ------------- |
 | Alt + Shift + L | 一致文字選択 |
 | Alt + / | コメントアウト |
@@ -49,6 +49,6 @@ Windows OS と AutoHotkey.exe
 | Ctrl + c | プログラムを停止 |
 
 #### コマンド
-| コマンド | 出力 |
+| 入力 | 出力 |
 | ------------- | ------------- |
 | Ctrl + c | プログラムを停止 |
