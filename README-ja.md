@@ -5,10 +5,10 @@ MacのCommandとWinのAltを入れ替えて、CtrlでUnix流のカーソル移�
 Visual Studio Code と CMD (コマンド プロンプト) を実行していると仮定します。  
 
 ## システム要件
-AutoHotkeyがインストールされたWindowsOSで起動します。
+AutoHotkeyがインストールされたWindowsOSで起動します。  
 CapsLockをCtrlキーと入れ替えることを推奨します。
 
-＃＃＃ 使用法
+## 使用法
 | 入力 | 出力 |
 | ------------- | ------------- |
 | Ctrl + a | カーソル行頭 |
@@ -40,7 +40,7 @@ CapsLockをCtrlキーと入れ替えることを推奨します。
 | Win + q | 仮想デスクトップを閉じる |
 
 
-#### Visual Studio Code
+## Visual Studio Code
 | 入力 | 出力 |
 | ------------- | ------------- |
 | Alt + Shift + L | 一致文字選択 |
@@ -48,7 +48,7 @@ CapsLockをCtrlキーと入れ替えることを推奨します。
 | Alt + d | 単語の選択 |
 | Ctrl + c | プログラムを停止 |
 
-#### CMD
+## CMD
 | 入力 | 出力 |
 | ------------- | ------------- |
 | Ctrl + c | プログラムを停止 |
