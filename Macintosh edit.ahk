@@ -5,13 +5,16 @@
 *~RAlt::Send {Blind}{vk07} ; https://github.com/karakaram/alt-ime-ahk/blob/master/alt-ime-ahk.ahk
 
 ^w:: 
-^s:: 
+#m::
+^s::
 ^z::
 ^x:: 
 ^v::
 ^+l::
-^Left::
-^Right::
+^#Left::
+^#Right::
+^#d::
+^#F4::
 ^+p::
 	Return ; Reset unique shortcut / 初期値削除
 
@@ -40,6 +43,7 @@
 !+p::Send ^+{p} ; Command Palette / コマンド パレット(vsc)
 
 !w::Send ^{w} ; Close the tab window / タブを 閉じる
+!m::Send #{m} ; Minimize Window / ウィンドウ最小化
 !a::Send ^{a} ; Select All / 全体選択
 !f::Send ^{f} ; Find / 検索
 !s::Send ^{s} ; Save / 保存
@@ -51,6 +55,10 @@
 !v::Send ^{v} ; Paste / 貼り付け
 !Down::Send {End} ; ↓ End / 一番下
 !Up::Send {Home} ; Top / 一番上
+^Left::Send ^#{Left} ; Left Virtual Desktop / 仮想デスクトップ左
+^Right::Send ^#{Right} ; Right Virtual Desktop / 仮想デスクトップ右
+#d::Send ^#{d} ; New Virtual Desktop / 新しい仮想デスクトップ
+#q::Send ^#{F4} ; Close Virtual Desktop / 仮想デスクトップを閉じる
 
 
 #If WinNotActive,ahk_class CASCADIA_HOSTING_WINDOW_CLASS || WinNotActive,ahk_exe Code.exe  ;  
