@@ -65,6 +65,5 @@
 	^c::Send {} ;
 #If WinNotActive
 ;Visual Studio Code and CMD on Stop Program Boolean
-
-;// This program was written by this program.
+;useMacOS was written by useMacOS&Windows
 
