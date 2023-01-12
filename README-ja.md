@@ -4,8 +4,8 @@ Windows 開発者やデザイナー、ライターなどの効率を向上させ
 MacのCommandとWinのAltを入れ替えて、CtrlでUnix流のカーソル移動が可能。  
 Visual Studio Code と CMD (コマンド プロンプト) を実行していると仮定します。  
 
-## システム要件は?
-AutoHotkeyがインストールされたWindows OSで起動します。
+## システム要件
+AutoHotkeyがインストールされたWindowsOSで起動します。
 CapsLockをCtrlキーと入れ替えることを推奨します。
 
 ＃＃＃ 使用法
@@ -18,7 +18,7 @@ CapsLockをCtrlキーと入れ替えることを推奨します。
 | Ctrl + p | ↑ カーソル上行 |
 | Ctrl + n | ↓ カーソル下行 |
 | Ctrl + d | 前方文字を削除 |
-| Ctrl + h | バック文字を削除 |
+| Ctrl + h | 後方文字を削除 |
 | Shift + Alt + ← | 後方選択 |
 | Shift + Alt + → | 前方選択 |
 | Shift + Win + ← | 後方単語選択 |
