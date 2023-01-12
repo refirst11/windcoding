@@ -33,6 +33,12 @@ Windows OS and AutoHotkey.exe
 | Alt + s | Save  |
 | Alt + w | Close The Tab Window  |
 | Alt + q | Close The Application  |
+| Alt + m | Minimize Window  |
+| Ctrl + ← | Left Virtual Desktop |
+| Ctrl + → | Right Virtual Desktop |
+| Win + d | New Virtual Desktop |
+| Win + q | Close Virtual Desktop |
+
 
 #### VSCODE
 | Commands  | Expected Output |
@@ -41,7 +47,6 @@ Windows OS and AutoHotkey.exe
 | Alt + / |  Comment out |
 | Alt + d |  Word Selection |
 | Ctrl + c |  Stop Program |
-
 
 #### CMD
 | Commands  | Expected Output |
