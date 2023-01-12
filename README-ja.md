@@ -5,8 +5,8 @@ MacのCommandとWinのAltを入れ替えて、CtrlでUnix流のカーソル移�
 Visual Studio Code と CMD (コマンド プロンプト) を実行していると仮定します。  
 
 ## システム要件は?
-Windows OS と AutoHotkey.exe  
-  →CtrlキーをCapsLockに入れ替えます。  
+AutoHotkeyがインストールされたWindows OSで起動します。
+CapsLockをCtrlキーと入れ替えることを推奨します。
 
 ＃＃＃ 使用法
 | 入力 | 出力 |
