@@ -11,7 +11,6 @@ Windows OS and AutoHotkey.exe
 Recommendation swap the Ctrl key to CapsLock.
 
 ## Usage
-
 | Input  | Output |
 | ------------- | ------------- |
 | Ctrl + a  | Cursor Start of Line |
