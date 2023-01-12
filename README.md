@@ -1,14 +1,14 @@
 [日本語版README](https://github.com/su-pull/Use-Macintosh-edit-on-Windows/blob/main/README-ja.md)
 
 ## Use Macintosh edit on Windows
-Created to improve efficiency for Windows developers, designers, and writers etc..  
-Or if you want to try Mac it works exactly.  
+Created to improve efficiency for windows developers, designers, and writers etc..  
+or if you want to try Mac it works exactly.  
 Mac's Command and Win's Alt are exchanged, and Unix-style cursor movement is possible with Ctrl.  
-Assuming running Visual Studio Code and CMD (Command Prompt).
+Assuming running Visual Studio Code and cmd.
 
-## system requirements?
+## system requirements
 Windows OS and AutoHotkey.exe  
- →Swap the Ctrl key to CapsLock.
+Recommendation swap the Ctrl key to CapsLock.
 
 ## Usage
 
