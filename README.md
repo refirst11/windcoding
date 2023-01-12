@@ -25,7 +25,7 @@ Windows OS and AutoHotkey.exe
 | Shift + Win + → | Forward Word Selection |
 | Alt + z | Undo |
 | Alt + Shift + z | Redo |
-| Alt + x | Cutting |
+| Alt + x | Cut |
 | Alt + c | Copy |
 | Alt + v | Paste |
 | Alt + a | Select All  |
