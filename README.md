@@ -19,21 +19,21 @@ Windows OS and AutoHotkey.exe
 | Ctrl + n  | ↓ Cursor Down Line |
 | Ctrl + d  | Delete Forward  Char |
 | Ctrl + h  | Delete Back Char |
-| Shift + Alt + ←  | Backward Selection  |
+| Shift + Alt + ←  | Backward Selection |
 | Shift + Alt + → | Forward Selection |
 | Shift + Win + ←  | Backward Word Selection |
 | Shift + Win + → | Forward Word Selection |
 | Alt + z | Undo |
-| Alt + Shift + z | Redo  |
+| Alt + Shift + z | Redo |
 | Alt + x | Cutting |
-| Alt + c | Copy  |
+| Alt + c | Copy |
 | Alt + v | Paste |
 | Alt + a | Select All  |
-| Alt + f | Find  |
-| Alt + s | Save  |
-| Alt + w | Close The Tab Window  |
-| Alt + q | Close The Application  |
-| Alt + m | Minimize Window  |
+| Alt + f | Find |
+| Alt + s | Save |
+| Alt + w | Close The Tab Window |
+| Alt + q | Close The Application |
+| Alt + m | Minimize Window |
 | Ctrl + ← | Left Virtual Desktop |
 | Ctrl + → | Right Virtual Desktop |
 | Win + d | New Virtual Desktop |
