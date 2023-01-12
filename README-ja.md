@@ -1,4 +1,4 @@
-## Windows for Mac users
+## useMacOS
 Windows 開発者やデザイナー、ライターなどの効率を向上させるために作成されました。  
 または、Mac を試してみたい場合は、ぴったりです。  
 MacのCommandとWinのAltを入れ替えて、CtrlでUnix流のカーソル移動が可能。  
