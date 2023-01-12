@@ -1,15 +1,18 @@
-# Use Macintosh edit on Windows
-Created to improve efficiency for Windows programmers and writers.  
+[日本語版README](https://github.com/su-pull/Use-Macintosh-edit-on-Windows/blob/main/README-ja.md)
+
+## useMacOS
+Created to improve efficiency for windows developers, designers, and writers etc..  
+or if you want to try Mac it works exactly.  
 Mac's Command and Win's Alt are exchanged, and Unix-style cursor movement is possible with Ctrl.  
-Assuming running Visual Studio Code and CMD (Command Prompt).
+Assuming running Visual Studio Code and cmd.
 
-## what system requirements is?
+## system requirements
 Windows OS and AutoHotkey.exe  
- →Swap the Ctrl key to CapsLock.
+Recommendation swap the Ctrl key to CapsLock.
 
-### Usage
+## Usage
 
-| Commands  | Expected Output |
+| Input  | Output |
 | ------------- | ------------- |
 | Ctrl + a  | Cursor Start of Line |
 | Ctrl + e  | Cursor End of Line |
@@ -25,7 +28,7 @@ Windows OS and AutoHotkey.exe
 | Shift + Win + → | Forward Word Selection |
 | Alt + z | Undo |
 | Alt + Shift + z | Redo |
-| Alt + x | Cutting |
+| Alt + x | Cut |
 | Alt + c | Copy |
 | Alt + v | Paste |
 | Alt + a | Select All  |
@@ -40,18 +43,15 @@ Windows OS and AutoHotkey.exe
 | Win + q | Close Virtual Desktop |
 
 
-#### VSCODE
-| Commands  | Expected Output |
+## VSCODE
+| Input  | Output |
 | ------------- | ------------- |
 | Alt + Shift + L | Match Selection |
 | Alt + / |  Comment out |
 | Alt + d |  Word Selection |
 | Ctrl + c |  Stop Program |
 
-#### CMD
-| Commands  | Expected Output |
+## CMD
+| Input  | Output |
 | ------------- | ------------- |
 | Ctrl + c |  Stop Program |
-
-
-
