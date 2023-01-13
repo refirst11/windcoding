@@ -13,53 +13,61 @@ Recommendation swap the Ctrl key to CapsLock.
 ## Usage
 | Input  | Output |
 | ------------- | ------------- |
-| Ctrl + a  | Cursor Start of Line |
-| Ctrl + e  | Cursor End of Line |
-| Ctrl + b  | ← Cursor Back |
-| Ctrl + f  | → Cursor Forward|
-| Ctrl + p  | ↑ Cursor Up Line |
-| Ctrl + n  | ↓ Cursor Down Line |
-| Ctrl + d  | Delete Forward  Char |
-| Ctrl + h  | Delete Back Char |
+| Ctrl + b  | ← Cursor back |
+| Ctrl + f  | → Cursor forward|
+| Ctrl + p  | ↑ Cursor up |
+| Ctrl + n  | ↓ Cursor down |
+| Ctrl + a  | Cursor line start |
+| Ctrl + e  | Cursor line end |
 | Alt + ←  | Cursor line start |
 | Alt + →  | Cursor line end |
 | Win + ←  | Cursor word backward |
 | Win + →  | Cursor word forward |
-| Shift + Alt + ←  | Backward Selection |
-| Shift + Alt + → | Forward Selection |
-| Shift + Win + ←  | Backward Word Selection |
-| Shift + Win + → | Forward Word Selection |
+| Shift + Alt + ←  | Backward selection |
+| Shift + Alt + → | Forward selection |
+| Shift + Win + ←  | Backward word selection |
+| Shift + Win + → | Forward word selection |
+| Ctrl + d  | Delete forward 1 character |
+| Ctrl + h  | Delete backward 1 character |
 | Alt + z | Undo |
 | Alt + Shift + z | Redo |
 | Alt + x | Cut |
 | Alt + c | Copy |
 | Alt + v | Paste |
-| Alt + a | Select All  |
+| Alt + a | Select all  |
 | Alt + f | Find |
 | Alt + s | Save |
-| Alt + w | Close The Tab Window |
-| Alt + q | Close The Application |
-| Alt + m | Minimize Window |
-| Alt + h | Minimize all Window |
-| Ctrl + ↑ | Window Transform Move Up |
-| Ctrl + ↓ | Window Transform Move Down |
-| Ctrl + ← | Window Transform Move Left |
-| Ctrl + → | Window Transform Move Right |
-| win + Ctrl + ← | Left Virtual Desktop |
-| win + Ctrl + → | Right Virtual Desktop |
-| Win + d | New Virtual Desktop |
-| Win + q | Close Virtual Desktop |
+| Alt + Shift + s | Save as |
+| Alt + Shift + n | New folder |
+| Alt + o | Open |
+| Ctrl + Enter | Rename |
+| Alt + w | Close the tab window |
+| Alt + q | Close the application |
+| Alt + m | Minimize window |
+| Alt + h | Minimize all window |
+| Ctrl + ↑ | Window transform move up |
+| Ctrl + ↓ | Window transform move down |
+| Ctrl + ← | Window transform move left |
+| Ctrl + → | Window transform move right |
+| Win + ↑ | Scroll & Cursor up |
+| Win + ↓ | Scroll & Cursor down |
+| Alt + ↑ | Scroll & Cursor top |
+| Alt + ↓ | Scroll & Cursor bottom |
+| win + Ctrl + ← | Virtual desktop on the left |
+| win + Ctrl + → | Virtual desktop on the right |
+| Win + d | New virtual desktops |
+| Win + q | Close virtual desktop |
 
 
-## VSCODE
+## Visual Studio Code
 | Input  | Output |
 | ------------- | ------------- |
-| Alt + Shift + L | Match Selection |
+| Alt + Shift + L | Match selection |
 | Alt + / |  Comment out |
-| Alt + d |  Word Selection |
-| Ctrl + c |  Stop Program |
+| Alt + d |  Word selection |
+| Ctrl + c |  Stop program |
 
-## CMD
+## cmd
 | Input  | Output |
 | ------------- | ------------- |
 | Ctrl + c |  Stop Program |
