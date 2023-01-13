@@ -5,7 +5,7 @@ MacのCommandとWinのAltを入れ替えて、CtrlでUnix流のカーソル移�
 IDEとcmdでのみCtrl + Cを許容しています(各自追加して使用してください)
 
 ## システム要件
-AutoHotkeyがインストールされたWindowsOSで起動します。  
+AutoHotkeyがインストールされたWindows11で起動します。  
 CapsLockをCtrlキーと入れ替えることを推奨します。
 
 ## 使用法
