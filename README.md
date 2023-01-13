@@ -7,7 +7,7 @@ Mac's Command and Win's Alt are exchanged, and Unix style cursor movement is pos
 Assuming running Visual Studio Code and cmd.
 
 ## system requirements
-Windows OS and AutoHotkey.exe  
+Windows 11 and AutoHotkey.exe  
 Recommendation swap the Ctrl key to CapsLock.
 
 ## Usage
