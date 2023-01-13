@@ -11,18 +11,14 @@
 ^x:: 
 ^v::
 ^+l::
-^#Left::
-^#Right::
 ^#d::
 ^+n::
 ^#F4::
 ^+p::
 	Return ; Reset unique shortcut / 初期値削除
 
-^h::Send {BS} ; Delete Back Char / 後方文字削除
-^d::Send {Delete} ; Delete Forward Char / 前方文字削除
-^f::Send {Right} ; → Cursor Forward / カーソル右
 ^b::Send {Left}  ; ←  Cursor Back /  カーソル左
+^f::Send {Right} ; → Cursor Forward / カーソル右
 ^p::Send {Up} ; 	↑ Cursor Up Line / カーソル上行
 ^n::Send {Down} ; ↓ Cursor Down Line / カーソル下行
 ^a::Send {Home} ; Cursor Start of Line / カーソル行頭
@@ -31,49 +27,54 @@
 #Right::Send ^{Right} ; Forward Word Move / カーソル単語前方
 !Left::Send {Home} ; Cursor Start of Line / カーソル行頭
 !Right::Send {End} ; Cursor Start of Line / カーソル行末
-
 !+Left::Send +{Home} ; Backward Selection / 後方行選択
 !+Right::Send +{End} ; Forward Selection / 前方行選択
 #+Left::Send ^+{Left} ; Backward Word Selection / 後方単語選択
 #+Right::Send ^+{Right} ; Forward Word Selection / 前方単語選択
-!d::Send ^{d} ; Word Selection / 単語一括選択
-!q::Send,!{F4} ; 	Close The Application / 強制終了
+^h::Send {BS} ; Delete Back Char / 後方文字削除
+^d::Send {Delete} ; Delete Forward Char / 前方文字削除
 
-!+l::Send ^+{l} ; Match Selection / 一致全選択
-!/::Send ^{/} ; Comment out / コメントアウト(vsc)
-!+p::Send ^+{p} ; Command Palette / コマンド パレット(vsc)
-
-!w::Send ^{w} ; Close the tab window / タブを 閉じる
-!m::Send #{m} ; Max Minimize Window / ウィンドウ最小化
-!h::Send #{d} ; Max Minimize all Window / ウィンドウを全て最小化
-^Up::Send #{Up} ; Maximize / ウィンドウ最大化
-^Down::Send #{Down} ; Minimize Window / ウィンドウ小型化,最小化
-#Up::Send {PgUp} ; Scroll Up / スクロールアップ
-#Down::Send {PgDn} ; Scroll Down / スクロールダウン
-!+n::Send ^+{n} ; New Folder / 新規フォルダ
-!o::Send ^{Enter} ; Open / 開く
-^Enter::Send {F2} ; Rename / 名称変更
-!a::Send ^{a} ; Select All / 全体選択
-!f::Send ^{f} ; Find / 検索
-!s::Send ^{s} ; Save / 保存
-!+s::Send ^+{s} ; Save File As / 名前を付けて保存
 !z::Send ^{z} ; Redo / 戻し
 !+z::Send ^{y} ; Undo / 進み
 !x::Send ^{x} ; Cut / 切り取り
 !c::Send ^{c} ; Copy / コピー
 !v::Send ^{v} ; Paste / 貼り付け
+!a::Send ^{a} ; Select All / 全体選択
+!f::Send ^{f} ; Find / 検索
+!s::Send ^{s} ; Save / 保存
+!+s::Send ^+{s} ; Save File As / 名前を付けて保存
+!+n::Send ^+{n} ; New Folder / 新規フォルダ
+!o::Send ^{Enter} ; Open / 開く
+^Enter::Send {F2} ; Rename / 名前を変更
+
+!w::Send ^{w} ; Close the tab window / タブを 閉じる
+!q::Send !{F4} ; 	Close The Application / 強制終了
+!m::Send #{m} ; Minimize Window / ウィンドウ最小化
+!h::Send #{d} ; Minimize all Window / ウィンドウを全て最小化
+^Up::Send #{Up} ; Maximize Window / ウィンドウ上方変形,移動
+^Down::Send #{Down} ; Minimize Window / ウィンドウ下方変形,移動
+^Left::Send #{Left} ; Maximize Window / ウィンドウ左方変形,移動
+^Right::Send #{Right} ; Minimize Window / ウィンドウ右方変形,移動
+#Up::Send {PgUp} ; Scroll Up / スクロールアップ
+#Down::Send {PgDn} ; Scroll Down / スクロールダウン
 !Down::Send ^{End} ; ↓ End / 一番下
 !Up::Send ^{Home} ; Top / 一番上
-^Left::Send ^#{Left} ; Left Virtual Desktop / 仮想デスクトップ左
-^Right::Send ^#{Right} ; Right Virtual Desktop / 仮想デスクトップ右
+
+;!^ Left Virtual Desktop / 左の仮想デスクトップ
+;!^ Right Virtual Desktop / 右の仮想デスクトップ
 #d::Send ^#{d} ; New Virtual Desktop / 新しい仮想デスクトップ
 #q::Send ^#{F4} ; Close Virtual Desktop / 仮想デスクトップを閉じる
 
-;Visual Studio Code and CMD on Stop Program Boolean
-#If WinNotActive,ahk_class CASCADIA_HOSTING_WINDOW_CLASS || WinNotActive,ahk_exe Code.exe  ;  
-	^c::Send {} ;
+
+;Visual Studio Code and cmd on Stop Program if.
+!d::Send ^{d} ; Word Selection / 単語一括選択
+!+l::Send ^+{l} ; Match Selection / 一致全選択
+!/::Send ^{/} ; Comment out / コメントアウト
+!+p::Send ^+{p} ; Command Palette / コマンドパレット
+
+#If WinNotActive,ahk_class CASCADIA_HOSTING_WINDOW_CLASS || WinNotActive,ahk_exe Code.exe
+	^c::Send {}
 #If WinNotActive
 
 
 ;useMacOS was written use useMacOS & Windows.
-
