@@ -27,8 +27,8 @@ Recommendation swap the Ctrl key to CapsLock.
 | Shift + Alt + → | Forward selection |
 | Shift + Win + ←  | Backward word selection |
 | Shift + Win + → | Forward word selection |
-| Ctrl + d  | Delete forward  text |
-| Ctrl + h  | Delete back text |
+| Ctrl + d  | Delete forward 1 character |
+| Ctrl + h  | Delete backward 1 character |
 | Alt + z | Undo |
 | Alt + Shift + z | Redo |
 | Alt + x | Cut |
