@@ -3,7 +3,7 @@
 ## useMacOS
 Created to improve efficiency for windows developers, designers, and writers etc..  
 or if you want to try Mac it works exactly.  
-Mac's Command and Win's Alt are exchanged, and Unix-style cursor movement is possible with Ctrl.  
+Mac's Command and Win's Alt are exchanged, and Unix style cursor movement is possible with Ctrl.  
 Assuming running Visual Studio Code and cmd.
 
 ## system requirements
@@ -21,6 +21,10 @@ Recommendation swap the Ctrl key to CapsLock.
 | Ctrl + n  | ↓ Cursor Down Line |
 | Ctrl + d  | Delete Forward  Char |
 | Ctrl + h  | Delete Back Char |
+| Alt + ←  | Cursor line start |
+| Alt + →  | Cursor line ebd |
+| Win + ←  | Cursor word backward |
+| Win + →  | Cursor word forward |
 | Shift + Alt + ←  | Backward Selection |
 | Shift + Alt + → | Forward Selection |
 | Shift + Win + ←  | Backward Word Selection |
@@ -36,8 +40,13 @@ Recommendation swap the Ctrl key to CapsLock.
 | Alt + w | Close The Tab Window |
 | Alt + q | Close The Application |
 | Alt + m | Minimize Window |
-| Ctrl + ← | Left Virtual Desktop |
-| Ctrl + → | Right Virtual Desktop |
+| Alt + h | Minimize all Window |
+| Ctrl + ↑ | Window Transform Move Up |
+| Ctrl + ↓ | Window Transform Move Down |
+| Ctrl + ← | Window Transform Move Left |
+| Ctrl + → | Window Transform Move Right |
+| win + Ctrl + ← | Left Virtual Desktop |
+| win + Ctrl + → | Right Virtual Desktop |
 | Win + d | New Virtual Desktop |
 | Win + q | Close Virtual Desktop |
 
