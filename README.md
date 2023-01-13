@@ -22,7 +22,7 @@ Recommendation swap the Ctrl key to CapsLock.
 | Ctrl + d  | Delete Forward  Char |
 | Ctrl + h  | Delete Back Char |
 | Alt + ←  | Cursor line start |
-| Alt + →  | Cursor line ebd |
+| Alt + →  | Cursor line end |
 | Win + ←  | Cursor word backward |
 | Win + →  | Cursor word forward |
 | Shift + Alt + ←  | Backward Selection |
