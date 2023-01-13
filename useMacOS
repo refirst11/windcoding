@@ -14,6 +14,7 @@
 ^#Left::
 ^#Right::
 ^#d::
+^+n::
 ^#F4::
 ^+p::
 	Return ; Reset unique shortcut / 初期値削除
@@ -43,7 +44,15 @@
 !+p::Send ^+{p} ; Command Palette / コマンド パレット(vsc)
 
 !w::Send ^{w} ; Close the tab window / タブを 閉じる
-!m::Send #{m} ; Minimize Window / ウィンドウ最小化
+!m::Send #{m} ; Max Minimize Window / ウィンドウ最小化
+!h::Send #{d} ; Max Minimize all Window / ウィンドウを全て最小化
+^Up::Send #{Up} ; Maximize / ウィンドウ最大化
+^Down::Send #{Down} ; Minimize Window / ウィンドウ小型化,最小化
+#Up::Send {PgUp} ; Scroll Up / スクロールアップ
+#Down::Send {PgDn} ; Scroll Down / スクロールダウン
+!+n::Send ^+{n} ; New Folder / 新規フォルダ
+!o::Send ^{Enter} ; Open / 開く
+^Enter::Send {F2} ; Rename / 名称変更
 !a::Send ^{a} ; Select All / 全体選択
 !f::Send ^{f} ; Find / 検索
 !s::Send ^{s} ; Save / 保存
@@ -53,17 +62,18 @@
 !x::Send ^{x} ; Cut / 切り取り
 !c::Send ^{c} ; Copy / コピー
 !v::Send ^{v} ; Paste / 貼り付け
-!Down::Send {End} ; ↓ End / 一番下
-!Up::Send {Home} ; Top / 一番上
+!Down::Send ^{End} ; ↓ End / 一番下
+!Up::Send ^{Home} ; Top / 一番上
 ^Left::Send ^#{Left} ; Left Virtual Desktop / 仮想デスクトップ左
 ^Right::Send ^#{Right} ; Right Virtual Desktop / 仮想デスクトップ右
 #d::Send ^#{d} ; New Virtual Desktop / 新しい仮想デスクトップ
 #q::Send ^#{F4} ; Close Virtual Desktop / 仮想デスクトップを閉じる
 
-
+;Visual Studio Code and CMD on Stop Program Boolean
 #If WinNotActive,ahk_class CASCADIA_HOSTING_WINDOW_CLASS || WinNotActive,ahk_exe Code.exe  ;  
 	^c::Send {} ;
 #If WinNotActive
-;Visual Studio Code and CMD on Stop Program Boolean
-;useMacOS was written by useMacOS&Windows
+
+
+;useMacOS was written use useMacOS & Windows.
 
