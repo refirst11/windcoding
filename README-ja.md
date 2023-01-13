@@ -2,7 +2,7 @@
 Windows 開発者やデザイナー、ライターなどの効率を向上させるために作成されました。  
 または、Mac を試してみたい場合は、ぴったりです。  
 MacのCommandとWinのAltを入れ替えて、CtrlでUnix流のカーソル移動が可能。  
-Visual Studio Code と CMD (コマンド プロンプト) を実行していると仮定します。  
+IDEとcmdでのみCtrl + Cを許容しています(各自追加して使用してください)
 
 ## システム要件
 AutoHotkeyがインストールされたWindowsOSで起動します。  
