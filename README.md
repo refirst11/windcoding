@@ -59,7 +59,7 @@ Recommendation swap the Ctrl key to CapsLock.
 | Win + q | Close virtual desktop |
 
 
-## VSCODE
+## Visual Studio Code
 | Input  | Output |
 | ------------- | ------------- |
 | Alt + Shift + L | Match selection |
@@ -67,7 +67,7 @@ Recommendation swap the Ctrl key to CapsLock.
 | Alt + d |  Word selection |
 | Ctrl + c |  Stop program |
 
-## CMD
+## cmd
 | Input  | Output |
 | ------------- | ------------- |
 | Ctrl + c |  Stop Program |
