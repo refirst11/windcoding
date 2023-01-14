@@ -1,16 +1,22 @@
 
 ## useMacOS [![OS - Windows](https://img.shields.io/badge/OS-Windows-blue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-2ea44f)](https://www.autohotkey.com/ "Go to AutoHotkey")
-
-
 Windows 開発者やデザイナー、ライターなどの効率を向上させるために作成されました。  
 または、Mac を試してみたい場合は、ぴったりです。  
 MacのCommandとWinのAltを入れ替えて、CtrlでUnix流のカーソル移動が可能。  
 IDEとcmdでのみCtrl + Cを許容しています(各自追加して使用してください)  
-US配列で英語と日本語を併用する人向けに[alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk)と併用することができます。
 
 ## システム要件
 AutoHotkeyがインストールされたWindows11で起動します。  
 CapsLockをCtrlキーと入れ替えることを推奨します。
+
+## IME変換
+
+### ANSI
+US配列で英語と日本語を併用する人向けに[alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk)と併用することができます。
+
+### JIS
+日本語配列の場合設定→時刻と言語→言語と地域→日本語(・・・言語のオプション)→Microsoft IME(・・・キーボードオプション)→全般→以前のバージョンの Microsoft IMEを使うをオフ
+Microsoft IME→キーとタッチのカスタマイズからキーの割り当てで無変換にIME-オフ、変換にIME-オンを割り当てる。
 
 ## 使用法
 | 入力 | 出力 |
