@@ -27,6 +27,8 @@ CapsLockをCtrlキーと入れ替えることを推奨します。
 | Shift + Win + → | 前方単語選択 |
 | Ctrl + d | 前方文字を削除 |
 | Ctrl + h | 後方文字を削除 |
+| Ctrl + k | カタカナに変換 |
+| Ctrl + ; | 半角カタカナに変換 |
 | Alt + z | 元に戻す |
 | Alt + Shift + z | やり直し |
 | Alt + x | カット |
