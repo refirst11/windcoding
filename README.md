@@ -1,3 +1,5 @@
+[![OS - Windows](https://img.shields.io/badge/OS-Windows-blue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-2ea44f)](https://www.autohotkey.com/)
+
 [日本語版README](https://github.com/su-pull/Use-Macintosh-edit-on-Windows/blob/main/README-ja.md)
 
 ## useMacOS
