@@ -10,6 +10,7 @@
 ^z::
 ^x:: 
 ^v::
+^i::
 ^+l::
 ^#d::
 ^+n::
@@ -33,7 +34,8 @@
 #+Right::Send ^+{Right} ; Forward Word Selection / 前方単語選択
 ^h::Send {BS} ; Delete Back Char / 後方文字削除
 ^d::Send {Delete} ; Delete Forward Char / 前方文字削除
-
+^k::Send ^{i} ; convert to Katakana / カタカナに変換
+^;::Send ^{o} ; convert to half-width katakana / 半角カタカナに変換
 !z::Send ^{z} ; Redo / 戻し
 !+z::Send ^{y} ; Undo / 進み
 !x::Send ^{x} ; Cut / 切り取り
