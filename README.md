@@ -4,7 +4,7 @@
 Created to improve efficiency for windows developers, designers, and writers etc..  
 or if you want to try Mac it works exactly.  
 Mac's Command and Win's Alt are exchanged, and Unix style cursor movement is possible with Ctrl.  
-Assuming running Visual Studio Code and cmd.
+Allows Ctrl+C only in IDE and cmd (add and use each person IDE)
 
 ## system requirements
 Windows 11 and AutoHotkey.exe  
