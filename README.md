@@ -29,6 +29,8 @@ Recommendation swap the Ctrl key to CapsLock.
 | Shift + Win + → | Forward word selection |
 | Ctrl + d  | Delete forward 1 character |
 | Ctrl + h  | Delete backward 1 character |
+| Ctrl + k | Convert to katakana |
+| Ctrl + ; | Convert to half-width katakana |
 | Alt + z | Undo |
 | Alt + Shift + z | Redo |
 | Alt + x | Cut |
