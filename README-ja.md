@@ -6,8 +6,6 @@ Windows 開発者やデザイナー、ライターなどの効率を向上させ
 または、Mac を試してみたい場合は、ぴったりです。  
 MacのCommandとWinのAltを入れ替えて、CtrlでUnix流のカーソル移動が可能。  
 IDEとcmdでのみCtrl + Cを許容しています(各自追加して使用してください)  
-
-version1.1でJIS版を対応させるため[alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk)のIME_SET関数を使用させて頂きました。  
 US配列で英語と日本語を併用する人向けに[alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk)と併用することができます。
 
 ## システム要件
