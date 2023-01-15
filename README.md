@@ -16,6 +16,7 @@ Recommendation swap the Ctrl key to CapsLock.
 ## Usage
 | Input  | Output |
 | ------------- | ------------- |
+| Ctrl + Space | IME toggle |
 | Ctrl + b  | ← Cursor back |
 | Ctrl + f  | → Cursor forward|
 | Ctrl + p  | ↑ Cursor up |
