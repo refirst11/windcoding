@@ -4,6 +4,7 @@
 *~LAlt::Send {Blind}{vk07} ; alt ime ahk copy code line 111~112
 *~RAlt::Send {Blind}{vk07} ; https://github.com/karakaram/alt-ime-ahk/blob/master/alt-ime-ahk.ahk
 
+!VKC0::
 ^w:: 
 #m::
 ^s::
@@ -19,6 +20,7 @@
 ^+p::
 	Return ; Reset unique shortcut / 初期値削除
 
+^Space::Send !{VKC0} ; IME toggle / IMEトグル
 ^b::Send {Left}  ; ←  Cursor Back /  カーソル左
 ^f::Send {Right} ; → Cursor Forward / カーソル右
 ^p::Send {Up} ; 	↑ Cursor Up Line / カーソル上行
