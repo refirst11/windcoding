@@ -11,6 +11,9 @@ IDEとcmdでのみCtrl + Cを許容しています(各自追加して使用し�
 AutoHotkeyがインストールされたWindows11で起動します。  
 CapsLockをCtrlキーと入れ替えることを推奨します。
 
+こちら[macintosh-ahk](https://github.com/su-pull/macintosh-ahk/archive/refs/heads/main.zip)よりZipをダウンロードして解凍し起動します。
+終了はタスクトレイの右クリックよりExitで終了できます。
+
 ## IME変換
 US配列の場合Alt _ `の変換は Ctrl + Spaceに置き換えられますが切り替えの通知が画面中央に表示されてしまうのでオフにします。  
 言語バーよりIMEモード切替の通知の画面中央に表示するのチェックを外す。  
