@@ -1,9 +1,10 @@
 
-[![OS - Windows](https://img.shields.io/badge/OS-Windows-blue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-2ea44f)](https://www.autohotkey.com/ "Go to AutoHotkey")  
+
 
 [日本語版README](https://github.com/su-pull/Use-Macintosh-edit-on-Windows/blob/main/README-ja.md)
 
 ## macintosh-ahk
+[![OS - Windows](https://img.shields.io/badge/OS-Windows-blue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-2ea44f)](https://www.autohotkey.com/ "Go to AutoHotkey")
 ![gif](https://user-images.githubusercontent.com/75829584/213149046-0ca524f6-a918-4aa8-ae1c-2076f6129b35.gif)
 Created to improve efficiency for windows developers, designers, and writers etc..  
 or if you want to try Mac it works exactly.  
