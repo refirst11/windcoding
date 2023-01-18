@@ -69,10 +69,12 @@ Recommendation swap the Ctrl key to CapsLock.
 ## Visual Studio Code
 | Input  | Output |
 | ------------- | ------------- |
-| Alt + Shift + L | Match selection |
-| Alt + / |  Comment out |
+| Alt + Shift + p | Command palette |
+| Alt + Shift + l | Match selection |
 | Alt + d |  Word selection |
+| Alt + / |  Comment out |
 | Ctrl + c |  Stop program |
+
 
 ## cmd
 | Input  | Output |
