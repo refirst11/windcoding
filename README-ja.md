@@ -1,7 +1,8 @@
  [![OS - Windows](https://img.shields.io/badge/OS-Windows-blue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-2ea44f)](https://www.autohotkey.com/ "Go to AutoHotkey")
 
-## useMacOS
-Windows 開発者やデザイナー、ライターなどの効率を向上させるために作成されました。  
+## macintosh-ahk
+![gif](https://user-images.githubusercontent.com/75829584/213149046-0ca524f6-a918-4aa8-ae1c-2076f6129b35.gif)
+Windows 開発者とライターの効率を向上させるために作成されました。  
 または、Mac を試してみたい場合は、ぴったりです。  
 MacのCommandとWinのAltを入れ替えて、CtrlでUnix流のカーソル移動が可能。  
 IDEとcmdでのみCtrl + Cを許容しています(各自追加して使用してください)  
@@ -11,6 +12,9 @@ AutoHotkeyがインストールされたWindows11で起動します。
 CapsLockをCtrlキーと入れ替えることを推奨します。
 
 ## IME変換
+US配列の場合Alt _ `の変換は Ctrl + Spaceに置き換えられますが切り替えの通知が画面中央に表示されてしまうのでオフにします。  
+言語バーよりIMEモード切替の通知の画面中央に表示するのチェックを外す。  
+この設定は日本語配列の半角/全角はそのまま残しているため日本語配列の場合は不要です。
 
 ### ANSI
 US配列で英語と日本語を併用する人向けに[alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk)と併用することができます。
@@ -70,13 +74,13 @@ Microsoft IME→キーとタッチのカスタマイズからキーの割り当�
 | Win + d | 新しい仮想デスクトップ |
 | Win + q | 仮想デスクトップを閉じる |
 
-
 ## Visual Studio Code
 | 入力 | 出力 |
 | ------------- | ------------- |
-| Alt + Shift + L | 一致文字選択 |
-| Alt + / | コメントアウト |
+| Alt + Shift + p | コマンドパレット |
+| Alt + Shift + l | 一致文字選択 |
 | Alt + d | 単語の選択 |
+| Alt + / | コメントアウト |
 | Ctrl + c | プログラムを停止 |
 
 ## cmd
