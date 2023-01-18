@@ -12,6 +12,9 @@
 ; empty
 ; 
 
+;; 
+;; // reset default shortcut keys
+;;
 !VKC0::
 ^w:: 
 #m::
@@ -26,7 +29,7 @@
 ^+n::
 ^#F4::
 ^+p::
-	Return ; reset default shortcut keys
+	Return
 ;
 ; empty
 ;
@@ -289,11 +292,9 @@
 ; Alt + p
 ;
 
-
 ;;
 ;; // cmd and vscode bash program stop command
 ;;
-
 #If WinNotActive,ahk_class CASCADIA_HOSTING_WINDOW_CLASS || WinNotActive,ahk_exe Code.exe
 	^c::Send {}
 #If WinNotActive
