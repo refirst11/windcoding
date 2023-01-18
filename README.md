@@ -73,10 +73,10 @@ Recommendation swap the Ctrl key to CapsLock.
 | Alt + Shift + l | Match selection |
 | Alt + d |  Word selection |
 | Alt + / |  Comment out |
-| Ctrl + c |  Stop program |
+| Ctrl + c |  stop a program |
 
 
 ## cmd
 | Input  | Output |
 | ------------- | ------------- |
-| Ctrl + c |  Stop Program |
+| Ctrl + c |  stop a program |
