@@ -1,6 +1,6 @@
  [![OS - Windows](https://img.shields.io/badge/OS-Windows-blue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-2ea44f)](https://www.autohotkey.com/ "Go to AutoHotkey")
 
-## useMacOS
+## macintosh-ahk
 ![gif](https://user-images.githubusercontent.com/75829584/213149046-0ca524f6-a918-4aa8-ae1c-2076f6129b35.gif)
 Windows 開発者とライターの効率を向上させるために作成されました。  
 または、Mac を試してみたい場合は、ぴったりです。  
