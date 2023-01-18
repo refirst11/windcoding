@@ -4,7 +4,7 @@
 [日本語版README](https://github.com/su-pull/Use-Macintosh-edit-on-Windows/blob/main/README-ja.md)
 
 ## useMacOS
-![demo](https://github.com/su-pull/useMacOS/master/editor.gif)
+![gif](https://user-images.githubusercontent.com/75829584/213129548-f8b5ded9-b28a-438e-891d-4b59d532b664.gif)
 Created to improve efficiency for windows developers, designers, and writers etc..  
 or if you want to try Mac it works exactly.  
 Mac's Command and Win's Alt are exchanged, and Unix style cursor movement is possible with Ctrl.  
