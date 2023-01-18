@@ -2,7 +2,7 @@
 
 ## useMacOS
 ![gif](https://user-images.githubusercontent.com/75829584/213149046-0ca524f6-a918-4aa8-ae1c-2076f6129b35.gif)
-Windows 開発者やデザイナー、ライターなどの効率を向上させるために作成されました。  
+Windows 開発者とライターの効率を向上させるために作成されました。  
 または、Mac を試してみたい場合は、ぴったりです。  
 MacのCommandとWinのAltを入れ替えて、CtrlでUnix流のカーソル移動が可能。  
 IDEとcmdでのみCtrl + Cを許容しています(各自追加して使用してください)  
