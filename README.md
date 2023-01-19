@@ -60,6 +60,7 @@ Microsoft IME→キーとタッチのカスタマイズからキーの割り当�
 | Alt + Shift + s | 名前を付けて保存 |
 | Alt + Shift + n | 新規フォルダー |
 | Alt + o | 開く |
+| Alt + Left Click | 新しいタブでリンクを開く |
 | Ctrl + Enter | 名前を変更 |
 | Alt + w | タブ ウィンドウを閉じる |
 | Alt + q | アプリケーションを閉じる |
