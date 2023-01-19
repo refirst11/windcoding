@@ -84,3 +84,6 @@ download here [macintosh-ahk ver0.2](https://github.com/su-pull/macintosh-ahk/ar
 | Input  | Output |
 | ------------- | ------------- |
 | Ctrl + c |  stop a program |
+
+## Blog
+[AHKでMacintoshのキーバインドが使えるスクリプトを作った](https://sou-web.net/docs/url/2023-01-14)
