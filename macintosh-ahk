@@ -35,12 +35,12 @@
 ; empty
 ;
 
-^Space::Send !{VKC0} ; IME toggle / IMEトグル 
+^Space::Send !{VKC0} ; IME toggle / IMEトグル
 ;
 ; Ctrl + Space
 ;
 
-^b::Send {Left}  ; ←  Cursor Back /  カーソル左;
+^b::Send {Left}  ; ←  Cursor Back / カーソル左
 ;
 ; Ctrl + b
 ;
