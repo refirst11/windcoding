@@ -1,0 +1,324 @@
+;; Macintosh like keybind autohotkey script for windows
+;; Repository: https://github.com/su-pull/useMacOS 
+#InstallKeybdHook
+#UseHook
+
+;;
+;; // unfocused tab 
+;;
+*~LAlt::Send {Blind}{vk07}
+*~RAlt::Send {Blind}{vk07}
+; 
+; empty
+; 
+
+;; 
+;; // reset default shortcut keys
+;;
+!VKC0::
+^w:: 
+#m::
+^s::
+^z::
+^x:: 
+^v::
+^i::
+^o::
+^+l::
+^#d::
+^+n::
+^#F4::
+^+p::
+^LButton::
+^WheelUp::
+^WheelDown::
+^=::
+^-::
+	Return
+;
+; empty
+;
+
+^Space::Send !{VKC0} ; IME toggle / IMEトグル
+;
+; Ctrl + Space
+;
+
+^b::Send {Left}  ; ←  Cursor Back / カーソル左
+;
+; Ctrl + b
+;
+
+^f::Send {Right} ; → Cursor Forward / カーソル右
+;
+; Ctrl + f
+;
+
+^p::Send {Up} ; 	↑ Cursor Up Line / カーソル上行
+;
+; Ctrl + p
+;
+
+^n::Send {Down} ; ↓ Cursor Down Line / カーソル下行
+;
+; Ctrl + n
+;
+
+^a::Send {Home} ; Cursor Start of Line / カーソル行頭
+;
+; Ctrl + a
+;
+
+^e::Send {End} ; Cursor End of Line / カーソル行末
+;
+; Ctrl + e
+; 
+
+#Left::Send ^{Left} ; Backward Word カーソル単語後方
+;
+; Alt + ←
+;
+
+#Right::Send ^{Right} ; Forward Word Move / カーソル単語前方
+;
+; Alt + →
+;
+
+!Left::Send {Home} ; Cursor Start of Line / カーソル行頭
+;
+; Win + ←
+;
+
+!Right::Send {End} ; Cursor Start of Line / カーソル行末
+;
+; Win + →
+;
+
+!+Left::Send +{Home} ; Backward Selection / 後方行選択
+;
+; Shift + Alt + ←
+;
+
+!+Right::Send +{End} ; Forward Selection / 前方行選択
+;
+; Shift + Alt + →
+;
+
+#+Left::Send ^+{Left} ; Backward Word Selection / 後方単語選択
+;
+; Shift + Win + ←
+;
+
+#+Right::Send ^+{Right} ; Forward Word Selection / 前方単語選択
+;
+; Shift + Win + →	
+;
+
+^d::Send {Delete} ; Delete Forward Char / 前方文字削除
+;
+; Ctrl + d
+;
+
+^h::Send {BS} ; Delete Back Char / 後方文字削除
+;
+; Ctrl + h
+;
+
+^k::Send ^{i} ; convert to Katakana / カタカナに変換
+;
+; Ctrl + i
+;
+
+^;::Send ^{o} ; convert to half-width katakana / 半角カタカナに変換
+;
+; Ctrl + o
+;
+
+!z::Send ^{z} ; Redo / 戻し
+;
+; Alt + z
+;
+
+!+z::Send ^{y} ; Undo / 進み
+;
+; Alt + Shift + z
+;
+
+!x::Send ^{x} ; Cut / 切り取り
+;
+; Alt + x
+;
+
+!c::Send ^{c} ; Copy / コピー
+;
+; Alt + c
+;
+
+!v::Send ^{v} ; Paste / 貼り付け
+;
+; Alt + v
+;
+
+!a::Send ^{a} ; Select All / 全体選択
+;
+; Alt + a
+;
+
+!f::Send ^{f} ; Find / 検索
+;
+; Alt + f
+;
+
+!s::Send ^{s} ; Save / 保存
+;
+; Alt + s
+;
+
+!+s::Send ^+{s} ; Save File As / 名前を付けて保存
+;
+; Alt + Shift + s
+;
+
+!+n::Send ^+{n} ; New Folder / 新規フォルダ
+;
+; Alt + Shift + n
+;
+
+!o::Send ^{Enter} ; Open / 開く
+;
+; Alt + o
+;
+
+!LButton::Send ^{LButton} ; Open link in a new tab / リンクを新しいタブで開く
+;
+; Alt + Left Click
+;
+
+^Enter::Send {F2} ; Rename / 名前を変更
+;
+; Ctrl + Enter
+;
+
+!w::Send ^{w} ; Close the tab window / タブを 閉じる
+;
+; Alt + w
+;
+
+!q::Send !{F4} ; 	Close The Application / 強制終了
+;
+; Alt + q
+;
+
+!=::Send ^{=} ; Text size enlarge / テキストサイズスケール拡大
+;
+; Alt + =(+ANSI)
+;
+
+!-::Send ^{-} ; Text size shrink / テキストサイズスケール縮小
+;
+; Alt + -
+;
+
+!m::Send #{Down} ; Minimize Window / ウィンドウ最小化
+;
+; Alt + m
+;
+
+!h::Send #{d} ; Minimize all Window / ウィンドウを全て最小化
+;
+; Alt + h
+;
+
+^Up::Send #{Up} ; Maximize Window / ウィンドウ上方変形,移動
+;
+; Ctrl + ↑
+;
+
+^Down::Send #{Down} ; Minimize Window / ウィンドウ下方変形,移動
+;
+; Ctrl + ↓
+;
+
+^Left::Send #{Left} ; Maximize Window / ウィンドウ左方変形,移動
+;
+; Ctrl + ←
+;
+
+^Right::Send #{Right} ; Minimize Window / ウィンドウ右方変形,移動
+;
+; Ctrl + →
+;
+
+#Up::Send {PgUp} ; Scroll Up / スクロールアップ
+;
+; Win + ↑
+;
+
+#Down::Send {PgDn} ; Scroll Down / スクロールダウン
+;
+; Win + ↓
+;
+
+!Up::Send ^{Home} ; Top / 一番上
+;
+; Alt + ↑
+;
+
+!Down::Send ^{End} ; ↓ End / 一番下
+;
+; Alt + ↓
+;
+
+;#^ Left Virtual Desktop / 左の仮想デスクトップ
+;
+; win + Ctrl + ←
+;
+
+;#^ Right Virtual Desktop / 右の仮想デスクトップ
+;
+; win + Ctrl + →
+;
+
+#d::Send ^#{d} ; New Virtual Desktop / 新しい仮想デスクトップ
+;
+; Win + d
+;
+
+#q::Send ^#{F4} ; Close Virtual Desktop / 仮想デスクトップを閉じる
+;
+; Win + q
+;
+
+;;
+;; // Visual Studio Code and cmd on Stop Program if.
+;;
+
+!d::Send ^{d} ; Word Selection / 単語一括選択
+;
+; Alt + Shift + L
+;
+
+!+l::Send ^+{l} ; Match Selection / 一致全選択
+;
+; Alt + d
+;
+
+!/::Send ^{/} ; Comment out / コメントアウト
+;
+; Alt + /
+;
+
+!+p::Send ^+{p} ; Command Palette / コマンドパレット
+;
+; Alt + p
+;
+
+;;
+;; // cmd and vscode bash program stop command
+;;
+#If WinNotActive,ahk_class CASCADIA_HOSTING_WINDOW_CLASS || WinNotActive,ahk_exe Code.exe
+	^c::Send {}
+#If WinNotActive
+;
+; ctrl + c
+;
