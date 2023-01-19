@@ -29,6 +29,7 @@
 ^+n::
 ^#F4::
 ^+p::
+^LButton::
 	Return
 ;
 ; empty
@@ -183,6 +184,12 @@
 ;
 ; Alt + o
 ;
+
+!LButton::Send ^{LButton} ; Open link in a new tab / リンクを新しいタブで開く
+;
+; Alt + Left Click
+;
+
 ^Enter::Send {F2} ; Rename / 名前を変更
 ;
 ; Ctrl + Enter
