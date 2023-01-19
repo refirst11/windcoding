@@ -54,7 +54,7 @@
 ; Ctrl + f
 ;
 
-^p::Send {Up} ; 	↑ Cursor Up Line / カーソル上行
+^p::Send {Up} ; ↑ Cursor Up Line / カーソル上行
 ;
 ; Ctrl + p
 ;
@@ -204,7 +204,7 @@
 ; Alt + w
 ;
 
-!q::Send !{F4} ; 	Close The Application / 強制終了
+!q::Send !{F4} ; Close The Application / 強制終了
 ;
 ; Alt + q
 ;
