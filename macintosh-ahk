@@ -205,7 +205,7 @@
 ; Alt + q
 ;
 
-!m::Send #{m} ; Minimize Window / ウィンドウ最小化
+!m::Send #{Down} ; Minimize Window / ウィンドウ最小化
 ;
 ; Alt + m
 ;
