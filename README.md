@@ -60,6 +60,7 @@ Microsoft IME→キーとタッチのカスタマイズからキーの割り当�
 | Alt + Shift + s | 名前を付けて保存 |
 | Alt + Shift + n | 新規フォルダー |
 | Alt + o | 開く |
+| Alt + Left Click | 新しいタブでリンクを開く |
 | Ctrl + Enter | 名前を変更 |
 | Alt + w | タブ ウィンドウを閉じる |
 | Alt + q | アプリケーションを閉じる |
@@ -91,3 +92,6 @@ Microsoft IME→キーとタッチのカスタマイズからキーの割り当�
 | 入力 | 出力 |
 | ------------- | ------------- |
 | Ctrl + c | プログラムを停止 |
+
+## ブログ
+[AHKでMacintoshのキーバインドが使えるスクリプトを作った](https://sou-web.net/docs/url/2023-01-14)
