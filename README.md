@@ -12,7 +12,7 @@ IDEとcmdでのみCtrl + Cを許容しています(各自追加して使用し�
 AutoHotkeyがインストールされたWindows(推奨11)で起動します。  
 CapsLockをCtrlキーと入れ替えることを推奨します。
 
-こちら[macintosh-ahk ver0.2](https://github.com/su-pull/macintosh-ahk/archive/refs/heads/main.zip)よりZipをダウンロードして解凍し起動します。  
+こちら[macintosh-ahk ver0.0.0](https://github.com/su-pull/macintosh-ahk/archive/refs/heads/main.zip)よりZipをダウンロードして解凍し起動します。  
 終了はタスクトレイの右クリックよりExitで終了できます。
 
 ## IME変換
