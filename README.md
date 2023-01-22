@@ -12,7 +12,7 @@ IDEとcmdでのみCtrl + Cを許容しています(各自追加して使用し�
 AutoHotkeyがインストールされたWindows(推奨11)で起動します。  
 CapsLockをCtrlキーと入れ替えることを推奨します。
 
-こちら[macintosh-ahk ver0.2](https://github.com/su-pull/macintosh-ahk/archive/refs/heads/main.zip)よりZipをダウンロードして解凍し起動します。  
+こちら[macintosh-ahk ver0.0.0β](https://github.com/su-pull/macintosh-ahk/archive/refs/heads/main.zip)よりZipをダウンロードして解凍し起動します。  
 終了はタスクトレイの右クリックよりExitで終了できます。
 
 ## IME変換
@@ -60,7 +60,7 @@ Microsoft IME→キーとタッチのカスタマイズからキーの割り当�
 | Alt + Shift + s | 名前を付けて保存 |
 | Alt + Shift + n | 新規フォルダー |
 | Alt + o | 開く |
-| Alt + Left Click | 新しいタブでリンクを開く |
+| Alt + Left Click | 新しいタブでリンクを開く / 複数選択 |
 | Ctrl + Enter | 名前を変更 |
 | Alt + w | タブ ウィンドウを閉じる |
 | Alt + q | アプリケーションを閉じる |
