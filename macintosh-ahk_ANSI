@@ -44,21 +44,6 @@
 ; Ctrl + Space
 ;
 
-!+2::Send !{PrintScreen} ; Window screenshot in a clipboard
-;
-; Alt + Shift + 2
-;
-
-!+3::Send +{PrintScreen} ; Screenshot in a clipboard 
-;
-; Alt + Shift + 3
-;
-
-!+4::Send {PrintScreen} ;  Cropping capture
-;
-; Alt + Shift + 4
-;
-
 ^b::Send {Left}  ; ←  Cursor back / カーソル左
 ;
 ; Ctrl + b
@@ -147,6 +132,21 @@
 ^;::Send ^{o} ; Convert to half-width katakana / 半角カタカナに変換
 ;
 ; Ctrl + o
+;
+
+!+2::Send !{PrintScreen} ; Window screenshot in a clipboard
+;
+; Alt + Shift + 2
+;
+
+!+3::Send +{PrintScreen} ; Screenshot in a clipboard 
+;
+; Alt + Shift + 3
+;
+
+!+4::Send {PrintScreen} ;  Cropping capture
+;
+; Alt + Shift + 4
 ;
 
 !z::Send ^{z} ; Redo / 戻し
