@@ -54,7 +54,7 @@
 ; Alt + Shift + 3
 ;
 
-!+4::Send {PrintScreen} ;  Crop a screenshot
+!+4::Send {PrintScreen} ;  Cropping capture
 ;
 ; Alt + Shift + 4
 ;
