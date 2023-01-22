@@ -22,9 +22,6 @@ download here [macintosh-ahk ver0.0.0β](https://github.com/su-pull/macintosh-ah
 | Input  | Output |
 | ------------- | ------------- |
 | Ctrl + Space | IME toggle |
-| Alt + Shift + 2 | Window screenshot in a clipboard |
-| Alt + Shift + 3 | Screenshot in a clipboard |
-| Alt + Shift + 4 | Cropping capture |
 | Ctrl + b  | ← Cursor back |
 | Ctrl + f  | → Cursor forward|
 | Ctrl + p  | ↑ Cursor up |
@@ -43,6 +40,9 @@ download here [macintosh-ahk ver0.0.0β](https://github.com/su-pull/macintosh-ah
 | Ctrl + h  | Delete backward 1 character |
 | Ctrl + k | Convert to katakana |
 | Ctrl + ; | Convert to half-width katakana |
+| Alt + Shift + 2 | Window screenshot in a clipboard |
+| Alt + Shift + 3 | Screenshot in a clipboard |
+| Alt + Shift + 4 | Cropping capture |
 | Alt + z | Undo |
 | Alt + Shift + z | Redo |
 | Alt + x | Cut |
