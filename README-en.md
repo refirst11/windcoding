@@ -15,7 +15,7 @@ Allows Ctrl+C only in IDE and cmd (add and use each person IDE)
 Windows 11 and AutoHotkey.exe  
 Recommendation swap the Ctrl key to CapsLock.
 
-download here [macintosh-ahk ver0.0.0α](https://github.com/su-pull/macintosh-ahk/archive/refs/heads/main.zip)  
+download here [macintosh-ahk ver0.0.0β](https://github.com/su-pull/macintosh-ahk/archive/refs/heads/main.zip)  
 
 
 ## Usage
