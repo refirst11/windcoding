@@ -134,17 +134,17 @@
 ; Ctrl + o
 ;
 
-!+2::Send !{PrintScreen} ; Window screenshot in a clipboard
+!+2::Send !{PrintScreen} ; Window screenshot in a clipboard / ウィンドウのスクリーンショットをクリップボードへ保存
 ;
 ; Alt + Shift + 2
 ;
 
-!+3::Send +{PrintScreen} ; Screenshot in a clipboard 
+!+3::Send +{PrintScreen} ; Screenshot in a clipboard  / 画面のスクリーンショットをクリップボードへ保存
 ;
 ; Alt + Shift + 3
 ;
 
-!+4::Send {PrintScreen} ;  Cropping capture
+!+4::Send {PrintScreen} ;  Cropping capture / 切り抜いてキャプチャーを起動
 ;
 ; Alt + Shift + 4
 ;
