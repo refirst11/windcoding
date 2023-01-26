@@ -307,8 +307,12 @@
 ;;
 ;; // Visual Studio Code and cmd on Stop Program if.
 ;;
-
-!d::Send ^{d} ; Word selection / 単語一括選択
+;
+; Word selection / 単語一括選択
+;
+#IfWinActive,ahk_exe Code.exe
+	!d::Send ^{d}
+#IfWinActive
 ;
 ; Alt + Shift + L
 ;
