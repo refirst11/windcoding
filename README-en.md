@@ -40,6 +40,7 @@ download here [macintosh-ahk ver0.0.1](https://github.com/su-pull/macintosh-ahk/
 | Ctrl + h  | Delete backward 1 character |
 | Ctrl + k | Convert to katakana |
 | Ctrl + ; | Convert to half-width katakana |
+| Alt + r | Reload |
 | Alt + Shift + 2 | Window screenshot in a clipboard |
 | Alt + Shift + 3 | Screenshot in a clipboard |
 | Alt + Shift + 4 | Cropping capture |
