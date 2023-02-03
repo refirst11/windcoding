@@ -134,6 +134,11 @@
 ; Ctrl + o
 ;
 
+!r::Send ^{r} ; Reload / 再読み込み
+;
+; Alt + r
+;
+
 !+2::Send !{PrintScreen} ; Window screenshot in a clipboard / ウィンドウのスクリーンショットをクリップボードへ保存
 ;
 ; Alt + Shift + 2
