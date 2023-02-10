@@ -39,6 +39,30 @@
 ; empty
 ;
 
+Left::
+	Send {Left}
+	u_flag = 0;
+	d_flag = 0;
+Return
+
+Right::
+	Send {Right}
+	u_flag = 0;
+	d_flag = 0;
+Return
+
+Up::
+	Send {Up}
+	u_flag = 0;
+	d_flag = 0;
+Return
+
+Down::
+	Send {Down}
+	u_flag = 0;
+	d_flag = 0;
+Return
+
 ^Space::Send !{VKC0} ; IME toggle / IMEトグル
 ;
 ; Ctrl + Space
@@ -269,12 +293,39 @@
 ; Ctrl + →
 ;
 
-#Up::Send {PgUp} ; Scroll up / スクロールアップ
+#Up::	
+	d_flag = 0;
+	u_flag += 1
+	If u_flag = 1
+	{
+		Send {Home} ; Home or  Up / 行先頭か行を上がる
+		Return
+	}
+	Else
+	{
+		Send {Up}
+		Return
+	}
+Return
 ;
 ; Win + ↑
 ;
 
-#Down::Send {PgDn} ; Scroll down / スクロールダウン
+
+#Down::
+	u_flag = 0;
+	d_flag += 1
+	If d_flag = 1
+	{
+		Send {End} ; End or Down / 行末か行を下がる
+		Return
+	}
+	Else
+	{
+		Send {Down}
+		Return
+	}
+Return
 ;
 ; Win + ↓
 ;
