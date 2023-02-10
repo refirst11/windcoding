@@ -39,18 +39,9 @@
 ; empty
 ;
 
-Left::
-	Send {Left}
-	u_flag = 0;
-	d_flag = 0;
-Return
-
-Right::
-	Send {Right}
-	u_flag = 0;
-	d_flag = 0;
-Return
-
+;
+; //reset Flag algorithm
+;
 Up::
 	Send {Up}
 	u_flag = 0;
@@ -62,6 +53,21 @@ Down::
 	u_flag = 0;
 	d_flag = 0;
 Return
+
+Left::
+	Send {Left}
+	u_flag = 0;
+	d_flag = 0;
+Return
+
+Right::
+	Send {Right}
+	u_flag = 0;
+	d_flag = 0;
+Return
+;
+; ↑ ↓ ← →
+;
 
 ^Space::Send !{VKC0} ; IME toggle / IMEトグル
 ;
@@ -293,12 +299,15 @@ Return
 ; Ctrl + →
 ;
 
+;
+; Home or  Up / 行先頭→行を上がる
+;
 #Up::	
 	d_flag = 0;
 	u_flag += 1
 	If u_flag = 1
 	{
-		Send {Home} ; Home or  Up / 行先頭か行を上がる
+		Send {Home}
 		Return
 	}
 	Else
@@ -311,13 +320,15 @@ Return
 ; Win + ↑
 ;
 
-
+;
+; End or Down / 行末→行を下がる
+;
 #Down::
 	u_flag = 0;
 	d_flag += 1
 	If d_flag = 1
 	{
-		Send {End} ; End or Down / 行末か行を下がる
+		Send {End}
 		Return
 	}
 	Else
@@ -363,19 +374,27 @@ Return
 ;;
 ;; // Visual Studio Code and cmd on Stop Program if.
 ;;
-;
-; Word selection / 単語一括選択
-;
+
 #IfWinActive,ahk_exe Code.exe
-	!d::Send ^{d}
-#IfWinActive
+
+#Up::Send !{Up} ; Swap selection / 選択範囲入れ替え
 ;
-; Alt + Shift + L
+; Win + ↑
 ;
 
-!+l::Send ^+{l} ; Match selection / 一致全選択
+#Down::Send !{Down} ; Swap selection / 選択範囲入れ替え
+;
+; Win + ↓
+;
+
+!d::Send ^{d} ; Word selection / 単語一括選択
 ;
 ; Alt + d
+;
+
+!+l::Send ^+{l} ; Match Selection / 一致全選択
+;
+; Alt + Shift + L
 ;
 
 !/::Send ^{/} ; Comment out / コメントアウト
@@ -383,10 +402,12 @@ Return
 ; Alt + /
 ;
 
-!+p::Send ^+{p} ; Command palette / コマンドパレット
+!+p::Send ^+{p} ; Command Palette / コマンドパレット
 ;
 ; Alt + p
 ;
+
+#IfWinActive
 
 ;;
 ;; // cmd and vscode bash program stop command
