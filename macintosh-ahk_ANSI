@@ -34,23 +34,14 @@
 ^WheelDown::
 ^=::
 ^-::
-	Return
+	Return ; reset default shortcut keys
 ;
 ; empty
 ;
 
-Left::
-	Send {Left}
-	u_flag = 0;
-	d_flag = 0;
-Return
-
-Right::
-	Send {Right}
-	u_flag = 0;
-	d_flag = 0;
-Return
-
+;
+; //reset Flag algorithm
+;
 Up::
 	Send {Up}
 	u_flag = 0;
@@ -63,104 +54,119 @@ Down::
 	d_flag = 0;
 Return
 
+Left::
+	Send {Left}
+	u_flag = 0;
+	d_flag = 0;
+Return
+
+Right::
+	Send {Right}
+	u_flag = 0;
+	d_flag = 0;
+Return
+;
+; ↑ ↓ ← →
+;
+
 ^Space::Send !{VKC0} ; IME toggle / IMEトグル
 ;
 ; Ctrl + Space
 ;
 
-^b::Send {Left}  ; ←  Cursor back / カーソル左
+^b::Send {Left}  ; ←  Cursor Back /  カーソル左
 ;
 ; Ctrl + b
 ;
 
-^f::Send {Right} ; → Cursor forward / カーソル右
+^f::Send {Right} ; → Cursor Forward / カーソル右
 ;
 ; Ctrl + f
 ;
 
-^p::Send {Up} ; ↑ Cursor up line / カーソル上行
+^p::Send {Up} ; 	↑ Cursor Up Line / カーソル上行
 ;
 ; Ctrl + p
 ;
 
-^n::Send {Down} ; ↓ Cursor down line / カーソル下行
+^n::Send {Down} ; ↓ Cursor Down Line / カーソル下行
 ;
 ; Ctrl + n
 ;
 
-^a::Send {Home} ; Cursor start of line / カーソル行頭
+^a::Send {Home} ; Cursor Start of Line / カーソル行頭
 ;
 ; Ctrl + a
 ;
 
-^e::Send {End} ; Cursor end of line / カーソル行末
+^e::Send {End} ; Cursor End of Line / カーソル行末
 ;
 ; Ctrl + e
 ; 
 
-#Left::Send ^{Left} ; Backward word カーソル単語後方
+#Left::Send ^{Left} ; Backward Word カーソル単語後方
 ;
 ; Alt + ←
 ;
 
-#Right::Send ^{Right} ; Forward word move / カーソル単語前方
+#Right::Send ^{Right} ; Forward Word Move / カーソル単語前方
 ;
 ; Alt + →
 ;
 
-!Left::Send {Home} ; Cursor start of line / カーソル行頭
+!Left::Send {Home} ; Cursor Start of Line / カーソル行頭
 ;
 ; Win + ←
 ;
 
-!Right::Send {End} ; Cursor start of line / カーソル行末
+!Right::Send {End} ; Cursor Start of Line / カーソル行末
 ;
 ; Win + →
 ;
 
-!+Left::Send +{Home} ; Backward selection / 後方行選択
+!+Left::Send +{Home} ; Backward Selection / 後方行選択
 ;
 ; Shift + Alt + ←
 ;
 
-!+Right::Send +{End} ; Forward selection / 前方行選択
+!+Right::Send +{End} ; Forward Selection / 前方行選択
 ;
 ; Shift + Alt + →
 ;
 
-#+Left::Send ^+{Left} ; Backward word selection / 後方単語選択
+#+Left::Send ^+{Left} ; Backward Word Selection / 後方単語選択
 ;
 ; Shift + Win + ←
 ;
 
-#+Right::Send ^+{Right} ; Forward word selection / 前方単語選択
+#+Right::Send ^+{Right} ; Forward Word Selection / 前方単語選択
 ;
 ; Shift + Win + →	
 ;
 
-^d::Send {Delete} ; Delete forward char / 前方文字削除
+^d::Send {Delete} ; Delete Forward Char / 前方文字削除
 ;
 ; Ctrl + d
 ;
 
-^h::Send {BS} ; Delete back char / 後方文字削除
+^h::Send {BS} ; Delete Back Char / 後方文字削除
 ;
 ; Ctrl + h
 ;
 
-^k::Send ^{i} ; Convert to kaatakana / カタカナに変換
+^k::Send ^{i} ; convert to Katakana / カタカナに変換
 ;
 ; Ctrl + i
-;
-
-^;::Send ^{o} ; Convert to half-width katakana / 半角カタカナに変換
-;
-; Ctrl + o
 ;
 
 !r::Send ^{r} ; Reload / 再読み込み
 ;
 ; Alt + r
+;
+
+^;::Send ^{o} ; convert to half-width katakana / 半角カタカナに変換
+;
+; Ctrl + o
 ;
 
 !+2::Send !{PrintScreen} ; Window screenshot in a clipboard / ウィンドウのスクリーンショットをクリップボードへ保存
@@ -203,7 +209,7 @@ Return
 ; Alt + v
 ;
 
-!a::Send ^{a} ; Select all / 全体選択
+!a::Send ^{a} ; Select All / 全体選択
 ;
 ; Alt + a
 ;
@@ -218,12 +224,12 @@ Return
 ; Alt + s
 ;
 
-!+s::Send ^+{s} ; Save file as / 名前を付けて保存
+!+s::Send ^+{s} ; Save File As / 名前を付けて保存
 ;
 ; Alt + Shift + s
 ;
 
-!+n::Send ^+{n} ; New folder / 新規フォルダ
+!+n::Send ^+{n} ; New Folder / 新規フォルダ
 ;
 ; Alt + Shift + n
 ;
@@ -248,14 +254,9 @@ Return
 ; Alt + w
 ;
 
-!q::Send !{F4} ; Close the application / 強制終了
+!q::Send !{F4} ; Close The Application / 強制終了
 ;
 ; Alt + q
-;
-
-!=::Send ^{=} ; Text size enlarge / テキストサイズスケール拡大
-;
-; Alt + =(+ANSI)
 ;
 
 !-::Send ^{-} ; Text size shrink / テキストサイズスケール縮小
@@ -263,42 +264,50 @@ Return
 ; Alt + -
 ;
 
-!m::Send #{Down} ; Minimize window / ウィンドウ最小化
+!=::Send ^{=} ; Text size enlarge / テキストサイズスケール拡大
+;
+; Alt + =(+ANSI)
+;
+
+!m::Send #{Down} ; Minimize Window / ウィンドウ最小化
 ;
 ; Alt + m
 ;
 
-!h::Send #{d} ; Minimize all window / ウィンドウを全て最小化
+!h::Send #{d} ; Minimize all Window / ウィンドウを全て最小化
 ;
 ; Alt + h
 ;
 
-^Up::Send #{Up} ; Maximize window / ウィンドウ上方変形,移動
+^Up::Send #{Up} ; Maximize Window / ウィンドウ上方変形,移動
 ;
 ; Ctrl + ↑
 ;
 
-^Down::Send #{Down} ; Minimize window / ウィンドウ下方変形,移動
+^Down::Send #{Down} ; Minimize Window / ウィンドウ下方変形,移動
 ;
 ; Ctrl + ↓
 ;
 
-^Left::Send #{Left} ; Maximize window / ウィンドウ左方変形,移動
+^Left::Send #{Left} ; Maximize Window / ウィンドウ左方変形,移動
 ;
 ; Ctrl + ←
 ;
 
-^Right::Send #{Right} ; Minimize window / ウィンドウ右方変形,移動
+^Right::Send #{Right} ; Minimize Window / ウィンドウ右方変形,移動
 ;
 ; Ctrl + →
 ;
 
+;
+; Home or  Up / 行先頭→行を上がる
+;
 #Up::	
 	d_flag = 0;
 	u_flag += 1
 	If u_flag = 1
 	{
-		Send {Home} ; Home or  Up / 行先頭か行を上がる
+		Send {Home}
 		Return
 	}
 	Else
@@ -311,13 +320,15 @@ Return
 ; Win + ↑
 ;
 
-
+;
+; End or Down / 行末→行を下がる
+;
 #Down::
 	u_flag = 0;
 	d_flag += 1
 	If d_flag = 1
 	{
-		Send {End} ; End or Down / 行末か行を下がる
+		Send {End}
 		Return
 	}
 	Else
@@ -340,22 +351,22 @@ Return
 ; Alt + ↓
 ;
 
-;#^ Left virtual desktop / 左の仮想デスクトップ
+;#^ Left Virtual Desktop / 左の仮想デスクトップ
 ;
 ; win + Ctrl + ←
 ;
 
-;#^ Right virtual desktop / 右の仮想デスクトップ
+;#^ Right Virtual Desktop / 右の仮想デスクトップ
 ;
 ; win + Ctrl + →
 ;
 
-#d::Send ^#{d} ; New virtual desktop / 新しい仮想デスクトップ
+#d::Send ^#{d} ; New Virtual Desktop / 新しい仮想デスクトップ
 ;
 ; Win + d
 ;
 
-#q::Send ^#{F4} ; Close virtual desktop / 仮想デスクトップを閉じる
+#q::Send ^#{F4} ; Close Virtual Desktop / 仮想デスクトップを閉じる
 ;
 ; Win + q
 ;
@@ -363,19 +374,27 @@ Return
 ;;
 ;; // Visual Studio Code and cmd on Stop Program if.
 ;;
-;
-; Word selection / 単語一括選択
-;
+
 #IfWinActive,ahk_exe Code.exe
-	!d::Send ^{d}
-#IfWinActive
+
+#Up::Send !{Up} ; Swap selection / 選択範囲入れ替え
 ;
-; Alt + Shift + L
+; Win + ↑
 ;
 
-!+l::Send ^+{l} ; Match selection / 一致全選択
+#Down::Send !{Down} ; Swap selection / 選択範囲入れ替え
+;
+; Win + ↓
+;
+
+!d::Send ^{d} ; Word selection / 単語一括選択
 ;
 ; Alt + d
+;
+
+!+l::Send ^+{l} ; Match Selection / 一致全選択
+;
+; Alt + Shift + L
 ;
 
 !/::Send ^{/} ; Comment out / コメントアウト
@@ -383,14 +402,17 @@ Return
 ; Alt + /
 ;
 
-!+p::Send ^+{p} ; Command palette / コマンドパレット
+!+p::Send ^+{p} ; Command Palette / コマンドパレット
 ;
 ; Alt + p
 ;
 
+#IfWinActive
+
 ;;
 ;; // cmd and vscode bash program stop command
 ;;
+
 #If WinNotActive,ahk_class CASCADIA_HOSTING_WINDOW_CLASS || WinNotActive,ahk_exe Code.exe
 	^c::Send {}
 #If WinNotActive
