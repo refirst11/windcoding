@@ -65,8 +65,8 @@ download here [macintosh-ahk ver0.0.1](https://github.com/su-pull/macintosh-ahk/
 | Ctrl + ↓ | Window transform move down |
 | Ctrl + ← | Window transform move left |
 | Ctrl + → | Window transform move right |
-| Win + ↑ | Scroll & Cursor up |
-| Win + ↓ | Scroll & Cursor down |
+| Win + ↑ | Cursor line start & Cursor up |
+| Win + ↓ | Cursor line end & Cursor down |
 | Alt + ↑ | Scroll & Cursor top |
 | Alt + ↓ | Scroll & Cursor bottom |
 | win + Ctrl + ← | Virtual desktop on the left |
@@ -78,6 +78,8 @@ download here [macintosh-ahk ver0.0.1](https://github.com/su-pull/macintosh-ahk/
 ## Visual Studio Code
 | Input  | Output |
 | ------------- | ------------- |
+| Win + ↑ | Swap the selection range up |
+| Win + ↓ | Swap the selection range down |
 | Alt + Shift + p | Command palette |
 | Alt + Shift + l | Match selection |
 | Alt + d |  Word selection |
