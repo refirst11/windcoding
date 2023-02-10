@@ -377,15 +377,26 @@ Return
 
 #IfWinActive,ahk_exe Code.exe
 
-#Up::Send !{Up} ; Swap selection / 選択範囲入れ替え
+#Up::Send !{Up} ; Swap the selection range up / 選択範囲入れ替え
 ;
 ; Win + ↑
 ;
 
-#Down::Send !{Down} ; Swap selection / 選択範囲入れ替え
+#Down::Send !{Down} ; Swap the selection range down / 選択範囲入れ替え
 ;
 ; Win + ↓
 ;
+
+#Up::Send !+{Up} ; Copy the selection range up / 選択範囲を上にコピー
+;
+; Win + ↑
+;
+
+#Down::Send !+{Down} ; Copy the selection range down / 選択範囲を下にコピー
+;
+; Win + ↓
+;
+
 
 !d::Send ^{d} ; Word selection / 単語一括選択
 ;
