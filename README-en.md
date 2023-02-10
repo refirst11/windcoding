@@ -67,8 +67,8 @@ download here [macintosh-ahk ver0.0.1](https://github.com/su-pull/macintosh-ahk/
 | Ctrl + → | Window transform move right |
 | Win + ↑ | Cursor line start & Cursor up |
 | Win + ↓ | Cursor line end & Cursor down |
-| Alt + ↑ | Scroll & Cursor top |
-| Alt + ↓ | Scroll & Cursor bottom |
+| Alt + ↑ | Scroll to top |
+| Alt + ↓ | Scroll to bottom |
 | win + Ctrl + ← | Virtual desktop on the left |
 | win + Ctrl + → | Virtual desktop on the right |
 | Win + d | New virtual desktops |
