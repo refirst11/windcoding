@@ -389,12 +389,12 @@ Return
 
 #Up::Send !+{Up} ; Copy the selection range up / 選択範囲を上にコピー
 ;
-; Win + ↑
+; Win + Shift + ↑
 ;
 
 #Down::Send !+{Down} ; Copy the selection range down / 選択範囲を下にコピー
 ;
-; Win + ↓
+; Win + Shift + ↓
 ;
 
 !d::Send ^{d} ; Word selection / 単語一括選択
