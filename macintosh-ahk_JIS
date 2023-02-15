@@ -42,6 +42,14 @@
 ;
 ; //reset Flag algorithm
 ;
+LButton::
+	u_flag = 0;
+	d_flag = 0;
+	SendInput {Lbutton down}
+	KeyWait, LButton
+	SendInput {Lbutton up}
+Return
+
 Up::
 	Send {Up}
 	u_flag = 0;
