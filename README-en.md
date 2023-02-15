@@ -67,8 +67,8 @@ download here [macintosh-ahk ver0.0.1](https://github.com/su-pull/macintosh-ahk/
 | Ctrl + → | Window transform move right |
 | Win + ↑ | Cursor line start & Cursor up |
 | Win + ↓ | Cursor line end & Cursor down |
-| Alt + ↑ | Scroll & Cursor top |
-| Alt + ↓ | Scroll & Cursor bottom |
+| Alt + ↑ | Scroll to top |
+| Alt + ↓ | Scroll to bottom |
 | win + Ctrl + ← | Virtual desktop on the left |
 | win + Ctrl + → | Virtual desktop on the right |
 | Win + d | New virtual desktops |
@@ -93,4 +93,5 @@ download here [macintosh-ahk ver0.0.1](https://github.com/su-pull/macintosh-ahk/
 | Ctrl + c |  stop a program |
 
 ## Blog
-[AHKでMacintoshのキーバインドが使えるスクリプトを作った](https://sou-web.net/docs/url/2023-01-14)
+[AHKでMacintoshのキーバインドが使えるスクリプトを作った](https://sou-web.net/docs/url/2023-01-14)  
+Giving a star would motivate me for development and production, and it simply makes me happy if you use it.
