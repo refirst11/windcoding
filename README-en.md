@@ -68,11 +68,11 @@ download here [macintosh-ahk ver0.0.1](https://github.com/su-pull/macintosh-ahk/
 | Win + ↓          | Cursor line end & Cursor down               |
 | Alt + ↑          | Scroll to top                               |
 | Alt + ↓          | Scroll to bottom                            |
-| win + Ctrl + ←   | Virtual desktop on the left                 |
-| win + Ctrl + →   | Virtual desktop on the right                |
+| Win + Ctrl + ←   | Virtual desktop on the left                 |
+| Win + Ctrl + →   | Virtual desktop on the right                |
 | Win + d          | New virtual desktops                        |
 | Win + q          | Close virtual desktop                       |
-| alt + shift + t  | Restore tabs                                |
+| Alt + Shift + t  | Restore tabs                                |
 
 ## Visual Studio Code
 
