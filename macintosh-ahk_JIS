@@ -34,6 +34,7 @@
 ^WheelDown::
 ^=::
 ^-::
+^+t::
 	Return
 ;
 ; empty
@@ -377,6 +378,11 @@ Return
 #q::Send ^#{F4} ; Close virtual desktop / 仮想デスクトップを閉じる
 ;
 ; Win + q
+;
+
+!+t::Send ^+{t} ; // タブを復元
+;
+;  alt + shift + t
 ;
 
 ;;
