@@ -1,6 +1,6 @@
 [README in English](https://github.com/su-pull/macintosh-ahk/blob/main/README-en.md)
 
-## macintosh-ahk
+## Juster
 
 [![OS - Windows](https://img.shields.io/badge/OS-Windows-blue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-2ea44f)](https://www.autohotkey.com/ "Go to AutoHotkey")  
 
