@@ -4,17 +4,9 @@
 
 [![OS - Windows](https://img.shields.io/badge/OS-Windows-blue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-2ea44f)](https://www.autohotkey.com/ "Go to AutoHotkey")
 
-Created to improve efficiency for windows developers, designers, and writers etc..  
-or if you want to try Mac it works exactly.  
-Mac's Command and Win's Alt are exchanged, and Unix style cursor movement is possible with Ctrl.  
-Allows Ctrl+C only in IDE and cmd (add and use each person IDE)
+Improve efficiency for Windows.  
+If you want to try mac key config, you can use.
 
-## system requirements
-
-Windows 11 and AutoHotkey.exe  
-Recommendation swap the Ctrl key to CapsLock.
-
-download here [macintosh-ahk ver0.0.1](https://github.com/su-pull/macintosh-ahk/archive/refs/heads/main.zip)
 
 ## Usage
 
