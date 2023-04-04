@@ -1,4 +1,4 @@
-[日本語版 README](https://github.com/su-pull/Use-Macintosh-edit-on-Windows/blob/main/README-ja.md)
+[Juster_JIS README](https://github.com/su-pull/Use-Macintosh-edit-on-Windows/blob/main/README_JIS.md)
 
 ## Juster
 
