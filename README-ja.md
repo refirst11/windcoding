@@ -111,7 +111,7 @@ Microsoft IME→ キーとタッチのカスタマイズからキーの割り当
 
 ## ブログ
 
-[AHK で Macintosh のキーバインドが使えるスクリプトを作った](https://sou-web.net/docs/url/2023-01-14)
+[Efficiency up Windows with Autohotkey](https://sou-web.net/docs/url/2023-01-14)
 
 ##備考
 スターをくれると開発のモチベーションになります。使ってくれると嬉しいです。
