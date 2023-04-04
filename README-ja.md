@@ -1,6 +1,6 @@
 [README in English](https://github.com/su-pull/macintosh-ahk/blob/main/README-en.md)
 
-## Juster
+## Juster_JIS
 
 [![OS - Windows](https://img.shields.io/badge/OS-Windows-blue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-2ea44f)](https://www.autohotkey.com/ "Go to AutoHotkey")  
 
@@ -8,30 +8,19 @@ Windows の作業効率を効率を向上させるために作りました。
 Mac を試してみたい場合は、ぴったりです。  
 
 
-## システム要件
+## 環境
 
-AutoHotkey がインストールされた Windows(推奨 11)で起動します。  
-CapsLock を Ctrl キーと入れ替えることを推奨します。
+AutoHotkey がインストールされた Windows(推奨 11)で起動出来ます。  
 
 こちら[macintosh-ahk ver0.0.1](https://github.com/su-pull/macintosh-ahk/archive/refs/heads/main.zip)より Zip をダウンロードして解凍し起動します。  
-終了はタスクトレイの右クリックより Exit で終了できます。
+終了はタスクトレイの右クリックより Exit でKillできます。
 
-## IME 変換
-
-US 配列の場合 Alt \_ `の変換は Ctrl + Space に置き換えられますが切り替えの通知が画面中央に表示されてしまうのでオフにします。  
-言語バーより IME モード切替の通知の画面中央に表示するのチェックを外す。  
-この設定は日本語配列の半角/全角はそのまま残しているため日本語配列の場合は不要です。
-
-### ANSI
-
-US 配列で英語と日本語を併用する人向けに[alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk)と併用することができます。
-
-### JIS
+### 設定
 
 日本語配列の場合設定 → 時刻と言語 → 言語と地域 → 日本語(・・・言語のオプション)→Microsoft IME(・・・キーボードオプション)→ 全般 → 以前のバージョンの Microsoft IME を使うをオフ
 Microsoft IME→ キーとタッチのカスタマイズからキーの割り当てで無変換に IME-オフ、変換に IME-オンを割り当てる。
 
-## 使用法
+## 説明
 
 | 入力             | 出力                                                 |
 | ---------------- | ---------------------------------------------------- |
@@ -114,4 +103,4 @@ Microsoft IME→ キーとタッチのカスタマイズからキーの割り当
 [Efficiency up Windows with Autohotkey](https://sou-web.net/docs/url/2023-01-14)
 
 ##備考
-スターをくれると開発のモチベーションになります。使ってくれると嬉しいです。
+使ってくれると嬉しいです。
