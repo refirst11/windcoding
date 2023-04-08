@@ -1,13 +1,13 @@
-[README in English](https://github.com/su-pull/macintosh-ahk/blob/main/README-en.md)
+[Juster README](https://github.com/su-pull/macintosh-ahk/blob/main/README-en.md)
 
 ## Juster_JIS
 
-[![OS - Windows](https://img.shields.io/badge/OS-Windows-blue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-2ea44f)](https://www.autohotkey.com/ "Go to AutoHotkey")
-[![Release Status](https://img.shields.io/github/release/su-pull/Juster.svg)](https://github.com/su-pull/Juster/releases/latest)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![OS - Windows](https://img.shields.io/badge/OS-Windows-lightblue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-lightblue)](https://www.autohotkey.com/ "Go to AutoHotkey")
+[![Release Status](https://img.shields.io/github/release/su-pull/Juster?color=lightblue)](https://github.com/su-pull/Juster/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-lightblue)](https://opensource.org/licenses/MIT)
 
-Windows の作業効率を効率を向上させるために作りました。  
-Mac を試してみたい場合は、ぴったりです。  
+Windows の作業効率を効率を向上させます。  
+Mac を試してみたい場合はぴったりで、こちらは日本語配列版になります。
 
 
 ## 環境
@@ -99,10 +99,3 @@ Microsoft IME→ キーとタッチのカスタマイズからキーの割り当
 | 入力     | 出力             |
 | -------- | ---------------- |
 | Ctrl + c | プログラムを停止 |
-
-## ブログ
-
-[Efficiency up Windows with Autohotkey](https://sou-web.net/docs/url/2023-01-14)
-
-##備考
-使ってくれると嬉しいです。
