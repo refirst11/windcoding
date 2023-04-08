@@ -2,9 +2,9 @@
 
 ## Juster
 
-[![OS - Windows](https://img.shields.io/badge/OS-Windows-blue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-2ea44f)](https://www.autohotkey.com/ "Go to AutoHotkey")
-[![Release Status](https://img.shields.io/github/release/su-pull/Juster.svg)](https://github.com/su-pull/Juster/releases/latest)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![OS - Windows](https://img.shields.io/badge/OS-Windows-lightblue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-lightblue)](https://www.autohotkey.com/ "Go to AutoHotkey")
+[![Release Status](https://img.shields.io/github/release/su-pull/Juster?color=lightblue)](https://github.com/su-pull/Juster/releases/latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-lightblue)](https://opensource.org/licenses/MIT)
 
 Improve efficiency for Windows.  
 If you want to try mac key config, you can use.
