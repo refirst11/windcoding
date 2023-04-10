@@ -1,6 +1,6 @@
 [Juster_JIS README](https://github.com/su-pull/Use-Macintosh-edit-on-Windows/blob/main/README_JIS.md)
 
-## Juster
+# Juster
 
 [![OS - Windows](https://img.shields.io/badge/OS-Windows-lightblue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-lightblue)](https://www.autohotkey.com/ "Go to AutoHotkey")
 [![Release Status](https://img.shields.io/github/release/su-pull/Juster?color=lightblue)](https://github.com/su-pull/Juster/releases/latest)
@@ -9,6 +9,8 @@
 Improve efficiency for Windows.  
 If you want to try mac key config, you can use.
 
+--breaking: changes:As AutoHotkey version 1 became deprecated, I migrated to v2.0.0.  
+features a version 2 is the ability to swap CapsLock and Control without modifying the registry.
 
 ## Usage
 
@@ -80,9 +82,8 @@ If you want to try mac key config, you can use.
 | Alt + /         | Comment out                   |
 | Ctrl + c        | stop a program                |
 
-## cmd
+## CMD
 
 | Input    | Output         |
 | -------- | -------------- |
 | Ctrl + c | stop a program |
-

@@ -1,6 +1,6 @@
 [Juster README](https://github.com/su-pull/macintosh-ahk/blob/main/README-en.md)
 
-## Juster_JIS
+# Juster_JIS
 
 [![OS - Windows](https://img.shields.io/badge/OS-Windows-lightblue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-lightblue)](https://www.autohotkey.com/ "Go to AutoHotkey")
 [![Release Status](https://img.shields.io/github/release/su-pull/Juster?color=lightblue)](https://github.com/su-pull/Juster/releases/latest)
@@ -9,20 +9,24 @@
 Windows の作業効率を効率を向上させます。  
 Mac を試してみたい場合はぴったりで、こちらは日本語配列版になります。
 
+--破壊的変更: AutoHotkey version1.1 が非推奨になったため AutoHotkey version2.0.0 に移行しました。  
+V2 の特徴としてレジストリを書き換えずに CapsLock と Control を Swap 出来るようになりました。
 
 ## 環境
 
-AutoHotkey がインストールされた Windows(推奨 11)で起動出来ます。  
+AutoHotkey がインストールされた Windows(推奨 11)で起動出来ます。
 
 こちら[macintosh-ahk ver0.0.1](https://github.com/su-pull/macintosh-ahk/archive/refs/heads/main.zip)より Zip をダウンロードして解凍し起動します。  
-終了はタスクトレイの右クリックより Exit でKillできます。
+終了はタスクトレイの右クリックより Exit で Kill できます。
 
-### 設定
+## 設定
 
-日本語配列の場合設定 → 時刻と言語 → 言語と地域 → 日本語(・・・言語のオプション)→Microsoft IME(・・・キーボードオプション)→ 全般 → 以前のバージョンの Microsoft IME を使うをオフ
+日本語配列の場合 無変換で英語入力モード、変換でかなモードに切り替える設定があります。
+
+設定 → 時刻と言語 → 言語と地域 → 日本語(・・・言語のオプション)→Microsoft IME(・・・キーボードオプション)→ 全般 → 以前のバージョンの Microsoft IME を使うをオフ
 Microsoft IME→ キーとタッチのカスタマイズからキーの割り当てで無変換に IME-オフ、変換に IME-オンを割り当てる。
 
-## 説明
+## 説明書
 
 | 入力             | 出力                                                 |
 | ---------------- | ---------------------------------------------------- |
@@ -94,7 +98,7 @@ Microsoft IME→ キーとタッチのカスタマイズからキーの割り当
 | Alt + /         | コメントアウト         |
 | Ctrl + c        | プログラムを停止       |
 
-## cmd
+## CMD
 
 | 入力     | 出力             |
 | -------- | ---------------- |
