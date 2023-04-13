@@ -1,6 +1,6 @@
-[Juster_JIS README](https://github.com/su-pull/Use-Macintosh-edit-on-Windows/blob/main/README_JIS.md)
+[juster_JIS README](https://github.com/su-pull/juster/blob/main/README_JIS.md)
 
-# Juster
+# juster
 
 [![OS - Windows](https://img.shields.io/badge/OS-Windows-lightblue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-lightblue)](https://www.autohotkey.com/ "Go to AutoHotkey")
 [![Release Status](https://img.shields.io/github/release/su-pull/Juster?color=lightblue)](https://github.com/su-pull/Juster/releases/latest)
