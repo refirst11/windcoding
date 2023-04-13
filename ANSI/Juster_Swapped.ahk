@@ -327,9 +327,9 @@ CapsLock & Right:: Send "#{Right}" ; Minimize window.
 #HotIf
 
 ;; Visual Studio Code and CMD stop program command.
-#HotIf !WinActive("ahk_exe Code.exe") and !WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
+#HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
 
-CapsLock & c:: Send "{}" ; is empty
+CapsLock & c:: Send "^{c}"
 ;
 ; ctrl + c
 

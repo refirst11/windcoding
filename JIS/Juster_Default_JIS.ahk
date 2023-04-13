@@ -293,8 +293,8 @@
 ;; Visual Studio Code and CMD stop program command.
 #HotIf !WinActive("ahk_exe Code.exe") and !WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
 
-^c:: Send "{}"
-;
+^c:: Send "{}" ; is empty
+;s
 ; ctrl + c
 
 #HotIf
