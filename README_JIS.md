@@ -1,4 +1,4 @@
-[juster README](https://github.com/su-pull/juster/README.md)
+[juster README](https://github.com/su-pull/Juster/blob/main/README.md)
 
 # juster_JIS
 
