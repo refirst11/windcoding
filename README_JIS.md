@@ -9,15 +9,7 @@
 Windows の作業効率を効率を向上させます。  
 Mac を試してみたい場合はぴったりで、こちらは日本語配列版になります。
 
---破壊的変更: AutoHotkey version1.1 が非推奨になったため AutoHotkey version2.0.0 に移行しました。  
-V2 の特徴としてレジストリを書き換えずに CapsLock と Control を Swap 出来るようになりました。
-
-## 環境
-
-AutoHotkey がインストールされた Windows(推奨 11)で起動出来ます。
-
-こちら[macintosh-ahk ver0.0.1](https://github.com/su-pull/macintosh-ahk/archive/refs/heads/main.zip)より Zip をダウンロードして解凍し起動します。  
-終了はタスクトレイの右クリックより Exit で Kill できます。
+CapsLock と Left Control を Swap するタイプとデフォルトのタイプがあります。
 
 ## 設定
 
@@ -82,7 +74,12 @@ Microsoft IME→ キーとタッチのカスタマイズからキーの割り当
 | Win + Ctrl + →   | 右の仮想デスクトップを表示                           |
 | Win + d          | 新しい仮想デスクトップ                               |
 | Win + q          | 仮想デスクトップを閉じる                             |
-| Alt + shift + t  | タブを復元                                           |
+
+## ブラウザー
+
+| Input           | Output     |
+| --------------- | ---------- |
+| Alt + shift + t | タブを復元 |
 
 ## Visual Studio Code
 

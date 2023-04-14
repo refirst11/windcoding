@@ -7,10 +7,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightblue)](https://opensource.org/licenses/MIT)
 
 Improve efficiency for Windows.  
-If you want to try mac key config, you can use.
+If you want to try mac key config, you can this use.
 
---breaking: changes:As AutoHotkey version 1 became deprecated, I migrated to v2.0.0.  
-features a version 2 is the ability to swap CapsLock and Control without modifying the registry.
+There are two types, one that swaps CapsLock and Left Control, and the other that defaults.
 
 ## Usage
 
@@ -68,7 +67,12 @@ features a version 2 is the ability to swap CapsLock and Control without modifyi
 | Win + Ctrl + →   | Virtual desktop on the right                |
 | Win + d          | New virtual desktops                        |
 | Win + q          | Close virtual desktop                       |
-| Alt + Shift + t  | Restore tabs                                |
+
+## Browser
+
+| Input           | Output       |
+| --------------- | ------------ |
+| Alt + Shift + t | Restore tabs |
 
 ## Visual Studio Code
 
