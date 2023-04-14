@@ -1,4 +1,4 @@
-/*Repository:https://github.com/su-pull/Juster */
+/*Repository:https://github.com/su-pull/juster */
 #UseHook
 
 ;; Un focused tab
