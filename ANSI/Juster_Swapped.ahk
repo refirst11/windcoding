@@ -42,12 +42,21 @@ SendSuppressedKeyUp(key) {
 }
 
 ;; Reset default shortcut keys.
-!VKC0:: ("")
-^w:: ("")
+!VKC0:: Send("")
+^w:: Send("")
 #m:: Send("")
 ^s:: Send("")
 ^z:: Send("")
 ^x:: Send("")
+^c:: Send("")
+CapsLock & c:: Send ("")
+CapsLock & k:: {
+    Send "^{i}"
+    Flag := false
+    if (Flag = false) {
+        Send ("+{End}{Del}")
+    }
+}
 ^v:: Send("")
 ^i:: Send("")
 ^o:: Send("")
@@ -133,7 +142,7 @@ CapsLock & d:: Send "{Delete}" ; Delete forward char.
 ;
 ; Ctrl + d
 
-CapsLock & k:: Send "^{i}" ; Convert to Katakana.
+;CapsLock & k:: Send "^{i}" ; Convert to Katakana.
 ;
 ; Ctrl + i
 
@@ -329,7 +338,14 @@ CapsLock & Right:: Send "#{Right}" ; Minimize window.
 ;; Visual Studio Code and CMD stop program command.
 #HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
 
-CapsLock & c:: Send "^{c}"
+CapsLock & c:: {
+    ClipSaved := ClipboardAll()
+    Send ("^{c}")
+    KeyWait "c"
+    A_Clipboard := ClipSaved
+    ClipSaved := ""
+}
+
 ;
 ; ctrl + c
 

@@ -30,12 +30,13 @@ SendSuppressedKeyUp(key) {
 *~RAlt:: Send "{Blind}{vk07}"
 
 ;; Reset default shortcut keys.
-!VKC0:: ("")
-^w:: ("")
+!VKC0:: Send("")
+^w:: Send("")
 #m:: Send("")
 ^s:: Send("")
 ^z:: Send("")
 ^x:: Send("")
+^c:: Send("")
 ^v:: Send("")
 ^i:: Send("")
 ^o:: Send("")
@@ -318,7 +319,13 @@ CapsLock & Right:: Send "#{Right}" ; ウィンドウ右方変形,移動
 ;; Visual Studio Code and CMD stop program command.
 #HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
 
-CapsLock & c:: Send "^{c}"
+CapsLock & c:: {
+    ClipSaved := ClipboardAll()
+    Send ("^{c}")
+    KeyWait "c"
+    A_Clipboard := ClipSaved
+    ClipSaved := ""
+}
 ;
 ; ctrl + c
 

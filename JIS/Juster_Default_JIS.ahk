@@ -6,12 +6,13 @@
 *~RAlt:: Send "{Blind}{vk07}"
 
 ;; Reset default shortcut keys
-!VKC0:: ("")
-^w:: ("")
+!VKC0:: Send("")
+^w:: Send("")
 #m:: Send("")
 ^s:: Send("")
 ^z:: Send("")
 ^x:: Send("")
+^c:: Send("")
 ^v:: Send("")
 ^i:: Send("")
 ^o:: Send("")
@@ -291,10 +292,16 @@
 #HotIf
 
 ;; Visual Studio Code and CMD stop program command.
-#HotIf !WinActive("ahk_exe Code.exe") and !WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
+#HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
 
-^c:: Send "{}" ; is empty
-;s
+^c:: {
+	ClipSaved := ClipboardAll()
+	Send ("^{c}")
+	KeyWait "c"
+	A_Clipboard := ClipSaved
+	ClipSaved := ""
+}
+;
 ; ctrl + c
 
 #HotIf
