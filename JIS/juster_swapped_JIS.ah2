@@ -1,11 +1,109 @@
-/*Repository:https://github.com/su-pull/juster */
+/*Repository:https://github.com/su-pull/juster/blob/main/README_JIS.md */
 #UseHook
 
-;; Un focused tab
+InstallKeybdHook
+SendSuppressedKeyUp(key) {
+    DllCall("keybd_event"
+        , "char", GetKeyVK(key)
+        , "char", GetKeySC(key)
+        , "uint", KEYEVENTF_KEYUP := 0x2
+        , "uptr", KEY_BLOCK_THIS := 0xFFC3D450)
+}
+
+;; Swap CapsLock to LCtrl in a way compatible with IME.
+*CapsLock::
+{
+    SendSuppressedKeyUp "LCtrl"
+    Send "{Blind}{LCtrl DownR}"
+}
+*CapsLock up::
+{
+    Send "{Blind}{LCtrl Up}"
+}
+*LCtrl:: {
+    Send "{Blind}!{CapsLock}"
+    SendSuppressedKeyUp "CapsLock"
+}
+
+;; Un focused tab.
 *~LAlt:: Send "{Blind}{vk07}"
 *~RAlt:: Send "{Blind}{vk07}"
 
-;; Reset default shortcut keys
+; CapsLock of remap.
+CapsLock & q:: Send ("")
+CapsLock & w:: Send ("")
+CapsLock & r:: Send ("")
+CapsLock & t:: Send ("")
+CapsLock & y:: Send ("")
+CapsLock & u:: Send ("")
+CapsLock & i:: Send ("")
+CapsLock & o:: Send ("")
+CapsLock & [:: Send ("")
+CapsLock & ]:: Send ("")
+CapsLock & \:: Send ("")
+CapsLock & s:: Send ("")
+CapsLock & g:: Send ("")
+CapsLock & j:: Send ("")
+CapsLock & ':: Send ("")
+CapsLock & z:: Send ("")
+CapsLock & x:: Send ("")
+CapsLock & c:: Send ("")
+CapsLock & m:: Send ("")
+CapsLock & ,:: Send ("")
+CapsLock & .:: Send ("")
+CapsLock & /:: Send ("")
+
+; CapsLock + Shift of remap.
+CapsLock & +:: {
+    if GetKeyState("q")
+        Send ("")
+    if GetKeyState("w")
+        Send ("")
+    if GetKeyState("r")
+        Send ("")
+    if GetKeyState("t")
+        Send ("")
+    if GetKeyState("y")
+        Send ("")
+    if GetKeyState("u")
+        Send ("")
+    if GetKeyState("i")
+        Send ("")
+    if GetKeyState("o")
+        Send ("")
+    if GetKeyState("[")
+        Send ("")
+    if GetKeyState("]")
+        Send ("")
+    if GetKeyState("\")
+        Send ("")
+    if GetKeyState("s")
+        Send ("")
+    if GetKeyState("g")
+        Send ("")
+    if GetKeyState("j")
+        Send ("")
+    if GetKeyState("'")
+        Send ("")
+    if GetKeyState("z")
+        Send ("")
+    if GetKeyState("x")
+        Send ("")
+    if GetKeyState("c")
+        Send ("")
+    if GetKeyState("m")
+        Send ("")
+    if GetKeyState(",")
+        Send ("")
+    if GetKeyState(".")
+        Send ("")
+    if GetKeyState("/")
+        Send ("")
+}
+;
+; is empty
+
+;; Reset use shortcut keys.
 !VKC0:: Send("")
 ^w:: Send("")
 #m:: Send("")
@@ -30,31 +128,31 @@
 ;
 ; is empty
 
-^Space:: Send "!{VKC0}" ; IMEトグル
+CapsLock & Space:: Send "!{VKC0}" ; IMEトグル
 ;
 ; Ctrl + Space
 
-^b:: Send "{Left}" ; ← カーソル左
+CapsLock & b:: Send "{Left}" ; ← カーソル左
 ;
 ; Ctrl + b
 
-^f:: Send "{Right}" ; → カーソル右
+CapsLock & f:: Send "{Right}" ; → カーソル右
 ;
 ; Ctrl + f
 
-^p:: Send "{Up}" ; ↑ カーソル上行
+CapsLock & p:: Send "{Up}" ; ↑ カーソル上行
 ;
 ; Ctrl + p
 
-^n:: Send "{Down}" ; ↓ カーソル下行
+CapsLock & n:: Send "{Down}" ; ↓ カーソル下行
 ;
 ; Ctrl + n
 
-^a:: Send "{Home}" ; カーソル行頭
+CapsLock & a:: Send "{Home}" ; カーソル行頭
 ;
 ; Ctrl + a
 
-^e:: Send "{End}" ; カーソル行末
+CapsLock & e:: Send "{End}" ; カーソル行末
 ;
 ; Ctrl + e
 
@@ -90,19 +188,19 @@
 ;
 ; Shift + Win + →
 
-^d:: Send "{Delete}" ; 前方文字削除
+CapsLock & d:: Send "{Delete}" ; 前方文字削除
 ;
 ; Ctrl + d
 
-^h:: Send "{BS}" ; 後方文字削除
+CapsLock & h:: Send "{BS}" ; 後方文字削除
 ;
 ; Ctrl + h
 
-^k:: Send "^{i}" ; カタカナに変換
+CapsLock & k:: Send "^{i}" ; カタカナに変換
 ;
 ; Ctrl + k
 
-^;:: Send "^{o}" ; 半角カタカナに変換
+CapsLock & `;:: Send "^{o}" ; 半角カタカナに変換
 ;
 ; Ctrl + ;
 
@@ -122,11 +220,11 @@
 ;
 ; Alt + Shift + 4
 
-!z:: Send "^{z}" ; 戻し
+!z:: Send "^{z}" ; 戻す
 ;
 ; Alt + z
 
-!+z:: Send "^{y}" ; 進み
+!+z:: Send "^{y}" ; 進める
 ;
 ; Alt + Shift + z
 
@@ -170,7 +268,7 @@
 ;
 ; Alt + Left Click
 
-^Enter:: Send "{F2}" ; 名前を変更
+CapsLock & Enter:: Send "{F2}" ; 名前を変更
 ;
 ; Ctrl + Enter
 
@@ -182,13 +280,13 @@
 ;
 ; Alt + q
 
-!-:: Send "^{-}" ; テキストサイズスケール縮小
-;
-; Alt + -
-
 !vkBB:: Send "^{vkBB}" ; テキストサイズスケール拡大
 ;
 ; Alt + ;(+JIS)
+
+!=:: Send "^{=}" ; テキストサイズスケール拡大
+;
+; Alt + =(+ANSI)
 
 !m:: Send "#{Down}" ; ウィンドウ最小化
 ;
@@ -198,30 +296,31 @@
 ;
 ; Alt + h
 
-^Up:: Send "#{Up}" ; ウィンドウ上方変形,移動
+CapsLock & Up:: Send "#{Up}" ; ウィンドウ上方変形,移動
 ;
 ; Ctrl + ↑
 
-^Down:: Send "#{Down}" ; ウィンドウ下方変形,移動
+CapsLock & Down:: Send "#{Down}" ; ウィンドウ下方変形,移動
 ;
 ; Ctrl + ↓
 
-^Left:: Send "#{Left}" ; ウィンドウ左方変形,移動
+CapsLock & Left:: Send "#{Left}" ; ウィンドウ左方変形,移動
 ;
 ; Ctrl + ←
 
-^Right:: Send "#{Right}" ; ウィンドウ右方変形,移動
+CapsLock & Right:: Send "#{Right}" ; ウィンドウ右方変形,移動
 ;
 ; Ctrl + →
 
 #Up:: {
-	Send "{Up}{Home}" ; 行先頭→行を上がる
+    Send "{Up}{Home}" ; 行先頭→行を上がる
 }
 ;
 ; Win + ↑
 
+
 #Down:: {
-	Send "{Down}{End}" ; 行末→行を下がる
+    Send "{Down}{End}" ; 行末→行を下がる
 }
 ;
 ; Win + ↓
@@ -291,15 +390,15 @@
 
 #HotIf
 
-;; Visual Studio Code and CMD stop program command.
+;; Visual Studio Code and CMD stop program command, revived clipboard.
 #HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
 
-^c:: {
-	ClipSaved := ClipboardAll()
-	Send ("^{c}")
-	KeyWait "c"
-	A_Clipboard := ClipSaved
-	ClipSaved := ""
+CapsLock & c:: {
+    ClipSaved := ClipboardAll()
+    Send ("^{c}")
+    KeyWait "c"
+    A_Clipboard := ClipSaved
+    ClipSaved := ""
 }
 ;
 ; ctrl + c
