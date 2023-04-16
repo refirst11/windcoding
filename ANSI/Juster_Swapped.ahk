@@ -25,6 +25,7 @@ SendSuppressedKeyUp(key) {
     SendSuppressedKeyUp "CapsLock"
 }
 
+
 ;; Un focused tab.
 *~LAlt:: Send "{Blind}{vk07}"
 *~RAlt:: Send "{Blind}{vk07}"
@@ -41,6 +42,27 @@ SendSuppressedKeyUp(key) {
     }
 }
 
+
+CapsLock & q:: Send ("")
+CapsLock & w:: Send ("")
+CapsLock & r:: Send ("")
+CapsLock & u:: Send ("")
+CapsLock & i:: Send ("")
+CapsLock & [:: Send ("")
+CapsLock & ]:: Send ("")
+CapsLock & \:: Send ("")
+CapsLock & s:: Send ("")
+CapsLock & g:: Send ("")
+CapsLock & j:: Send ("")
+CapsLock & ':: Send ("")
+CapsLock & z:: Send ("")
+CapsLock & x:: Send ("")
+CapsLock & c:: Send ("")
+CapsLock & m:: Send ("")
+CapsLock & ,:: Send ("")
+CapsLock & .:: Send ("")
+CapsLock & /:: Send ("")
+
 ;; Reset default shortcut keys.
 !VKC0:: Send("")
 ^w:: Send("")
@@ -49,14 +71,6 @@ SendSuppressedKeyUp(key) {
 ^z:: Send("")
 ^x:: Send("")
 ^c:: Send("")
-CapsLock & c:: Send ("")
-CapsLock & k:: {
-    Send "^{i}"
-    Flag := false
-    if (Flag = false) {
-        Send ("+{End}{Del}")
-    }
-}
 ^v:: Send("")
 ^i:: Send("")
 ^o:: Send("")
@@ -142,13 +156,13 @@ CapsLock & d:: Send "{Delete}" ; Delete forward char.
 ;
 ; Ctrl + d
 
-;CapsLock & k:: Send "^{i}" ; Convert to Katakana.
+CapsLock & k:: Send "^{i}" ; Convert to Katakana.
 ;
-; Ctrl + i
+; Ctrl + k
 
 CapsLock & `;:: Send "^{o}" ; convert to half-width Katakana.
 ;
-; Ctrl + o
+; Ctrl + ;
 
 !r:: Send "^{r}" ; Reload.
 ;
@@ -178,7 +192,7 @@ CapsLock & `;:: Send "^{o}" ; convert to half-width Katakana.
 ;
 ; Alt + x
 
-!c:: Send "^{c}" ; Copy.
+!c:: Send ("^{c}") ; Copy.
 ;
 ; Alt + c
 
@@ -345,7 +359,6 @@ CapsLock & c:: {
     A_Clipboard := ClipSaved
     ClipSaved := ""
 }
-
 ;
 ; ctrl + c
 

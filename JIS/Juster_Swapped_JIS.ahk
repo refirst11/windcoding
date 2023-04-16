@@ -29,6 +29,27 @@ SendSuppressedKeyUp(key) {
 *~LAlt:: Send "{Blind}{vk07}"
 *~RAlt:: Send "{Blind}{vk07}"
 
+;; initialize Control keys.
+CapsLock & q:: Send ("")
+CapsLock & w:: Send ("")
+CapsLock & r:: Send ("")
+CapsLock & u:: Send ("")
+CapsLock & i:: Send ("")
+CapsLock & [:: Send ("")
+CapsLock & ]:: Send ("")
+CapsLock & \:: Send ("")
+CapsLock & s:: Send ("")
+CapsLock & g:: Send ("")
+CapsLock & j:: Send ("")
+CapsLock & ':: Send ("")
+CapsLock & z:: Send ("")
+CapsLock & x:: Send ("")
+CapsLock & c:: Send ("")
+CapsLock & m:: Send ("")
+CapsLock & ,:: Send ("")
+CapsLock & .:: Send ("")
+CapsLock & /:: Send ("")
+
 ;; Reset default shortcut keys.
 !VKC0:: Send("")
 ^w:: Send("")
@@ -124,15 +145,15 @@ CapsLock & h:: Send "{BS}" ; 後方文字削除
 
 CapsLock & k:: Send "^{i}" ; カタカナに変換
 ;
-; Ctrl + i
+; Ctrl + k
+
+CapsLock & `;:: Send "^{o}" ; 半角カタカナに変換
+;
+; Ctrl + ;
 
 !r:: Send "^{r}" ; 再読み込み
 ;
 ; Alt + r
-
-CapsLock & `;:: Send "^{o}" ; 半角カタカナに変換
-;
-; Ctrl + o
 
 !+2:: Send "!{PrintScreen}" ; ウィンドウのスクリーンショットをクリップボードへ保存
 ;

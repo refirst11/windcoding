@@ -5,7 +5,7 @@
 *~LAlt:: Send "{Blind}{vk07}"
 *~RAlt:: Send "{Blind}{vk07}"
 
-;; IME switch
+;; IME switch.
 ~LAlt Up:: {
 	if (A_PriorKey = "LAlt") {
 		Send "{vkF2sc070}{vkF3sc029}"
@@ -18,7 +18,7 @@
 }
 
 
-;; Reset default shortcut keys
+;; Reset default shortcut keys.
 !VKC0:: ("")
 ^w:: ("")
 #m:: Send("")
@@ -113,15 +113,15 @@
 
 ^k:: Send "^{i}" ; convert to Katakana.
 ;
-; Ctrl + i
+; Ctrl + k
+
+^;:: Send "^{o}" ; convert to half-width katakana.
+;
+; Ctrl + ;
 
 !r:: Send "^{r}" ; Reload.
 ;
 ; Alt + r
-
-^;:: Send "^{o}" ; convert to half-width katakana.
-;
-; Ctrl + o
 
 !+2:: Send "!{PrintScreen}" ; Window screenshot in a clipboard.
 ;
