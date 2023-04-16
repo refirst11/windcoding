@@ -1,22 +1,27 @@
 /*Repository:https://github.com/su-pull/juster */
 #UseHook
 
-;; Un focused tab
-*~LAlt:: Send "{Blind}{vk07}"
-*~RAlt:: Send "{Blind}{vk07}"
-
-;; IME switch.
-~LAlt Up:: {
-	if (A_PriorKey = "LAlt") {
+;; IME switch
+LAltPressed := false
+RAltPressed := false
+~LAlt:: {
+	Send "{Blind}{vk07}"
+	KeyWait "LAlt"
+	if (A_PriorKey = "LAlt" && !LAltPressed) {
 		Send "{vkF2sc070}{vkF3sc029}"
+		global LAltPressed := true
+		global RAltPressed := false
 	}
 }
-~RAlt Up:: {
-	if (A_PriorKey = "RAlt") {
+~RAlt:: {
+	Send "{Blind}{vk07}"
+	KeyWait "RAlt"
+	if (A_PriorKey = "RAlt" && !RAltPressed) {
 		Send "{vkF2sc070}"
+		global RAltPressed := true
+		global LAltPressed := false
 	}
 }
-
 
 ;; Reset default shortcut keys.
 !VKC0:: ("")
