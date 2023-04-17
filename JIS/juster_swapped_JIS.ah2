@@ -29,7 +29,7 @@ SendSuppressedKeyUp(key) {
 *~LAlt:: Send "{Blind}{vk07}"
 *~RAlt:: Send "{Blind}{vk07}"
 
-; CapsLock of remap.
+;; CapsLock of remap.
 CapsLock & q:: Send ("")
 CapsLock & w:: Send ("")
 CapsLock & r:: Send ("")
@@ -52,56 +52,6 @@ CapsLock & m:: Send ("")
 CapsLock & ,:: Send ("")
 CapsLock & .:: Send ("")
 CapsLock & /:: Send ("")
-
-; CapsLock + Shift of remap.
-CapsLock & +:: {
-    if GetKeyState("q")
-        Send ("")
-    if GetKeyState("w")
-        Send ("")
-    if GetKeyState("r")
-        Send ("")
-    if GetKeyState("t")
-        Send ("")
-    if GetKeyState("y")
-        Send ("")
-    if GetKeyState("u")
-        Send ("")
-    if GetKeyState("i")
-        Send ("")
-    if GetKeyState("o")
-        Send ("")
-    if GetKeyState("[")
-        Send ("")
-    if GetKeyState("]")
-        Send ("")
-    if GetKeyState("\")
-        Send ("")
-    if GetKeyState("s")
-        Send ("")
-    if GetKeyState("g")
-        Send ("")
-    if GetKeyState("j")
-        Send ("")
-    if GetKeyState("'")
-        Send ("")
-    if GetKeyState("z")
-        Send ("")
-    if GetKeyState("x")
-        Send ("")
-    if GetKeyState("c")
-        Send ("")
-    if GetKeyState("m")
-        Send ("")
-    if GetKeyState(",")
-        Send ("")
-    if GetKeyState(".")
-        Send ("")
-    if GetKeyState("/")
-        Send ("")
-}
-;
-; is empty
 
 ;; Reset use shortcut keys.
 !VKC0:: Send("")
@@ -132,29 +82,65 @@ CapsLock & Space:: Send "!{VKC0}" ; IMEトグル
 ;
 ; Ctrl + Space
 
-CapsLock & b:: Send "{Left}" ; ← カーソル左
+CapsLock & b:: {
+    if GetKeyState("Shift") {
+        Send ("+{Left}")  ; ← Cursor back select.
+    } else {
+        Send "{Left}" ; ← Cursor back.
+    }
+}
 ;
-; Ctrl + b
+; Ctrl + Shift + b & Ctrl + b
 
-CapsLock & f:: Send "{Right}" ; → カーソル右
+CapsLock & f:: {
+    if GetKeyState("Shift") {
+        Send ("+{Right}") ; → Cursor forward select.
+    } else {
+        Send "{Right}" ; → Cursor forward.
+    }
+}
 ;
-; Ctrl + f
+; Ctrl + Shift + f & Ctrl + f
 
-CapsLock & p:: Send "{Up}" ; ↑ カーソル上行
+CapsLock & p:: {
+    if GetKeyState("Shift") {
+        Send ("+{Up}") ; ↑ Cursor up line select.
+    } else {
+        Send "{Up}" ; ↑ Cursor up line.
+    }
+}
 ;
-; Ctrl + p
+; Ctrl + Shift + p & Ctrl + p
 
-CapsLock & n:: Send "{Down}" ; ↓ カーソル下行
+CapsLock & n:: {
+    if GetKeyState("Shift") {
+        Send ("+{Down}") ; ↑ Cursor down line select.
+    } else {
+        Send "{Down}" ; ↓ Cursor down line.
+    }
+}
 ;
-; Ctrl + n
+; Ctrl + Shift + n & SCtrl + n
 
-CapsLock & a:: Send "{Home}" ; カーソル行頭
+CapsLock & a:: {
+    if GetKeyState("Shift") {
+        Send ("+{Home}") ; → Start of line select.
+    } else {
+        Send "{Home}" ; Cursor start of line.
+    }
+}
 ;
-; Ctrl + a
+; Ctrl + Shift + a & Ctrl + a
 
-CapsLock & e:: Send "{End}" ; カーソル行末
+CapsLock & e:: {
+    if GetKeyState("Shift") {
+        Send ("+{End}") ; → End of line select.
+    } else {
+        Send "{End}" ; Cursor end of line.
+    }
+}
 ;
-; Ctrl + e
+; Ctrl + Shift + e & Ctrl + e
 
 #Left:: Send "^{Left}" ; カーソル単語後方
 ;
@@ -332,6 +318,16 @@ CapsLock & Right:: Send "#{Right}" ; ウィンドウ右方変形,移動
 !Down:: Send "^{End}" ; 一番下
 ;
 ; Alt + ↓
+
+CapsLock & v:: {
+    if GetKeyState("Shift") {
+        Send ("^+{End}") ; Go bottom select.
+    } else {
+        Send "^{End}"  ; Go bottom.
+    }
+}
+;
+; Ctrl + Shift + v & Ctrl + v
 
 ;#^ ; 左の仮想デスクトップ
 ;

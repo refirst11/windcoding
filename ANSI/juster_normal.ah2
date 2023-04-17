@@ -4,30 +4,26 @@
 ;; IME switch
 LAltPressed := false
 RAltPressed := false
+;; IME switch
+LAltPressed := false
+RAltPressed := false
 ~LAlt:: {
+	global RAltPressed := false
 	Send "{Blind}{vk07}"
 	KeyWait "LAlt"
 	if (A_PriorKey = "LAlt" && !LAltPressed) {
 		Send "{vkF2sc070}{vkF3sc029}"
 		global LAltPressed := true
-		global RAltPressed := false
 	}
 }
 ~RAlt:: {
+	global LAltPressed := false
 	Send "{Blind}{vk07}"
 	KeyWait "RAlt"
 	if (A_PriorKey = "RAlt" && !RAltPressed) {
 		Send "{vkF2sc070}"
 		global RAltPressed := true
-		global LAltPressed := false
 	}
-}
-LButton:: {
-	global LAltPressed := false
-	global RAltPressed := false
-	SendInput "{Lbutton down}"
-	KeyWait "LButton"
-	SendInput "{Lbutton up}"
 }
 
 ; Ctrl of remap.
@@ -46,6 +42,7 @@ LButton:: {
 ^,:: Send ("")
 ^.:: Send ("")
 ^/:: Send ("")
+
 ; Ctrl + Shift of remap.
 ^+q:: Send ("")
 ^+w:: Send ("")
@@ -67,6 +64,7 @@ LButton:: {
 ^+,:: Send ("")
 ^+.:: Send ("")
 ^+/:: Send ("")
+
 ;; Reset use shortcut keys.
 !VKC0:: Send("")
 ^w:: Send("")
@@ -96,29 +94,65 @@ LButton:: {
 ;
 ; Ctrl + Space
 
-^b:: Send "{Left}" ; ← Cursor back.
-;S
-; Ctrl + b
-
-^f:: Send "{Right}" ; → Cursor forward.
+^b:: {
+	if GetKeyState("Shift") {
+		Send ("+{Left}")  ; ← Cursor back select.
+	} else {
+		Send "{Left}" ; ← Cursor back.
+	}
+}
 ;
-; Ctrl + f
+; Ctrl + Shift + b & Ctrl + b
 
-^p:: Send "{Up}" ; ↑ Cursor up line.
+^f:: {
+	if GetKeyState("Shift") {
+		Send ("+{Right}") ; → Cursor forward select.
+	} else {
+		Send "{Right}" ; → Cursor forward.
+	}
+}
 ;
-; Ctrl + p
+; Ctrl + Shift + f & Ctrl + f
 
-^n:: Send "{Down}" ; ↓ Cursor down line.
+^p:: {
+	if GetKeyState("Shift") {
+		Send ("+{Up}") ; ↑ Cursor up line select.
+	} else {
+		Send "{Up}" ; ↑ Cursor up line.
+	}
+}
 ;
-; Ctrl + n
+; Ctrl + Shift + p & Ctrl + p
 
-^a:: Send "{Home}" ; Cursor start of line.
+^n:: {
+	if GetKeyState("Shift") {
+		Send ("+{Down}") ; ↑ Cursor down line select.
+	} else {
+		Send "{Down}" ; ↓ Cursor down line.
+	}
+}
 ;
-; Ctrl + a
+; Ctrl + Shift + n & SCtrl + n
 
-^e:: Send "{End}" ; Cursor end of line.
+^a:: {
+	if GetKeyState("Shift") {
+		Send ("+{Home}") ; → Start of line select.
+	} else {
+		Send "{Home}" ; Cursor start of line.
+	}
+}
 ;
-; Ctrl + e
+; Ctrl + Shift + a & Ctrl + a
+
+^e:: {
+	if GetKeyState("Shift") {
+		Send ("+{End}") ; → End of line select.
+	} else {
+		Send "{End}" ; Cursor end of line.
+	}
+}
+;
+; Ctrl + Shift + e & Ctrl + e
 
 #Left:: Send "^{Left}" ; Cursor backward word.
 ;
@@ -295,6 +329,16 @@ LButton:: {
 !Down:: Send "^{End}" ; Go bottom.
 ;
 ; Alt + ↓
+
+^v:: {
+	if GetKeyState("Shift") {
+		Send ("^+{End}") ; Go bottom a select.
+	} else {
+		Send "^{End}"  ; Go bottom.
+	}
+}
+;
+; Ctrl + v
 
 ;#^ Left Virtual Desktop.
 ;

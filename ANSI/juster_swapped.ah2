@@ -30,29 +30,22 @@ SendSuppressedKeyUp(key) {
 LAltPressed := false
 RAltPressed := false
 ~LAlt:: {
+    global RAltPressed := false
     Send "{Blind}{vk07}"
     KeyWait "LAlt"
     if (A_PriorKey = "LAlt" && !LAltPressed) {
         Send "{vkF2sc070}{vkF3sc029}"
         global LAltPressed := true
-        global RAltPressed := false
     }
 }
 ~RAlt:: {
+    global LAltPressed := false
     Send "{Blind}{vk07}"
     KeyWait "RAlt"
     if (A_PriorKey = "RAlt" && !RAltPressed) {
         Send "{vkF2sc070}"
         global RAltPressed := true
-        global LAltPressed := false
     }
-}
-LButton:: {
-    global LAltPressed := false
-    global RAltPressed := false
-    SendInput "{Lbutton down}"
-    KeyWait "LButton"
-    SendInput "{Lbutton up}"
 }
 
 ; CapsLock of remap.
@@ -78,54 +71,6 @@ CapsLock & m:: Send ("")
 CapsLock & ,:: Send ("")
 CapsLock & .:: Send ("")
 CapsLock & /:: Send ("")
-
-; CapsLock + Shift of remap.
-CapsLock & +:: {
-    if GetKeyState("q")
-        Send ("")
-    if GetKeyState("w")
-        Send ("")
-    if GetKeyState("r")
-        Send ("")
-    if GetKeyState("t")
-        Send ("")
-    if GetKeyState("y")
-        Send ("")
-    if GetKeyState("u")
-        Send ("")
-    if GetKeyState("i")
-        Send ("")
-    if GetKeyState("o")
-        Send ("")
-    if GetKeyState("[")
-        Send ("")
-    if GetKeyState("]")
-        Send ("")
-    if GetKeyState("\")
-        Send ("")
-    if GetKeyState("s")
-        Send ("")
-    if GetKeyState("g")
-        Send ("")
-    if GetKeyState("j")
-        Send ("")
-    if GetKeyState("'")
-        Send ("")
-    if GetKeyState("z")
-        Send ("")
-    if GetKeyState("x")
-        Send ("")
-    if GetKeyState("c")
-        Send ("")
-    if GetKeyState("m")
-        Send ("")
-    if GetKeyState(",")
-        Send ("")
-    if GetKeyState(".")
-        Send ("")
-    if GetKeyState("/")
-        Send ("")
-}
 
 ;; Reset use shortcut keys.
 !VKC0:: Send("")
@@ -156,29 +101,65 @@ CapsLock & Space:: Send "!{VKC0}" ; IME toggle.
 ;
 ; Ctrl + Space
 
-CapsLock & b:: Send "{Left}" ; ← Cursor back.
+CapsLock & b:: {
+    if GetKeyState("Shift") {
+        Send ("+{Left}")  ; ← Cursor back select.
+    } else {
+        Send "{Left}" ; ← Cursor back.
+    }
+}
 ;
-; Ctrl + b
+; Ctrl + Shift + b & Ctrl + b
 
-CapsLock & f:: Send "{Right}" ; → Cursor forward.
+CapsLock & f:: {
+    if GetKeyState("Shift") {
+        Send ("+{Right}") ; → Cursor forward select.
+    } else {
+        Send "{Right}" ; → Cursor forward.
+    }
+}
 ;
-; Ctrl + f
+; Ctrl + Shift + f & Ctrl + f
 
-CapsLock & p:: Send "{Up}" ; ↑ Cursor up line.
+CapsLock & p:: {
+    if GetKeyState("Shift") {
+        Send ("+{Up}") ; ↑ Cursor up line select.
+    } else {
+        Send "{Up}" ; ↑ Cursor up line.
+    }
+}
 ;
-; Ctrl + p
+; Ctrl + Shift + p & Ctrl + p
 
-CapsLock & n:: Send "{Down}" ; ↓ Cursor down line.
+CapsLock & n:: {
+    if GetKeyState("Shift") {
+        Send ("+{Down}") ; ↑ Cursor down line select.
+    } else {
+        Send "{Down}" ; ↓ Cursor down line.
+    }
+}
 ;
-; Ctrl + n
+; Ctrl + Shift + n & SCtrl + n
 
-CapsLock & a:: Send "{Home}" ; Cursor start of line.
+CapsLock & a:: {
+    if GetKeyState("Shift") {
+        Send ("+{Home}") ; → Start of line select.
+    } else {
+        Send "{Home}" ; Cursor start of line.
+    }
+}
 ;
-; Ctrl + a
+; Ctrl + Shift + a & Ctrl + a
 
-CapsLock & e:: Send "{End}" ; Cursor end of line.
+CapsLock & e:: {
+    if GetKeyState("Shift") {
+        Send ("+{End}") ; → End of line select.
+    } else {
+        Send "{End}" ; Cursor end of line.
+    }
+}
 ;
-; Ctrl + e
+; Ctrl + Shift + e & Ctrl + e
 
 #Left:: Send "^{Left}" ; Cursor backward word.
 ;
@@ -355,6 +336,16 @@ CapsLock & Right:: Send "#{Right}" ; Minimize window.
 !Down:: Send "^{End}" ; Go bottom.
 ;
 ; Alt + ↓
+
+CapsLock & v:: {
+    if GetKeyState("Shift") {
+        Send ("^+{End}") ; Go bottom select.
+    } else {
+        Send "^{End}"  ; Go bottom.
+    }
+}
+;
+; Ctrl + Shift + v & Ctrl + v
 
 ; CapsLock & # & Left::Send "#^{Left}" ; Left Virtual Desktop.
 ; ;

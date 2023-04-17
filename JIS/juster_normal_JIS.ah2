@@ -22,55 +22,29 @@
 ^.:: Send ("")
 ^/:: Send ("")
 
-; Ctrl + Shift of remap.
-^+:: {
-	if GetKeyState("q")
-		Send ("")
-	if GetKeyState("w")
-		Send ("")
-	if GetKeyState("r")
-		Send ("")
-	if GetKeyState("t")
-		Send ("")
-	if GetKeyState("y")
-		Send ("")
-	if GetKeyState("u")
-		Send ("")
-	if GetKeyState("i")
-		Send ("")
-	if GetKeyState("o")
-		Send ("")
-	if GetKeyState("[")
-		Send ("")
-	if GetKeyState("]")
-		Send ("")
-	if GetKeyState("\")
-		Send ("")
-	if GetKeyState("s")
-		Send ("")
-	if GetKeyState("g")
-		Send ("")
-	if GetKeyState("j")
-		Send ("")
-	if GetKeyState("'")
-		Send ("")
-	if GetKeyState("z")
-		Send ("")
-	if GetKeyState("x")
-		Send ("")
-	if GetKeyState("c")
-		Send ("")
-	if GetKeyState("m")
-		Send ("")
-	if GetKeyState(",")
-		Send ("")
-	if GetKeyState(".")
-		Send ("")
-	if GetKeyState("/")
-		Send ("")
-}
+;; Ctrl + Shift of remap.
+^+q:: Send ("")
+^+w:: Send ("")
+^+r:: Send ("")
+^+y:: Send ("")
+^+u:: Send ("")
+^+i:: Send ("")
+^+o:: Send ("")
+^+[:: Send ("")
+^+]:: Send ("")
+^+\:: Send ("")
+^+g:: Send ("")
+^+j:: Send ("")
+^+':: Send ("")
+^+z:: Send ("")
+^+x:: Send ("")
+^+c:: Send ("")
+^+m:: Send ("")
+^+,:: Send ("")
+^+.:: Send ("")
+^+/:: Send ("")
 
-;; Reset default shortcut keys
+;; Reset default shortcut keys.
 !VKC0:: Send("")
 ^w:: Send("")
 #m:: Send("")
@@ -78,7 +52,6 @@
 ^z:: Send("")
 ^x:: Send("")
 ^c:: Send("")
-^v:: Send("")
 ^i:: Send("")
 ^o:: Send("")
 ^+l:: Send("")
@@ -99,29 +72,63 @@
 ;
 ; Ctrl + Space
 
-^b:: Send "{Left}" ; ← カーソル左
+^b:: {
+	if GetKeyState("Shift") {
+		Send ("+{Left}")  ; ← Cursor back select.
+	} else {
+		Send "{Left}" ; ← Cursor back.
+	}
+}
 ;
-; Ctrl + b
+; Ctrl + Shift + b & Ctrl + b
 
-^f:: Send "{Right}" ; → カーソル右
+^f:: {
+	if GetKeyState("Shift") {
+		Send ("+{Right}") ; → Cursor forward select.
+	} else {
+		Send "{Right}" ; → Cursor forward.
+	}
+}
 ;
-; Ctrl + f
+; Ctrl + Shift + f & Ctrl + f
 
-^p:: Send "{Up}" ; ↑ カーソル上行
+^p:: {
+	if GetKeyState("Shift") {
+		Send ("+{Up}") ; ↑ Cursor up line select.
+	} else {
+		Send "{Up}" ; ↑ Cursor up line.
+	}
+}
 ;
-; Ctrl + p
+; Ctrl + Shift + p & Ctrl + p
 
-^n:: Send "{Down}" ; ↓ カーソル下行
+^n:: {
+	if GetKeyState("Shift") {
+		Send ("+{Down}") ; ↑ Cursor down line select.
+	} else {
+		Send "{Down}" ; ↓ Cursor down line.
+	}
+}
 ;
-; Ctrl + n
+; Ctrl + Shift + n & SCtrl + n
 
-^a:: Send "{Home}" ; カーソル行頭
+^a:: {
+	if GetKeyState("Shift") {
+		Send ("+{Home}") ; → Start of line select.
+	} else {
+		Send "{Home}" ; Cursor start of line.
+	}
+}
 ;
-; Ctrl + a
+; Ctrl + Shift + a & Ctrl + a
 
-^e:: Send "{End}" ; カーソル行末
-;
-; Ctrl + e
+^e:: {
+	if GetKeyState("Shift") {
+		Send ("+{End}") ; → End of line select.
+	} else {
+		Send "{End}" ; Cursor end of line.
+	}
+}
 
 #Left:: Send "^{Left}" ; カーソル単語後方
 ;
@@ -298,6 +305,16 @@
 !Down:: Send "^{End}" ; 一番下
 ;
 ; Alt + ↓
+
+^v:: {
+	if GetKeyState("Shift") {
+		Send ("^+{End}") ; Go bottom select.
+	} else {
+		Send "^{End}"  ; Go bottom.
+	}
+}
+;
+; Ctrl + Shift + v & Ctrl + v
 
 ;#^ ; 左の仮想デスクトップ
 ;
