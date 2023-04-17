@@ -73,7 +73,6 @@ RAltPressed := false
 ^z:: Send("")
 ^x:: Send("")
 ^c:: Send("")
-^v:: Send("")
 ^i:: Send("")
 ^o:: Send("")
 ^+l:: Send("")
