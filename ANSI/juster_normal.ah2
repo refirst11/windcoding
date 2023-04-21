@@ -1,28 +1,19 @@
 /*Repository:https://github.com/su-pull/juster */
 #UseHook
 
-;; IME switch
-LAltPressed := false
-RAltPressed := false
-;; IME switch
-LAltPressed := false
-RAltPressed := false
-~LAlt:: {
-	global RAltPressed := false
+; IME switch.
+*~LAlt:: {
 	Send "{Blind}{vk07}"
 	KeyWait "LAlt"
-	if (A_PriorKey = "LAlt" && !LAltPressed) {
+	if (A_PriorKey = "LAlt") {
 		Send "{vkF2sc070}{vkF3sc029}"
-		global LAltPressed := true
 	}
 }
-~RAlt:: {
-	global LAltPressed := false
+*~RAlt:: {
 	Send "{Blind}{vk07}"
 	KeyWait "RAlt"
-	if (A_PriorKey = "RAlt" && !RAltPressed) {
+	if (A_PriorKey = "RAlt") {
 		Send "{vkF2sc070}"
-		global RAltPressed := true
 	}
 }
 
