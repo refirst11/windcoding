@@ -308,9 +308,9 @@
 
 ^v:: {
 	if GetKeyState("Shift") {
-		Send ("^+{End}") ; Go bottom select.
+		Send ("^+{End}") ; 一番下まで選択
 	} else {
-		Send "^{End}"  ; Go bottom.
+		Send "^{End}"  ; 一番下
 	}
 }
 ;
