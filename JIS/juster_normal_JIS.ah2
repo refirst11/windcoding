@@ -6,7 +6,6 @@
 *~RAlt:: Send "{Blind}{vk07}"
 
 ; Ctrl of remap.
-^q:: Send ("")
 ^r:: Send ("")
 ^t:: Send ("")
 ^y:: Send ("")
@@ -55,7 +54,6 @@
 ^i:: Send("")
 ^o:: Send("")
 ^+l:: Send("")
-^#d:: Send("")
 ^+n:: Send("")
 ^#F4:: Send("")
 ^+p:: Send("")
@@ -270,21 +268,21 @@
 ;
 ; Alt + h
 
-^Up:: Send "#{Up}" ; ウィンドウ上方変形,移動
+^+Up:: Send "#{Up}" ; ウィンドウ上方変形,移動
 ;
-; Ctrl + ↑
+; Ctrl + Shift + ↑
 
-^Down:: Send "#{Down}" ; ウィンドウ下方変形,移動
+^+Down:: Send "#{Down}" ; ウィンドウ下方変形,移動
 ;
-; Ctrl + ↓
+; Ctrl + Shift + ↓
 
-^Left:: Send "#{Left}" ; ウィンドウ左方変形,移動
+^+Left:: Send "#{Left}" ; ウィンドウ左方変形,移動
 ;
-; Ctrl + ←
+; Ctrl + Shift + ←
 
-^Right:: Send "#{Right}" ; ウィンドウ右方変形,移動
+^+Right:: Send "#{Right}" ; ウィンドウ右方変形,移動
 ;
-; Ctrl + →
+; Ctrl + Shift + →
 
 #Up:: {
 	Send "{Up}{Home}" ; 行先頭→行を上がる
@@ -316,21 +314,20 @@
 ;
 ; Ctrl + Shift + v & Ctrl + v
 
-;#^ ; 左の仮想デスクトップ
-;
-; win + Ctrl + ←
+^Left:: Send "#^{Left}" ; 左の仮想デスクトップ
+; Ctrl + ←
 
-;#^ ; 右の仮想デスクトップ
+^Right:: Send "#^{Right}" ; 右の仮想デスクトップ
 ;
-; win + Ctrl + →
+; Ctrl + →
 
-#d:: Send "^#{d}" ; 新しい仮想デスクトップ
+^+d:: Send "^#{d}" ; 新しい仮想デスクトップ
 ;
-; Win + d
+; Ctrl + shift + d
 
-#q:: Send "^#{F4}" ; 仮想デスクトップを閉じる
+^q:: Send "^#{F4}" ; 仮想デスクトップを閉じる
 ;
-; Win + q
+; Ctrl + q
 
 !+t:: Send "^+{t}" ; タブを復元
 ;

@@ -18,7 +18,6 @@
 }
 
 ; Ctrl of remap.
-^q:: Send ("")
 ^r:: Send ("")
 ^t:: Send ("")
 ^y:: Send ("")
@@ -67,7 +66,6 @@
 ^i:: Send("")
 ^o:: Send("")
 ^+l:: Send("")
-^#d:: Send("")
 ^+n:: Send("")
 ^#F4:: Send("")
 ^+p:: Send("")
@@ -284,21 +282,21 @@
 ;
 ; Alt + h
 
-^Up:: Send "#{Up}" ; Maximize window.
+^+Up:: Send "#{Up}" ; Maximize window.
 ;
-; Ctrl + ↑
+; Ctrl + Shift + ↑
 
-^Down:: Send "#{Down}" ; Minimize window.
+^+Down:: Send "#{Down}" ; Minimize window.
 ;
-; Ctrl + ↓
+; Ctrl + Shift + ↓
 
-^Left:: Send "#{Left}" ; Maximize window.
+^+Left:: Send "#{Left}" ; Maximize window.
 ;
-; Ctrl + ←
+; Ctrl + Shift + ←
 
-^Right:: Send "#{Right}" ; Minimize window.
+^+Right:: Send "#{Right}" ; Minimize window.
 ;
-; Ctrl + →
+; Ctrl + Shift + →
 
 #Up:: {
 	Send "{Up}{Home}" ; Home or  Up
@@ -330,27 +328,29 @@
 ;
 ; Ctrl + v
 
-;#^ Left Virtual Desktop.
+^Left:: Send "#^{Left}" ; Virtual Desktop.
 ;
-; win + Ctrl + ←
+; Ctrl + ←
 
-;#^ Right Virtual Desktop.
+^Right:: Send "#^{Right}" ; Virtual Desktop.
 ;
-; win + Ctrl + →
+; Ctrl + →
 
-#d:: Send "^#{d}" ; New Virtual Desktop.
+^+d:: Send "^#{d}" ; New Virtual Desktop.
 ;
-; Win + d
+; Ctrl + shift + d
 
-#q:: Send "^#{F4}" ; Close Virtual Desktop.
-; Win + q
+^q:: Send "^#{F4}" ; Close Virtual Desktop.
+;
+; Ctrl + q
 
-!+t:: Send "^+{t}" ; タブを復元
+!+t:: Send "^+{t}" ; Restore tabs
 ;
 ;  alt + shift + t
 
 ;; Visual Studio Code only.
 #HotIf WinActive("ahk_exe Code.exe")
+
 #Up:: Send "!{Up}" ; Swap the selection range up.
 ;
 ; Win + ↑
