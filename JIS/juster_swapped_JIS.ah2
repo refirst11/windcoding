@@ -30,7 +30,6 @@ SendSuppressedKeyUp(key) {
 *~RAlt:: Send "{Blind}{vk07}"
 
 ;; CapsLock of remap.
-CapsLock & q:: Send ("")
 CapsLock & w:: Send ("")
 CapsLock & r:: Send ("")
 CapsLock & t:: Send ("")
@@ -65,7 +64,6 @@ CapsLock & /:: Send ("")
 ^i:: Send("")
 ^o:: Send("")
 ^+l:: Send("")
-^#d:: Send("")
 ^+n:: Send("")
 ^#F4:: Send("")
 ^+p:: Send("")
@@ -174,7 +172,14 @@ CapsLock & e:: {
 ;
 ; Shift + Win + →
 
-CapsLock & d:: Send "{Delete}" ; 前方文字削除
+CapsLock & d:: {
+    if GetKeyState("Shift") {
+        Send "^#{d}" ; 新しい仮想デスクトップ
+    }
+    else {
+        Send "{Delete}" ; 前方文字削除
+    }
+}
 ;
 ; Ctrl + d
 
@@ -282,19 +287,27 @@ CapsLock & Enter:: Send "{F2}" ; 名前を変更
 ;
 ; Alt + h
 
-CapsLock & Up:: Send "#{Up}" ; ウィンドウ上方変形,移動
+CapsLock & Up:: {
+    if GetKeyState("Shift") {
+        Send "#{Up}" ; ウィンドウ上方変形, 移動
+    }
+}
 ;
-; Ctrl + ↑
+; Ctrl + Shift + ↑
 
-CapsLock & Down:: Send "#{Down}" ; ウィンドウ下方変形,移動
+CapsLock & Down:: {
+    if GetKeyState("Shift") {
+        Send "#{Down}" ; ウィンドウ下方変形, 移動
+    }
+}
 ;
-; Ctrl + ↓
+; Ctrl + Shift + ↓
 
-CapsLock & Left:: Send "#{Left}" ; ウィンドウ左方変形,移動
+;; CapsLock & + Left:: Send "#{Left}" ; ウィンドウ左方変形,移動 -> Go to CapsLock & Left.
 ;
 ; Ctrl + ←
 
-CapsLock & Right:: Send "#{Right}" ; ウィンドウ右方変形,移動
+;; CapsLock & + Right:: Send "#{Right}" ; ウィンドウ右方変形,移動 -> Go to CapsLock & Right.
 ;
 ; Ctrl + →
 
@@ -329,21 +342,35 @@ CapsLock & v:: {
 ;
 ; Ctrl + Shift + v & Ctrl + v
 
-;#^ ; 左の仮想デスクトップ
+CapsLock & Left:: {
+    if GetKeyState("Shift") {
+        Send "#{Left}" ; ウィンドウ左方変形, 移動
+    }
+    else {
+        Send "#^{Left}" ; 左の仮想デスクトップ
+    }
+}
 ;
-; win + Ctrl + ←
+; Ctrl + ←
 
-;#^ ; 右の仮想デスクトップ
+CapsLock & Right:: {
+    if GetKeyState("Shift") {
+        Send "#{Right}" ; ウィンドウ右方変形, 移動
+    }
+    else {
+        Send "#^{Right}" ; 右の仮想デスクトップ
+    }
+}
 ;
-; win + Ctrl + →
+; Ctrl + →
 
-#d:: Send "^#{d}" ; 新しい仮想デスクトップ
+;;CapsLock & + d:: 新しい仮想デスクトップ -> Go to CapsLock & d.
 ;
-; Win + d
+; Ctrl + shift + d
 
-#q:: Send "^#{F4}" ; 仮想デスクトップを閉じる
+CapsLock & q:: Send "^#{F4}" ; 仮想デスクトップを閉じる
 ;
-; Win + q
+; Ctrl + q
 
 !+t:: Send "^+{t}" ; タブを復元
 ;

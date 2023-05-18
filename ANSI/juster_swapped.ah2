@@ -43,7 +43,6 @@ SendSuppressedKeyUp(key) {
 }
 
 ; CapsLock of remap.
-CapsLock & q:: Send ("")
 CapsLock & w:: Send ("")
 CapsLock & r:: Send ("")
 CapsLock & t:: Send ("")
@@ -78,7 +77,6 @@ CapsLock & /:: Send ("")
 ^i:: Send("")
 ^o:: Send("")
 ^+l:: Send("")
-^#d:: Send("")
 ^+n:: Send("")
 ^#F4:: Send("")
 ^+p:: Send("")
@@ -191,7 +189,14 @@ CapsLock & h:: Send "{BS}" ; Delete back char.
 ;
 ; Ctrl + h
 
-CapsLock & d:: Send "{Delete}" ; Delete forward char.
+CapsLock & d:: {
+    if GetKeyState("Shift") {
+        Send "^#{d}" ; New Virtual Desktop.
+    }
+    else {
+        Send "{Delete}" ; Delete forward char.
+    }
+}
 ;
 ; Ctrl + d
 
@@ -295,21 +300,29 @@ CapsLock & Enter:: Send "{F2}" ; Rename.
 ;
 ; Alt + h
 
-CapsLock & Up:: Send "#{Up}" ; Maximize window.
+CapsLock & Up:: {
+    if GetKeyState("Shift") {
+        Send "#{Up}" ; Maximize window.
+    }
+}
 ;
-; Ctrl + ↑
+; Ctrl + Shift + ↑
 
-CapsLock & Down:: Send "#{Down}" ; Minimize window.
+CapsLock & Down:: {
+    if GetKeyState("Shift") {
+        Send "#{Down}" ; Minimize window.
+    }
+}
 ;
-; Ctrl + ↓
+; Ctrl + Shift + ↓
 
-CapsLock & Left:: Send "#{Left}" ; Maximize window.
+;; CapsLock & + Left:: Send "#{Left}" ; Maximize window. -> Go to CapsLock & Left.
 ;
-; Ctrl + ←
+; Ctrl + Shift + ←
 
-CapsLock & Right:: Send "#{Right}" ; Minimize window.
+;; CapsLock & + Right:: Send "#{Right}" ; Minimize window. -> Go to CapsLock & Right.
 ;
-; Ctrl + →
+; Ctrl + Shift + →
 
 #Up:: {
     Send "{Up}{Home}" ; Home or Up.
@@ -341,21 +354,35 @@ CapsLock & v:: {
 ;
 ; Ctrl + Shift + v & Ctrl + v
 
-; CapsLock & # & Left::Send "#^{Left}" ; Left Virtual Desktop.
-; ;
-; ; win + Ctrl + ←
-
-; CapsLock & # & Right::Send "#^{Right}" ; Right Virtual Desktop.
-; ;
-; ; win + Ctrl + →
-
-#d:: Send "^#{d}" ; New Virtual Desktop.
+CapsLock & Left:: {
+    if GetKeyState("Shift") {
+        Send "#{Left}" ; Maximize window.
+    }
+    else {
+        Send "#^{Left}" ; Virtual Desktop.
+    }
+}
 ;
-; Win + d
+; Ctrl + ←
 
-#q:: Send "^#{F4}" ; Close Virtual Desktop.
+CapsLock & Right:: {
+    if GetKeyState("Shift") {
+        Send "#{Right}" ; Maximize window.
+    }
+    else {
+        Send "#^{Right}" ; Virtual Desktop.
+    }
+}
 ;
-; Win + q
+; Ctrl + →
+
+;;CapsLock & + d:: -> Go to CapsLock & d.
+;
+; Ctrl + shift + d
+
+CapsLock & q:: Send "^#{F4}" ; Close Virtual Desktop.
+;
+; Ctrl + q
 
 !+t:: Send "^+{t}" ; Restore tabs
 ;
@@ -363,6 +390,7 @@ CapsLock & v:: {
 
 ;; Visual Studio Code only.
 #HotIf WinActive("ahk_exe Code.exe")
+
 #Up:: Send "!{Up}" ; Swap the selection range up.
 ;
 ; Win + ↑
