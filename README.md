@@ -22,8 +22,12 @@ There are two types, one that swaps CapsLock and Left Control, and the other tha
 | Ctrl + n         | ↓ Cursor down                               |
 | Ctrl + a         | Cursor line start                           |
 | Ctrl + e         | Cursor line end                             |
+| Alt + ↑          | Scroll to top                               |
+| Alt + ↓          | Scroll to bottom                            |
 | Alt + ←          | Cursor line start                           |
 | Alt + →          | Cursor line end                             |
+| Win + ↑          | Cursor line start & Cursor up               |
+| Win + ↓          | Cursor line end & Cursor down               |
 | Win + ←          | Cursor word backward                        |
 | Win + →          | Cursor word forward                         |
 | Shift + Alt + ←  | Backward selection                          |
@@ -34,10 +38,8 @@ There are two types, one that swaps CapsLock and Left Control, and the other tha
 | Ctrl + h         | Delete backward 1 character                 |
 | Ctrl + k         | Convert to katakana                         |
 | Ctrl + ;         | Convert to half-width katakana              |
+| Ctrl + Enter     | Rename                                      |
 | Alt + r          | Reload                                      |
-| Alt + Shift + 2  | Window screenshot in a clipboard            |
-| Alt + Shift + 3  | Screenshot in a clipboard                   |
-| Alt + Shift + 4  | Cropping capture                            |
 | Alt + z          | Undo                                        |
 | Alt + Shift + z  | Redo                                        |
 | Alt + x          | Cut                                         |
@@ -45,28 +47,26 @@ There are two types, one that swaps CapsLock and Left Control, and the other tha
 | Alt + v          | Paste                                       |
 | Alt + a          | Select all                                  |
 | Alt + f          | Find                                        |
+| Alt + Shift + 2  | Window screenshot in a clipboard            |
+| Alt + Shift + 3  | Screenshot in a clipboard                   |
+| Alt + Shift + 4  | Cropping capture                            |
 | Alt + s          | Save                                        |
 | Alt + Shift + s  | Save as                                     |
 | Alt + Shift + n  | New folder                                  |
 | Alt + o          | Open                                        |
 | Alt + Left Click | Open link in a new tab / Multiple selection |
-| Ctrl + Enter     | Rename                                      |
 | Alt + w          | Close the tab window                        |
 | Alt + q          | Close the application                       |
 | Alt + m          | Minimize window                             |
 | Alt + h          | Minimize all window                         |
-| Ctrl + ↑         | Window transform move up                    |
-| Ctrl + ↓         | Window transform move down                  |
-| Ctrl + ←         | Window transform move left                  |
-| Ctrl + →         | Window transform move right                 |
-| Win + ↑          | Cursor line start & Cursor up               |
-| Win + ↓          | Cursor line end & Cursor down               |
-| Alt + ↑          | Scroll to top                               |
-| Alt + ↓          | Scroll to bottom                            |
-| Win + Ctrl + ←   | Virtual desktop on the left                 |
-| Win + Ctrl + →   | Virtual desktop on the right                |
-| Win + d          | New virtual desktops                        |
-| Win + q          | Close virtual desktop                       |
+| Ctrl + Shift + ↑ | Window transform move up                    |
+| Ctrl + Shift + ↓ | Window transform move down                  |
+| Ctrl + Shift + ← | Window transform move left                  |
+| Ctrl + Shift + → | Window transform move right                 |
+| Ctrl + ←         | Virtual desktop on the left                 |
+| Ctrl + →         | Virtual desktop on the right                |
+| Ctrl + Shift + d | New virtual desktops                        |
+| Ctrl + q         | Close virtual desktop                       |
 
 ## Browser
 
