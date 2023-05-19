@@ -120,7 +120,7 @@
 	}
 }
 ;
-; Ctrl + Shift + n & SCtrl + n
+; Ctrl + Shift + n & Ctrl + n
 
 ^a:: {
 	if GetKeyState("Shift") {
@@ -142,6 +142,14 @@
 ;
 ; Ctrl + Shift + e & Ctrl + e
 
+!Up:: Send "^{Home}" ; Go Top.
+;
+; Alt + ↑
+
+!Down:: Send "^{End}" ; Go bottom.
+;
+; Alt + ↓
+
 #Left:: Send "^{Left}" ; Cursor backward word.
 ;
 ; Alt + ←
@@ -149,6 +157,28 @@
 #Right:: Send "^{Right}" ; Cursor forward word.
 ;
 ; Alt + →
+
+^v:: {
+	if GetKeyState("Shift") {
+		Send ("^+{End}") ; Go bottom a select.
+	} else {
+		Send "^{End}"  ; Go bottom.
+	}
+}
+;
+; Ctrl + Shift + v & Ctrl + v
+
+#Up:: {
+	Send "{Up}{Home}" ; Home or  Up
+}
+;
+; Win + ↑
+
+#Down:: {
+	Send "{Down}{End}" ; End or Down
+}
+;
+; Win + ↓
 
 !Left:: Send "{Home}" ; Cursor start of line.
 ;
@@ -190,9 +220,9 @@
 ;
 ; Ctrl + ;
 
-!r:: Send "^{r}" ; Reload.
+^Enter:: Send "{F2}" ; Rename.
 ;
-; Alt + r
+; Ctrl + Enter
 
 !+2:: Send "!{PrintScreen}" ; Window screenshot in a clipboard.
 ;
@@ -205,6 +235,10 @@
 !+4:: Send "{PrintScreen}" ;  Cropping capture.
 ;
 ; Alt + Shift + 4
+
+!r:: Send "^{r}" ; Reload.
+;
+; Alt + r
 
 !z:: Send "^{z}" ; Redo.
 ;
@@ -254,10 +288,6 @@
 ;
 ; Alt + Left Click
 
-^Enter:: Send "{F2}" ; Rename.
-;
-; Ctrl + Enter
-
 !w:: Send "^{w}" ; Close the tab window.
 ;
 ; Alt + w
@@ -298,36 +328,6 @@
 ;
 ; Ctrl + Shift + →
 
-#Up:: {
-	Send "{Up}{Home}" ; Home or  Up
-}
-;
-; Win + ↑
-
-#Down:: {
-	Send "{Down}{End}" ; End or Down
-}
-;
-; Win + ↓
-
-!Up:: Send "^{Home}" ; Go Top.
-;
-; Alt + ↑
-
-!Down:: Send "^{End}" ; Go bottom.
-;
-; Alt + ↓
-
-^v:: {
-	if GetKeyState("Shift") {
-		Send ("^+{End}") ; Go bottom a select.
-	} else {
-		Send "^{End}"  ; Go bottom.
-	}
-}
-;
-; Ctrl + v
-
 ^Left:: Send "#^{Left}" ; Virtual Desktop.
 ;
 ; Ctrl + ←
@@ -338,7 +338,7 @@
 
 ^+d:: Send "^#{d}" ; New Virtual Desktop.
 ;
-; Ctrl + shift + d
+; Ctrl + Shift + d
 
 ^q:: Send "^#{F4}" ; Close Virtual Desktop.
 ;
@@ -346,7 +346,7 @@
 
 !+t:: Send "^+{t}" ; Restore tabs
 ;
-;  alt + shift + t
+;  Alt + Shift + t
 
 ;; Visual Studio Code only.
 #HotIf WinActive("ahk_exe Code.exe")
@@ -394,5 +394,5 @@
 	ClipSaved := ""
 }
 ;
-; ctrl + c
+; Ctrl + c
 #HotIf

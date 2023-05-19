@@ -108,7 +108,7 @@
 	}
 }
 ;
-; Ctrl + Shift + n & SCtrl + n
+; Ctrl + Shift + n & Ctrl + n
 
 ^a:: {
 	if GetKeyState("Shift") {
@@ -128,6 +128,14 @@
 	}
 }
 
+!Up:: Send "^{Home}" ; 一番上
+;
+; Alt + ↑
+
+!Down:: Send "^{End}" ; 一番下
+;
+; Alt + ↓
+
 #Left:: Send "^{Left}" ; カーソル単語後方
 ;
 ; Alt + ←
@@ -135,6 +143,28 @@
 #Right:: Send "^{Right}" ; カーソル単語前方
 ;
 ; Alt + →
+
+^v:: {
+	if GetKeyState("Shift") {
+		Send ("^+{End}") ; 一番下まで選択
+	} else {
+		Send "^{End}"  ; 一番下
+	}
+}
+;
+; Ctrl + Shift + v & Ctrl + v
+
+#Up:: {
+	Send "{Up}{Home}" ; 行先頭→行を上がる
+}
+;
+; Win + ↑
+
+#Down:: {
+	Send "{Down}{End}" ; 行末→行を下がる
+}
+;
+; Win + ↓
 
 !Left:: Send "{Home}" ; カーソル行頭
 ;
@@ -176,9 +206,9 @@
 ;
 ; Ctrl + ;
 
-!r:: Send "^{r}" ; 再読み込み
+^Enter:: Send "{F2}" ; 名前を変更
 ;
-; Alt + r
+; Ctrl + Enter
 
 !+2:: Send "!{PrintScreen}" ; ウィンドウのスクリーンショットをクリップボードへ保存
 ;
@@ -191,6 +221,10 @@
 !+4:: Send "{PrintScreen}" ; 切り抜いてキャプチャーを起動
 ;
 ; Alt + Shift + 4
+
+!r:: Send "^{r}" ; 再読み込み
+;
+; Alt + r
 
 !z:: Send "^{z}" ; 戻し
 ;
@@ -240,10 +274,6 @@
 ;
 ; Alt + Left Click
 
-^Enter:: Send "{F2}" ; 名前を変更
-;
-; Ctrl + Enter
-
 !w:: Send "^{w}" ; タブを 閉じる
 ;
 ; Alt + w
@@ -284,36 +314,6 @@
 ;
 ; Ctrl + Shift + →
 
-#Up:: {
-	Send "{Up}{Home}" ; 行先頭→行を上がる
-}
-;
-; Win + ↑
-
-#Down:: {
-	Send "{Down}{End}" ; 行末→行を下がる
-}
-;
-; Win + ↓
-
-!Up:: Send "^{Home}" ; 一番上
-;
-; Alt + ↑
-
-!Down:: Send "^{End}" ; 一番下
-;
-; Alt + ↓
-
-^v:: {
-	if GetKeyState("Shift") {
-		Send ("^+{End}") ; 一番下まで選択
-	} else {
-		Send "^{End}"  ; 一番下
-	}
-}
-;
-; Ctrl + Shift + v & Ctrl + v
-
 ^Left:: Send "#^{Left}" ; 左の仮想デスクトップ
 ; Ctrl + ←
 
@@ -323,7 +323,7 @@
 
 ^+d:: Send "^#{d}" ; 新しい仮想デスクトップ
 ;
-; Ctrl + shift + d
+; Ctrl + Shift + d
 
 ^q:: Send "^#{F4}" ; 仮想デスクトップを閉じる
 ;
@@ -331,7 +331,7 @@
 
 !+t:: Send "^+{t}" ; タブを復元
 ;
-;  alt + shift + t
+;  Alt + Shift + t
 
 ;; Visual Studio Code only.
 #HotIf WinActive("ahk_exe Code.exe")
@@ -381,6 +381,6 @@
 	ClipSaved := ""
 }
 ;
-; ctrl + c
+; Ctrl + c
 
 #HotIf
