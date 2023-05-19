@@ -153,6 +153,14 @@ CapsLock & e:: {
 ;
 ; Ctrl + Shift + e & Ctrl + e
 
+!Up:: Send "^{Home}" ; Go top.
+;
+; Alt + ↑
+
+!Down:: Send "^{End}" ; Go bottom.
+;
+; Alt + ↓
+
 #Left:: Send "^{Left}" ; Cursor backward word.
 ;
 ; Alt + ←
@@ -160,6 +168,28 @@ CapsLock & e:: {
 #Right:: Send "^{Right}" ; Cursor forward word.
 ;
 ; Alt + →
+
+CapsLock & v:: {
+    if GetKeyState("Shift") {
+        Send ("^+{End}") ; Go bottom select.
+    } else {
+        Send "^{End}"  ; Go bottom.
+    }
+}
+;
+; Ctrl + Shift + v & Ctrl + v
+
+#Up:: {
+    Send "{Up}{Home}" ; Home or Up.
+}
+;
+; Win + ↑
+
+#Down:: {
+    Send "{Down}{End}" ; End or Down.
+}
+;
+; Win + ↓
 
 !Left:: Send "{Home}" ; Cursor start of Line.
 ;
@@ -208,9 +238,9 @@ CapsLock & `;:: Send "^{o}" ; convert to half-width Katakana.
 ;
 ; Ctrl + ;
 
-!r:: Send "^{r}" ; Reload.
+CapsLock & Enter:: Send "{F2}" ; Rename.
 ;
-; Alt + r
+; Ctrl + Enter
 
 !+2:: Send "!{PrintScreen}" ; Window screenshot in a clipboard.
 ;
@@ -223,6 +253,10 @@ CapsLock & `;:: Send "^{o}" ; convert to half-width Katakana.
 !+4:: Send "{PrintScreen}" ;  Cropping capture.
 ;
 ; Alt + Shift + 4
+
+!r:: Send "^{r}" ; Reload.
+;
+; Alt + r
 
 !z:: Send "^{z}" ; Redo.
 ;
@@ -272,10 +306,6 @@ CapsLock & `;:: Send "^{o}" ; convert to half-width Katakana.
 ;
 ; Alt + Left Click
 
-CapsLock & Enter:: Send "{F2}" ; Rename.
-;
-; Ctrl + Enter
-
 !w:: Send "^{w}" ; Close the tab window.
 ;
 ; Alt + w
@@ -324,36 +354,6 @@ CapsLock & Down:: {
 ;
 ; Ctrl + Shift + →
 
-#Up:: {
-    Send "{Up}{Home}" ; Home or Up.
-}
-;
-; Win + ↑
-
-#Down:: {
-    Send "{Down}{End}" ; End or Down.
-}
-;
-; Win + ↓
-
-!Up:: Send "^{Home}" ; Go top.
-;
-; Alt + ↑
-
-!Down:: Send "^{End}" ; Go bottom.
-;
-; Alt + ↓
-
-CapsLock & v:: {
-    if GetKeyState("Shift") {
-        Send ("^+{End}") ; Go bottom select.
-    } else {
-        Send "^{End}"  ; Go bottom.
-    }
-}
-;
-; Ctrl + Shift + v & Ctrl + v
-
 CapsLock & Left:: {
     if GetKeyState("Shift") {
         Send "#{Left}" ; Maximize window.
@@ -378,7 +378,7 @@ CapsLock & Right:: {
 
 ;;CapsLock & + d:: -> Go to CapsLock & d.
 ;
-; Ctrl + shift + d
+; Ctrl + Shift + d
 
 CapsLock & q:: Send "^#{F4}" ; Close Virtual Desktop.
 ;
@@ -386,7 +386,7 @@ CapsLock & q:: Send "^#{F4}" ; Close Virtual Desktop.
 
 !+t:: Send "^+{t}" ; Restore tabs
 ;
-;  alt + shift + t
+;  Alt + Shift + t
 
 ;; Visual Studio Code only.
 #HotIf WinActive("ahk_exe Code.exe")
@@ -434,5 +434,5 @@ CapsLock & c:: {
     ClipSaved := ""
 }
 ;
-; ctrl + c
+; Ctrl + c
 #HotIf

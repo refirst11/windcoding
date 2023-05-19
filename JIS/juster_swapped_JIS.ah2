@@ -140,6 +140,14 @@ CapsLock & e:: {
 ;
 ; Ctrl + Shift + e & Ctrl + e
 
+!Up:: Send "^{Home}" ; 一番上
+;
+; Alt + ↑
+
+!Down:: Send "^{End}" ; 一番下
+;
+; Alt + ↓
+
 #Left:: Send "^{Left}" ; カーソル単語後方
 ;
 ; Alt + ←
@@ -147,6 +155,28 @@ CapsLock & e:: {
 #Right:: Send "^{Right}" ; カーソル単語前方
 ;
 ; Alt + →
+
+CapsLock & v:: {
+    if GetKeyState("Shift") {
+        Send ("^+{End}") ; 一番下まで選択
+    } else {
+        Send "^{End}"  ; 一番下
+    }
+}
+;
+; Ctrl + Shift + v & Ctrl + v
+
+#Up:: {
+    Send "{Up}{Home}" ; 行先頭→行を上がる
+}
+;
+; Win + ↑
+
+#Down:: {
+    Send "{Down}{End}" ; 行末→行を下がる
+}
+;
+; Win + ↓
 
 !Left:: Send "{Home}" ; カーソル行頭
 ;
@@ -195,9 +225,9 @@ CapsLock & `;:: Send "^{o}" ; 半角カタカナに変換
 ;
 ; Ctrl + ;
 
-!r:: Send "^{r}" ; 再読み込み
+CapsLock & Enter:: Send "{F2}" ; 名前を変更
 ;
-; Alt + r
+; Ctrl + Enter
 
 !+2:: Send "!{PrintScreen}" ; ウィンドウのスクリーンショットをクリップボードへ保存
 ;
@@ -210,6 +240,10 @@ CapsLock & `;:: Send "^{o}" ; 半角カタカナに変換
 !+4:: Send "{PrintScreen}" ; 切り抜いてキャプチャーを起動
 ;
 ; Alt + Shift + 4
+
+!r:: Send "^{r}" ; 再読み込み
+;
+; Alt + r
 
 !z:: Send "^{z}" ; 戻す
 ;
@@ -259,10 +293,6 @@ CapsLock & `;:: Send "^{o}" ; 半角カタカナに変換
 ;
 ; Alt + Left Click
 
-CapsLock & Enter:: Send "{F2}" ; 名前を変更
-;
-; Ctrl + Enter
-
 !w:: Send "^{w}" ; タブを 閉じる
 ;
 ; Alt + w
@@ -311,37 +341,6 @@ CapsLock & Down:: {
 ;
 ; Ctrl + →
 
-#Up:: {
-    Send "{Up}{Home}" ; 行先頭→行を上がる
-}
-;
-; Win + ↑
-
-
-#Down:: {
-    Send "{Down}{End}" ; 行末→行を下がる
-}
-;
-; Win + ↓
-
-!Up:: Send "^{Home}" ; 一番上
-;
-; Alt + ↑
-
-!Down:: Send "^{End}" ; 一番下
-;
-; Alt + ↓
-
-CapsLock & v:: {
-    if GetKeyState("Shift") {
-        Send ("^+{End}") ; 一番下まで選択
-    } else {
-        Send "^{End}"  ; 一番下
-    }
-}
-;
-; Ctrl + Shift + v & Ctrl + v
-
 CapsLock & Left:: {
     if GetKeyState("Shift") {
         Send "#{Left}" ; ウィンドウ左方変形, 移動
@@ -366,7 +365,7 @@ CapsLock & Right:: {
 
 ;;CapsLock & + d:: 新しい仮想デスクトップ -> Go to CapsLock & d.
 ;
-; Ctrl + shift + d
+; Ctrl + Shift + d
 
 CapsLock & q:: Send "^#{F4}" ; 仮想デスクトップを閉じる
 ;
@@ -374,7 +373,7 @@ CapsLock & q:: Send "^#{F4}" ; 仮想デスクトップを閉じる
 
 !+t:: Send "^+{t}" ; タブを復元
 ;
-;  alt + shift + t
+;  Alt + Shift + t
 
 ;; Visual Studio Code only.
 #HotIf WinActive("ahk_exe Code.exe")
@@ -424,6 +423,6 @@ CapsLock & c:: {
     ClipSaved := ""
 }
 ;
-; ctrl + c
+; Ctrl + c
 
 #HotIf
