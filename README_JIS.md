@@ -1,15 +1,16 @@
-[juster README](https://github.com/su-pull/Juster/blob/main/README.md)
+[wincoding README](https://github.com/su-pull/wincoding/blob/main/README.md)
 
-# juster_JIS
+# wincoding_JIS
 
 [![OS - Windows](https://img.shields.io/badge/OS-Windows-lightblue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-lightblue)](https://www.autohotkey.com/ "Go to AutoHotkey")
-[![Release Status](https://img.shields.io/github/release/su-pull/Juster?color=lightblue)](https://github.com/su-pull/Juster/releases/latest)
+[![Release Status](https://img.shields.io/github/release/su-pull/wincoding?color=lightblue)](https://github.com/su-pull/wincoding/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightblue)](https://opensource.org/licenses/MIT)
 
 Windows の作業効率を効率を向上させます。  
 Mac を試してみたい場合はぴったりで、こちらは日本語配列版になります。
 
 CapsLock と Left Control を Swap するタイプとデフォルトのタイプがあります。
+メモリーリークを起こした場合アプリを終了させたあと起動してください。
 
 ## 設定
 
