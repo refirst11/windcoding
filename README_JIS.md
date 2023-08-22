@@ -1,15 +1,15 @@
-[juster README](https://github.com/su-pull/Juster/blob/main/README.md)
+[wincoding README](https://github.com/su-pull/wincoding/blob/main/README.md)
 
-# juster_JIS
+# wincoding_JIS
 
 [![OS - Windows](https://img.shields.io/badge/OS-Windows-lightblue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-lightblue)](https://www.autohotkey.com/ "Go to AutoHotkey")
-[![Release Status](https://img.shields.io/github/release/su-pull/Juster?color=lightblue)](https://github.com/su-pull/Juster/releases/latest)
+[![Release Status](https://img.shields.io/github/release/su-pull/wincoding?color=lightblue)](https://github.com/su-pull/wincoding/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightblue)](https://opensource.org/licenses/MIT)
 
-Windows の作業効率を効率を向上させます。  
+これは Windows の作業効率を効率を向上させます。  
 Mac を試してみたい場合はぴったりで、こちらは日本語配列版になります。
 
-CapsLock と Left Control を Swap するタイプとデフォルトのタイプがあります。
+仮想デスクトップなどの Win キーを使うコマンドは Windows デフォルトの動作のままです(Mac Option キーとしても使えます)。
 
 ## 設定
 
@@ -23,14 +23,18 @@ Microsoft IME→ キーとタッチのカスタマイズからキーの割り当
 | 入力             | 出力                                                 |
 | ---------------- | ---------------------------------------------------- |
 | Ctrl + Space     | IME オンオフ                                         |
-| Ctrl + b         | ← カーソルを戻る                                     |
-| Ctrl + f         | → カーソルを進める                                   |
 | Ctrl + p         | ↑ カーソル上行                                       |
 | Ctrl + n         | ↓ カーソル下行                                       |
+| Ctrl + b         | ← カーソルを戻る                                     |
+| Ctrl + f         | → カーソルを進める                                   |
 | Ctrl + a         | カーソル行頭                                         |
 | Ctrl + e         | カーソル行末                                         |
+| Alt + ↑          | トップにスクロール                                   |
+| Alt + ↓          | ボトムにスクロール                                   |
 | Alt + ←          | カーソル行頭                                         |
 | Alt + →          | カーソル行末                                         |
+| Win + ↑          | カーソル行頭 → カーソル上行                          |
+| Win + ↓          | カーソル行末 → カーソル下行                          |
 | Win + ←          | カーソル単語後方                                     |
 | Win + →          | カーソル単語前方                                     |
 | Shift + Alt + ←  | 後方選択                                             |
@@ -41,10 +45,8 @@ Microsoft IME→ キーとタッチのカスタマイズからキーの割り当
 | Ctrl + h         | 後方文字を削除                                       |
 | Ctrl + k         | カタカナに変換                                       |
 | Ctrl + ;         | 半角カタカナに変換                                   |
+| Ctrl + Enter     | 名前を変更                                           |
 | Alt + r          | リロード                                             |
-| Alt + Shift + 2  | ウィンドウのスクリーンショットをクリップボードへ保存 |
-| Alt + Shift + 3  | 画面のスクリーンショットをクリップボードへ保存       |
-| Alt + Shift + 4  | 切り抜いてキャプチャーを起動                         |
 | Alt + z          | 元に戻す                                             |
 | Alt + Shift + z  | やり直し                                             |
 | Alt + x          | カット                                               |
@@ -52,28 +54,18 @@ Microsoft IME→ キーとタッチのカスタマイズからキーの割り当
 | Alt + v          | 貼り付け                                             |
 | Alt + a          | すべて選択                                           |
 | Alt + f          | 検索                                                 |
+| Alt + Shift + 2  | ウィンドウのスクリーンショットをクリップボードへ保存 |
+| Alt + Shift + 3  | 画面のスクリーンショットをクリップボードへ保存       |
+| Alt + Shift + 4  | 切り抜いてキャプチャーを起動                         |
 | Alt + s          | 保存                                                 |
 | Alt + Shift + s  | 名前を付けて保存                                     |
 | Alt + Shift + n  | 新規フォルダー                                       |
 | Alt + o          | 開く                                                 |
 | Alt + Left Click | 新しいタブでリンクを開く / 複数選択                  |
-| Ctrl + Enter     | 名前を変更                                           |
 | Alt + w          | タブ ウィンドウを閉じる                              |
 | Alt + q          | アプリケーションを閉じる                             |
 | Alt + m          | ウィンドウを最小化                                   |
 | Alt + h          | ウィンドウを全て最小化                               |
-| Ctrl + ↑         | ウィンドウを上へ変形,移動                            |
-| Ctrl + ↓         | ウィンドウを下へ変形,移動                            |
-| Ctrl + ←         | ウィンドウを左へ変形,移動                            |
-| Ctrl + →         | ウィンドウを右へ変形,移動                            |
-| Win + ↑          | カーソル行頭 → カーソル上行                          |
-| Win + ↓          | カーソル行末 → カーソル下行                          |
-| Alt + ↑          | トップにスクロール                                   |
-| Alt + ↓          | ボトムにスクロール                                   |
-| Win + Ctrl + ←   | 左の仮想デスクトップを表示                           |
-| Win + Ctrl + →   | 右の仮想デスクトップを表示                           |
-| Win + d          | 新しい仮想デスクトップ                               |
-| Win + q          | 仮想デスクトップを閉じる                             |
 
 ## ブラウザー
 
