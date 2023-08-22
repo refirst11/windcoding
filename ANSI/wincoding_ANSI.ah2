@@ -1,37 +1,23 @@
-/*Repository:https://github.com/su-pull/juster */
+/*Repository:https://github.com/su-pull/wincoding */
 #UseHook
 
-;; IME switch
-LAltPressed := false
-RAltPressed := false
-~LAlt:: {
+; IME switch.
+*~LAlt:: {
 	Send "{Blind}{vk07}"
 	KeyWait "LAlt"
-	if (A_PriorKey = "LAlt" && !LAltPressed) {
+	if (A_PriorKey = "LAlt") {
 		Send "{vkF2sc070}{vkF3sc029}"
-		global LAltPressed := true
-		global RAltPressed := false
 	}
 }
-~RAlt:: {
+*~RAlt:: {
 	Send "{Blind}{vk07}"
 	KeyWait "RAlt"
-	if (A_PriorKey = "RAlt" && !RAltPressed) {
+	if (A_PriorKey = "RAlt") {
 		Send "{vkF2sc070}"
-		global RAltPressed := true
-		global LAltPressed := false
 	}
-}
-LButton:: {
-	global LAltPressed := false
-	global RAltPressed := false
-	SendInput "{Lbutton down}"
-	KeyWait "LButton"
-	SendInput "{Lbutton up}"
 }
 
 ; Ctrl of remap.
-^q:: Send ("")
 ^r:: Send ("")
 ^t:: Send ("")
 ^y:: Send ("")
@@ -46,6 +32,7 @@ LButton:: {
 ^,:: Send ("")
 ^.:: Send ("")
 ^/:: Send ("")
+
 ; Ctrl + Shift of remap.
 ^+q:: Send ("")
 ^+w:: Send ("")
@@ -67,6 +54,7 @@ LButton:: {
 ^+,:: Send ("")
 ^+.:: Send ("")
 ^+/:: Send ("")
+
 ;; Reset use shortcut keys.
 !VKC0:: Send("")
 ^w:: Send("")
@@ -75,11 +63,9 @@ LButton:: {
 ^z:: Send("")
 ^x:: Send("")
 ^c:: Send("")
-^v:: Send("")
 ^i:: Send("")
 ^o:: Send("")
 ^+l:: Send("")
-^#d:: Send("")
 ^+n:: Send("")
 ^#F4:: Send("")
 ^+p:: Send("")
@@ -96,29 +82,65 @@ LButton:: {
 ;
 ; Ctrl + Space
 
-^b:: Send "{Left}" ; ← Cursor back.
-;S
-; Ctrl + b
-
-^f:: Send "{Right}" ; → Cursor forward.
+^b:: {
+	if GetKeyState("Shift") {
+		Send ("+{Left}")  ; ← Cursor back select.
+	} else {
+		Send "{Left}" ; ← Cursor back.
+	}
+}
 ;
-; Ctrl + f
+; Ctrl + Shift + b & Ctrl + b
 
-^p:: Send "{Up}" ; ↑ Cursor up line.
+^f:: {
+	if GetKeyState("Shift") {
+		Send ("+{Right}") ; → Cursor forward select.
+	} else {
+		Send "{Right}" ; → Cursor forward.
+	}
+}
 ;
-; Ctrl + p
+; Ctrl + Shift + f & Ctrl + f
 
-^n:: Send "{Down}" ; ↓ Cursor down line.
+^p:: {
+	if GetKeyState("Shift") {
+		Send ("+{Up}") ; ↑ Cursor up line select.
+	} else {
+		Send "{Up}" ; ↑ Cursor up line.
+	}
+}
 ;
-; Ctrl + n
+; Ctrl + Shift + p & Ctrl + p
 
-^a:: Send "{Home}" ; Cursor start of line.
+^n:: {
+	if GetKeyState("Shift") {
+		Send ("+{Down}") ; ↑ Cursor down line select.
+	} else {
+		Send "{Down}" ; ↓ Cursor down line.
+	}
+}
 ;
-; Ctrl + a
+; Ctrl + Shift + n & SCtrl + n
 
-^e:: Send "{End}" ; Cursor end of line.
+^a:: {
+	if GetKeyState("Shift") {
+		Send ("+{Home}") ; → Start of line select.
+	} else {
+		Send "{Home}" ; Cursor start of line.
+	}
+}
 ;
-; Ctrl + e
+; Ctrl + Shift + a & Ctrl + a
+
+^e:: {
+	if GetKeyState("Shift") {
+		Send ("+{End}") ; → End of line select.
+	} else {
+		Send "{End}" ; Cursor end of line.
+	}
+}
+;
+; Ctrl + Shift + e & Ctrl + e
 
 #Left:: Send "^{Left}" ; Cursor backward word.
 ;
@@ -260,21 +282,9 @@ LButton:: {
 ;
 ; Alt + h
 
-^Up:: Send "#{Up}" ; Maximize window.
+^+Up:: Send "#{Up}" ; Maximize window.
 ;
-; Ctrl + ↑
-
-^Down:: Send "#{Down}" ; Minimize window.
-;
-; Ctrl + ↓
-
-^Left:: Send "#{Left}" ; Maximize window.
-;
-; Ctrl + ←
-
-^Right:: Send "#{Right}" ; Minimize window.
-;
-; Ctrl + →
+; Ctrl + Shift + ↑
 
 #Up:: {
 	Send "{Up}{Home}" ; Home or  Up
@@ -296,27 +306,23 @@ LButton:: {
 ;
 ; Alt + ↓
 
-;#^ Left Virtual Desktop.
+^v:: {
+	if GetKeyState("Shift") {
+		Send ("^+{End}") ; Go bottom a select.
+	} else {
+		Send "^{End}"  ; Go bottom.
+	}
+}
 ;
-; win + Ctrl + ←
+; Ctrl + v
 
-;#^ Right Virtual Desktop.
-;
-; win + Ctrl + →
-
-#d:: Send "^#{d}" ; New Virtual Desktop.
-;
-; Win + d
-
-#q:: Send "^#{F4}" ; Close Virtual Desktop.
-; Win + q
-
-!+t:: Send "^+{t}" ; タブを復元
+!+t:: Send "^+{t}" ; Restore tabs
 ;
 ;  alt + shift + t
 
 ;; Visual Studio Code only.
 #HotIf WinActive("ahk_exe Code.exe")
+
 #Up:: Send "!{Up}" ; Swap the selection range up.
 ;
 ; Win + ↑

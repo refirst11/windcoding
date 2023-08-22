@@ -1,4 +1,4 @@
-/*Repository:https://github.com/su-pull/juster/blob/main/README_JIS.md */
+/*Repository:https://github.com/su-pull/wincoding/blob/main/README_JIS.md */
 #UseHook
 
 ;; Un focused tab.
@@ -6,7 +6,6 @@
 *~RAlt:: Send "{Blind}{vk07}"
 
 ; Ctrl of remap.
-^q:: Send ("")
 ^r:: Send ("")
 ^t:: Send ("")
 ^y:: Send ("")
@@ -22,55 +21,29 @@
 ^.:: Send ("")
 ^/:: Send ("")
 
-; Ctrl + Shift of remap.
-^+:: {
-	if GetKeyState("q")
-		Send ("")
-	if GetKeyState("w")
-		Send ("")
-	if GetKeyState("r")
-		Send ("")
-	if GetKeyState("t")
-		Send ("")
-	if GetKeyState("y")
-		Send ("")
-	if GetKeyState("u")
-		Send ("")
-	if GetKeyState("i")
-		Send ("")
-	if GetKeyState("o")
-		Send ("")
-	if GetKeyState("[")
-		Send ("")
-	if GetKeyState("]")
-		Send ("")
-	if GetKeyState("\")
-		Send ("")
-	if GetKeyState("s")
-		Send ("")
-	if GetKeyState("g")
-		Send ("")
-	if GetKeyState("j")
-		Send ("")
-	if GetKeyState("'")
-		Send ("")
-	if GetKeyState("z")
-		Send ("")
-	if GetKeyState("x")
-		Send ("")
-	if GetKeyState("c")
-		Send ("")
-	if GetKeyState("m")
-		Send ("")
-	if GetKeyState(",")
-		Send ("")
-	if GetKeyState(".")
-		Send ("")
-	if GetKeyState("/")
-		Send ("")
-}
+;; Ctrl + Shift of remap.
+^+q:: Send ("")
+^+w:: Send ("")
+^+r:: Send ("")
+^+y:: Send ("")
+^+u:: Send ("")
+^+i:: Send ("")
+^+o:: Send ("")
+^+[:: Send ("")
+^+]:: Send ("")
+^+\:: Send ("")
+^+g:: Send ("")
+^+j:: Send ("")
+^+':: Send ("")
+^+z:: Send ("")
+^+x:: Send ("")
+^+c:: Send ("")
+^+m:: Send ("")
+^+,:: Send ("")
+^+.:: Send ("")
+^+/:: Send ("")
 
-;; Reset default shortcut keys
+;; Reset default shortcut keys.
 !VKC0:: Send("")
 ^w:: Send("")
 #m:: Send("")
@@ -78,11 +51,9 @@
 ^z:: Send("")
 ^x:: Send("")
 ^c:: Send("")
-^v:: Send("")
 ^i:: Send("")
 ^o:: Send("")
 ^+l:: Send("")
-^#d:: Send("")
 ^+n:: Send("")
 ^#F4:: Send("")
 ^+p:: Send("")
@@ -99,29 +70,63 @@
 ;
 ; Ctrl + Space
 
-^b:: Send "{Left}" ; ← カーソル左
+^b:: {
+	if GetKeyState("Shift") {
+		Send ("+{Left}")  ; ← Cursor back select.
+	} else {
+		Send "{Left}" ; ← Cursor back.
+	}
+}
 ;
-; Ctrl + b
+; Ctrl + Shift + b & Ctrl + b
 
-^f:: Send "{Right}" ; → カーソル右
+^f:: {
+	if GetKeyState("Shift") {
+		Send ("+{Right}") ; → Cursor forward select.
+	} else {
+		Send "{Right}" ; → Cursor forward.
+	}
+}
 ;
-; Ctrl + f
+; Ctrl + Shift + f & Ctrl + f
 
-^p:: Send "{Up}" ; ↑ カーソル上行
+^p:: {
+	if GetKeyState("Shift") {
+		Send ("+{Up}") ; ↑ Cursor up line select.
+	} else {
+		Send "{Up}" ; ↑ Cursor up line.
+	}
+}
 ;
-; Ctrl + p
+; Ctrl + Shift + p & Ctrl + p
 
-^n:: Send "{Down}" ; ↓ カーソル下行
+^n:: {
+	if GetKeyState("Shift") {
+		Send ("+{Down}") ; ↑ Cursor down line select.
+	} else {
+		Send "{Down}" ; ↓ Cursor down line.
+	}
+}
 ;
-; Ctrl + n
+; Ctrl + Shift + n & SCtrl + n
 
-^a:: Send "{Home}" ; カーソル行頭
+^a:: {
+	if GetKeyState("Shift") {
+		Send ("+{Home}") ; → Start of line select.
+	} else {
+		Send "{Home}" ; Cursor start of line.
+	}
+}
 ;
-; Ctrl + a
+; Ctrl + Shift + a & Ctrl + a
 
-^e:: Send "{End}" ; カーソル行末
-;
-; Ctrl + e
+^e:: {
+	if GetKeyState("Shift") {
+		Send ("+{End}") ; → End of line select.
+	} else {
+		Send "{End}" ; Cursor end of line.
+	}
+}
 
 #Left:: Send "^{Left}" ; カーソル単語後方
 ;
@@ -263,22 +268,6 @@
 ;
 ; Alt + h
 
-^Up:: Send "#{Up}" ; ウィンドウ上方変形,移動
-;
-; Ctrl + ↑
-
-^Down:: Send "#{Down}" ; ウィンドウ下方変形,移動
-;
-; Ctrl + ↓
-
-^Left:: Send "#{Left}" ; ウィンドウ左方変形,移動
-;
-; Ctrl + ←
-
-^Right:: Send "#{Right}" ; ウィンドウ右方変形,移動
-;
-; Ctrl + →
-
 #Up:: {
 	Send "{Up}{Home}" ; 行先頭→行を上がる
 }
@@ -299,21 +288,15 @@
 ;
 ; Alt + ↓
 
-;#^ ; 左の仮想デスクトップ
+^v:: {
+	if GetKeyState("Shift") {
+		Send ("^+{End}") ; 一番下まで選択
+	} else {
+		Send "^{End}"  ; 一番下
+	}
+}
 ;
-; win + Ctrl + ←
-
-;#^ ; 右の仮想デスクトップ
-;
-; win + Ctrl + →
-
-#d:: Send "^#{d}" ; 新しい仮想デスクトップ
-;
-; Win + d
-
-#q:: Send "^#{F4}" ; 仮想デスクトップを閉じる
-;
-; Win + q
+; Ctrl + Shift + v & Ctrl + v
 
 !+t:: Send "^+{t}" ; タブを復元
 ;

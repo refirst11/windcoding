@@ -1,4 +1,4 @@
-/*Repository:https://github.com/su-pull/juster */
+/*Repository:https://github.com/su-pull/wincoding */
 #UseHook
 
 InstallKeybdHook
@@ -22,41 +22,27 @@ SendSuppressedKeyUp(key) {
 }
 
 *LCtrl:: {
-    Send "{Blind}!{CapsLock}"
+    Send "{Blind}{CapsLock}"
     SendSuppressedKeyUp "CapsLock"
 }
 
-;; IME switch
-LAltPressed := false
-RAltPressed := false
-~LAlt:: {
+; IME switch.
+*~LAlt:: {
     Send "{Blind}{vk07}"
     KeyWait "LAlt"
-    if (A_PriorKey = "LAlt" && !LAltPressed) {
+    if (A_PriorKey = "LAlt") {
         Send "{vkF2sc070}{vkF3sc029}"
-        global LAltPressed := true
-        global RAltPressed := false
     }
 }
-~RAlt:: {
+*~RAlt:: {
     Send "{Blind}{vk07}"
     KeyWait "RAlt"
-    if (A_PriorKey = "RAlt" && !RAltPressed) {
+    if (A_PriorKey = "RAlt") {
         Send "{vkF2sc070}"
-        global RAltPressed := true
-        global LAltPressed := false
     }
-}
-LButton:: {
-    global LAltPressed := false
-    global RAltPressed := false
-    SendInput "{Lbutton down}"
-    KeyWait "LButton"
-    SendInput "{Lbutton up}"
 }
 
 ; CapsLock of remap.
-CapsLock & q:: Send ("")
 CapsLock & w:: Send ("")
 CapsLock & r:: Send ("")
 CapsLock & t:: Send ("")
@@ -79,67 +65,82 @@ CapsLock & ,:: Send ("")
 CapsLock & .:: Send ("")
 CapsLock & /:: Send ("")
 
-; CapsLock + Shift of remap.
-CapsLock & +:: {
-    if GetKeyState("q")
-        Send ("")
-    if GetKeyState("w")
-        Send ("")
-    if GetKeyState("r")
-        Send ("")
-    if GetKeyState("t")
-        Send ("")
-    if GetKeyState("y")
-        Send ("")
-    if GetKeyState("u")
-        Send ("")
-    if GetKeyState("i")
-        Send ("")
-    if GetKeyState("o")
-        Send ("")
-    if GetKeyState("[")
-        Send ("")
-    if GetKeyState("]")
-        Send ("")
-    if GetKeyState("\")
-        Send ("")
-    if GetKeyState("s")
-        Send ("")
-    if GetKeyState("g")
-        Send ("")
-    if GetKeyState("j")
-        Send ("")
-    if GetKeyState("'")
-        Send ("")
-    if GetKeyState("z")
-        Send ("")
-    if GetKeyState("x")
-        Send ("")
-    if GetKeyState("c")
-        Send ("")
-    if GetKeyState("m")
-        Send ("")
-    if GetKeyState(",")
-        Send ("")
-    if GetKeyState(".")
-        Send ("")
-    if GetKeyState("/")
-        Send ("")
-}
+; System Ctrl of remap.
+^F1:: Send ("F1")
+^F2:: Send ("F2")
+^F3:: Send ("F3")
+^F4:: Send ("F4")
+^F5:: Send ("F5")
+^F6:: Send ("F6")
+^F7:: Send ("F7")
+^F8:: Send ("F8")
+^F9:: Send ("F9")
+^F10:: Send ("F10")
+^F11:: Send ("F11")
+^F12:: Send ("F12")
+^Esc:: Send ("Esc")
+^1:: Send ("1")
+^2:: Send ("2")
+^3:: Send ("3")
+^4:: Send ("4")
+^5:: Send ("5")
+^6:: Send ("6")
+^7:: Send ("7")
+^8:: Send ("8")
+^9:: Send ("9")
+^0:: Send ("0")
+^a:: Send ("a")
+^b:: Send ("b")
+^c:: Send ("c") ; copy as Alt + c
+^d:: Send ("d")
+^e:: Send ("e")
+^f:: Send ("f")
+^g:: Send ("g")
+^h:: Send ("h")
+^i:: Send ("i") ; katakana as Ctrl + k
+^j:: Send ("j")
+^k:: Send ("k")
+^l:: Send ("l")
+^n:: Send ("n")
+^m:: Send ("m")
+^o:: Send ("o") ; open as Alt + o
+^p:: Send ("p")
+^q:: Send ("q")
+^r:: Send ("r")
+^s:: Send ("s") ; save as Alt + s
+^t:: Send ("t")
+^u:: Send ("u")
+^v:: Send ("v") ; past as Alt + v
+^w:: Send ("w") ; close as Alt + q
+^x:: Send ("x") ; cut as Alt + x
+^y:: Send ("y")
+^z:: Send ("z") ; undo as Alt + z
+^[:: Send ("[")
+^]:: Send ("]")
+^\:: Send ("\")
+^;:: Send (";")
+^':: Send ("'")
+^,:: Send (",")
+^.:: Send (".")
+^Backspace:: Send("Backspace")
+^Space:: Send("Space")
+^Up:: Send("Up")
+^Down:: Send("Down")
+^ScrollLock:: Send ("ScrollLock")
+^NumLock:: Send ("NumLock")
+^Pause:: Send ("Pause")
+^Insert:: Send ("Insert")
+^Delete:: Send ("Delete")
+^Home:: Send ("Home")
+^End:: Send ("End")
+^PgUp:: Send ("PgUp")
+^PgDn:: Send ("PgDn")
 
 ;; Reset use shortcut keys.
+#Capslock:: Send("")
 !VKC0:: Send("")
-^w:: Send("")
 #m:: Send("")
-^s:: Send("")
-^z:: Send("")
-^x:: Send("")
-^c:: Send("")
-^v:: Send("")
-^i:: Send("")
-^o:: Send("")
 ^+l:: Send("")
-^#d:: Send("")
 ^+n:: Send("")
 ^#F4:: Send("")
 ^+p:: Send("")
@@ -156,29 +157,71 @@ CapsLock & Space:: Send "!{VKC0}" ; IME toggle.
 ;
 ; Ctrl + Space
 
-CapsLock & b:: Send "{Left}" ; ← Cursor back.
+CapsLock & b:: {
+    if GetKeyState("Shift") {
+        Send ("+{Left}")  ; ← Cursor back select.
+    } else {
+        Send "{Left}" ; ← Cursor back.
+    }
+}
 ;
-; Ctrl + b
+; Ctrl + Shift + b & Ctrl + b
 
-CapsLock & f:: Send "{Right}" ; → Cursor forward.
+CapsLock & f:: {
+    if GetKeyState("Shift") {
+        Send ("+{Right}") ; → Cursor forward select.
+    } else {
+        Send "{Right}" ; → Cursor forward.
+    }
+}
 ;
-; Ctrl + f
+; Ctrl + Shift + f & Ctrl + f
 
-CapsLock & p:: Send "{Up}" ; ↑ Cursor up line.
+CapsLock & p:: {
+    if GetKeyState("Shift") {
+        Send ("+{Up}") ; ↑ Cursor up line select.
+    } else {
+        Send "{Up}" ; ↑ Cursor up line.
+    }
+}
 ;
-; Ctrl + p
+; Ctrl + Shift + p & Ctrl + p
 
-CapsLock & n:: Send "{Down}" ; ↓ Cursor down line.
+CapsLock & n:: {
+    if GetKeyState("Shift") {
+        Send ("+{Down}") ; ↑ Cursor down line select.
+    } else {
+        Send "{Down}" ; ↓ Cursor down line.
+    }
+}
 ;
-; Ctrl + n
+; Ctrl + Shift + n & SCtrl + n
 
-CapsLock & a:: Send "{Home}" ; Cursor start of line.
+CapsLock & a:: {
+    if GetKeyState("Shift") {
+        Send ("+{Home}") ; → Start of line select.
+    } else {
+        Send "{Home}" ; Cursor start of line.
+    }
+}
 ;
-; Ctrl + a
+; Ctrl + Shift + a & Ctrl + a
 
-CapsLock & e:: Send "{End}" ; Cursor end of line.
+CapsLock & e:: {
+    if GetKeyState("Shift") {
+        Send ("+{End}") ; → End of line select.
+    } else {
+        Send "{End}" ; Cursor end of line.
+    }
+}
 ;
-; Ctrl + e
+; Ctrl + Shift + e & Ctrl + e
+CapsLock & Up:: Send "^{Up}"
+CapsLock & Down:: Send "^{Down}"
+CapsLock & PgUp:: Send "^{PgUp}"
+CapsLock & PgDn:: Send "^{PgDn}"
+;  Scroll.
+;  TabScroll.
 
 #Left:: Send "^{Left}" ; Cursor backward word.
 ;
@@ -284,10 +327,6 @@ CapsLock & `;:: Send "^{o}" ; convert to half-width Katakana.
 ;
 ; Alt + Shift + n
 
-!o:: Send "^{Enter}" ; Open.
-;
-; Alt + o
-
 !LButton:: Send "^{LButton}" ; Open link in a new tab.
 ;
 ; Alt + Left Click
@@ -320,21 +359,14 @@ CapsLock & Enter:: Send "{F2}" ; Rename.
 ;
 ; Alt + h
 
-CapsLock & Up:: Send "#{Up}" ; Maximize window.
+!i:: Send "^{i}"
+!o:: Send "^{o}"
+!p:: Send "^{p}"
+!j:: Send "^{j}"
+!k:: Send "^{k}"
+!l:: Send "^{l}"
 ;
-; Ctrl + ↑
-
-CapsLock & Down:: Send "#{Down}" ; Minimize window.
-;
-; Ctrl + ↓
-
-CapsLock & Left:: Send "#{Left}" ; Maximize window.
-;
-; Ctrl + ←
-
-CapsLock & Right:: Send "#{Right}" ; Minimize window.
-;
-; Ctrl + →
+; Default.
 
 #Up:: {
     Send "{Up}{Home}" ; Home or Up.
@@ -356,21 +388,23 @@ CapsLock & Right:: Send "#{Right}" ; Minimize window.
 ;
 ; Alt + ↓
 
-; CapsLock & # & Left::Send "#^{Left}" ; Left Virtual Desktop.
-; ;
-; ; win + Ctrl + ←
-
-; CapsLock & # & Right::Send "#^{Right}" ; Right Virtual Desktop.
-; ;
-; ; win + Ctrl + →
-
-#d:: Send "^#{d}" ; New Virtual Desktop.
+CapsLock & v:: {
+    if GetKeyState("Shift") {
+        Send ("^+{End}") ; Go bottom select.
+    } else {
+        Send "^{End}"  ; Go bottom.
+    }
+}
 ;
-; Win + d
+; Ctrl + Shift + v & Ctrl + v
 
-#q:: Send "^#{F4}" ; Close Virtual Desktop.
+LCtrl & #:: {
+    if GetKeyState("d") {
+        Send "^#{d}" ; New Virtual Desktop.
+    }
+}
 ;
-; Win + q
+; Ctrl + Win + d
 
 !+t:: Send "^+{t}" ; Restore tabs
 ;
