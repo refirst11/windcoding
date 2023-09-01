@@ -454,6 +454,7 @@ CapsLock & c:: {
     A_Clipboard := ClipSaved
     ClipSaved := ""
 }
-;
+!c:: Send ("")
+;!
 ; ctrl + c
 #HotIf
