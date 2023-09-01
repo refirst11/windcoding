@@ -3,14 +3,14 @@
 
 ; IME switch.
 *~LAlt:: {
-	Send "{Blind}{vk07}"
+	Send "{vk07}"
 	KeyWait "LAlt"
 	if (A_PriorKey = "LAlt") {
 		Send "{vkF2sc070}{vkF3sc029}"
 	}
 }
 *~RAlt:: {
-	Send "{Blind}{vk07}"
+	Send "{vk07}"
 	KeyWait "RAlt"
 	if (A_PriorKey = "RAlt") {
 		Send "{vkF2sc070}"
