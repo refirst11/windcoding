@@ -1,9 +1,9 @@
 /*Repository:https://github.com/su-pull/wincoding/blob/main/README_JIS.md */
 #UseHook
 
-;; Un focused tab.
-*~LAlt:: Send "{Blind}{vk07}"
-*~RAlt:: Send "{Blind}{vk07}"
+;; not select tab.
+*~LAlt:: Send "{vk07}"
+*~RAlt:: Send "{vk07}"
 
 ; Ctrl of remap.
 ^r:: Send ("")
