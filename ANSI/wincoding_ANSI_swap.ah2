@@ -5,20 +5,20 @@ InstallKeybdHook
 SendSuppressedKeyUp(key) {
     DllCall("keybd_event"
         , "char", GetKeyVK(key)
-        , "char", GetKeySC(key)
-        , "uint", KEYEVENTF_KEYUP := 0x2
-        , "uptr", KEY_BLOCK_THIS := 0xFFC3D450)
+            , "char", GetKeySC(key)
+                , "uint", KEYEVENTF_KEYUP := 0x2
+                , "uptr", KEY_BLOCK_THIS := 0xFFC3D450)
 }
 
-;; Swap CapsLock to LCtrl in a way compatible with IME.
+; CapsCtrl.
 *CapsLock::
 {
-    Send "{Blind}{LCtrl DownR}"
+    Send "{LCtrl DownR}"
     SendSuppressedKeyUp "LCtrl"
 }
 *CapsLock up::
 {
-    Send "{Blind}{LCtrl Up}"
+    Send "{LCtrl Up}"
 }
 
 *LCtrl:: {
@@ -28,14 +28,14 @@ SendSuppressedKeyUp(key) {
 
 ; IME switch.
 *~LAlt:: {
-    Send "{Blind}{vk07}"
+    Send "{vk07}"
     KeyWait "LAlt"
     if (A_PriorKey = "LAlt") {
         Send "{vkF2sc070}{vkF3sc029}"
     }
 }
 *~RAlt:: {
-    Send "{Blind}{vk07}"
+    Send "{vk07}"
     KeyWait "RAlt"
     if (A_PriorKey = "RAlt") {
         Send "{vkF2sc070}"
@@ -410,6 +410,10 @@ LCtrl & #:: {
 ;
 ;  alt + shift + t
 
+!d:: Send "^{d}" ; Word selection.
+;
+; Alt + d
+
 ;; Visual Studio Code only.
 #HotIf WinActive("ahk_exe Code.exe")
 #Up:: Send "!{Up}" ; Swap the selection range up.
@@ -427,10 +431,6 @@ LCtrl & #:: {
 #+Down:: Send "!+{Down}" ; Copy the selection range down.
 ;
 ; Win + Shift + ↓
-
-!d:: Send "^{d}" ; Word selection.
-;
-; Alt + d
 
 !+l:: Send "^+{l}" ; Match selection.
 ;
