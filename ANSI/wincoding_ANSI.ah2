@@ -367,5 +367,5 @@
 }
 !c:: Send ("")
 ;
-; ctrl + c
+; Ctrl + c
 #HotIf

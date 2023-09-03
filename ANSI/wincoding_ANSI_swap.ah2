@@ -364,7 +364,6 @@ CapsLock & Enter:: Send "{F2}" ; Rename.
 !p:: Send "^{p}"
 !j:: Send "^{j}"
 !k:: Send "^{k}"
-!l:: Send "^{l}"
 ;
 ; Default.
 
@@ -455,6 +454,8 @@ CapsLock & c:: {
     ClipSaved := ""
 }
 !c:: Send ("")
-;!
-; ctrl + c
+CapsLock & l:: Send "^{l}"
+;
+; Ctrl + c
+; Ctrl + l
 #HotIf
