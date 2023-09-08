@@ -366,5 +366,5 @@
 	ClipSaved := ""
 }
 ;
-; ctrl + c
+; Ctrl + c
 #HotIf

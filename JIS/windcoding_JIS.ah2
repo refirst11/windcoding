@@ -341,7 +341,6 @@
 
 ;; Visual Studio Code and CMD stop program command, revived clipboard.
 #HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
-
 ^c:: {
 	ClipSaved := ClipboardAll()
 	Send ("^{c}")
@@ -350,6 +349,5 @@
 	ClipSaved := ""
 }
 ;
-; ctrl + c
-
+; Ctrl + c
 #HotIf

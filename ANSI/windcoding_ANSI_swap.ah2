@@ -5,9 +5,9 @@ InstallKeybdHook
 SendSuppressedKeyUp(key) {
     DllCall("keybd_event"
         , "char", GetKeyVK(key)
-            , "char", GetKeySC(key)
-                , "uint", KEYEVENTF_KEYUP := 0x2
-                , "uptr", KEY_BLOCK_THIS := 0xFFC3D450)
+        , "char", GetKeySC(key)
+        , "uint", KEYEVENTF_KEYUP := 0x2
+        , "uptr", KEY_BLOCK_THIS := 0xFFC3D450)
 }
 
 ; CapsCtrl.
@@ -364,7 +364,6 @@ CapsLock & Enter:: Send "{F2}" ; Rename.
 !p:: Send "^{p}"
 !j:: Send "^{j}"
 !k:: Send "^{k}"
-!l:: Send "^{l}"
 ;
 ; Default.
 
@@ -454,6 +453,8 @@ CapsLock & c:: {
     A_Clipboard := ClipSaved
     ClipSaved := ""
 }
+CapsLock & l:: Send "^{l}"
 ;
-; ctrl + c
+; Ctrl + c
+; Ctrl + l
 #HotIf
