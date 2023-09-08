@@ -1,9 +1,9 @@
-[wincoding README](https://github.com/su-pull/wincoding/blob/main/README.md)
+[windcoding README](https://github.com/su-pull/windcoding/blob/main/README.md)
 
 # wincoding_JIS
 
 [![OS - Windows](https://img.shields.io/badge/OS-Windows-lightblue?logo=windows&logoColor=white)](https://www.microsoft.com/ "Go to Microsoft homepage") [![exe - AutoHotkey](https://img.shields.io/badge/exe-AutoHotkey-lightblue)](https://www.autohotkey.com/ "Go to AutoHotkey")
-[![Release Status](https://img.shields.io/github/release/su-pull/wincoding?color=lightblue)](https://github.com/su-pull/wincoding/releases/latest)
+[![Release Status](https://img.shields.io/github/release/su-pull/windcoding?color=lightblue)](https://github.com/su-pull/windcoding/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightblue)](https://opensource.org/licenses/MIT)
 
 これは Windows の作業効率を効率を向上させます。  
