@@ -7,10 +7,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightblue)](https://opensource.org/licenses/MIT)
 
 This is Improve efficiency for Windows development.  
-If you want to try mac key config, you can this use.
+If you want to try, you can this use.  
+Also This is intended to be a documentation of MacOS shortcuts.
+You can set the CapsLock position to Control like in Unix, in which case select swap to start.
 
-There are two types, one that swaps CapsLock and Left Control, and the other that defaults.  
-The commands that use the Win key, such as Virtual Desktop, remain in the Windows default behavior (they can also be used as Mac Option keys).
+*The commands that use the Win key, such as Virtual Desktop, remain in the Windows default behavior (they can also be used as Mac Option keys).
 
 ## Usage
 
