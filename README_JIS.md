@@ -6,10 +6,12 @@
 [![Release Status](https://img.shields.io/github/release/su-pull/windcoding?color=lightblue)](https://github.com/su-pull/windcoding/releases/latest)
 [![License: MIT](https://img.shields.io/badge/License-MIT-lightblue)](https://opensource.org/licenses/MIT)
 
-これは Windows の作業効率を効率を向上させます。  
-Mac を試してみたい場合はぴったりで、こちらは日本語配列版になります。
+これにより Windows の開発効率が向上します。  
+Mac を試してみたい場合はこれを使用できます。  
+またこれは、MacOS ショートカットのドキュメントであることを目的としています。  
+Unix のように CapsLock の位置を Control に設定できます。その場合は、スワップを選択して開始します。
 
-仮想デスクトップなどの Win キーを使うコマンドは Windows デフォルトの動作のままです(Mac Option キーとしても使えます)。
+\*仮想デスクトップなどの Win キーを使うコマンドは Windows デフォルトの動作のままです(Mac Option キーとしても使えます)。
 
 ## 設定
 
