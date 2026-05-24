@@ -1,4 +1,4 @@
-/*Repository:https://github.com/su-pull/wincoding */
+/* Repository:https://github.com/refirst11/wincoding */
 #UseHook
 
 InstallKeybdHook
@@ -28,14 +28,14 @@ SendSuppressedKeyUp(key) {
 
 ; IME switch.
 *~LAlt:: {
-    Send "{vk07}"
+    Send "{vkE8}"
     KeyWait "LAlt"
     if (A_PriorKey = "LAlt") {
         Send "{vkF2sc070}{vkF3sc029}"
     }
 }
 *~RAlt:: {
-    Send "{vk07}"
+    Send "{vkE8}"
     KeyWait "RAlt"
     if (A_PriorKey = "RAlt") {
         Send "{vkF2sc070}"
@@ -397,13 +397,21 @@ CapsLock & v:: {
 ;
 ; Ctrl + Shift + v & Ctrl + v
 
-LCtrl & #:: {
-    if GetKeyState("d") {
-        Send "^#{d}" ; New Virtual Desktop.
-    }
-}
+<^#d:: Send "^#{d}" ; New Virtual Desktop.
 ;
 ; Ctrl + Win + d
+
+<^#Left:: Send "^#{Left}" ; Switch to Left Virtual Desktop.
+;
+; Ctrl + Win + ←
+
+<^#Right:: Send "^#{Right}" ; Switch to Right Virtual Desktop.
+;
+; Ctrl + Win + →
+
+<^#w:: Send "^#{F4}" ; Close Virtual Desktop.
+;
+; Ctrl + Win + w
 
 !+t:: Send "^+{t}" ; Restore tabs
 ;
@@ -414,7 +422,7 @@ LCtrl & #:: {
 ; Alt + d
 
 ;; Visual Studio Code only.
-#HotIf WinActive("ahk_exe Code.exe")
+#HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Antigravity IDE.exe")
 #Up:: Send "!{Up}" ; Swap the selection range up.
 ;
 ; Win + ↑
@@ -445,7 +453,7 @@ LCtrl & #:: {
 #HotIf
 
 ;; Visual Studio Code and CMD stop program command, revived clipboard.
-#HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
+#HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Antigravity IDE.exe") or WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
 CapsLock & c:: {
     ClipSaved := ClipboardAll()
     Send ("^{c}")
