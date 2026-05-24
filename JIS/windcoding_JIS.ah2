@@ -2,8 +2,8 @@
 #UseHook
 
 ;; not select tab.
-*~LAlt:: Send "{vk07}"
-*~RAlt:: Send "{vk07}"
+*~LAlt:: Send "{vkE8}"
+*~RAlt:: Send "{vkE8}"
 
 ; Ctrl of remap.
 ^r:: Send ("")
@@ -303,7 +303,7 @@
 ;  alt + shift + t
 
 ;; Visual Studio Code only.
-#HotIf WinActive("ahk_exe Code.exe")
+#HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Antigravity IDE.exe")
 
 #Up:: Send "!{Up}" ; 選択範囲入れ替え
 ;
@@ -340,7 +340,7 @@
 #HotIf
 
 ;; Visual Studio Code and CMD stop program command, revived clipboard.
-#HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
+#HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Antigravity IDE.exe") or WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
 ^c:: {
 	ClipSaved := ClipboardAll()
 	Send ("^{c}")
