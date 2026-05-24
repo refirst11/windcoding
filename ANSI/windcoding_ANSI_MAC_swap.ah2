@@ -30,14 +30,14 @@ SendSuppressedKeyUp(key) {
 
 ; IME switch.
 *~LWin:: {
-    Send "{vk07}"
+    Send "{vkE8}"
     KeyWait "LWin"
     if (A_PriorKey = "LWin") {
         Send "{vkF2sc070}{vkF3sc029}"
     }
 }
 *~RWin:: {
-    Send "{vk07}"
+    Send "{vkE8}"
     KeyWait "RWin"
     if (A_PriorKey = "RWin") {
         Send "{vkF2sc070}"
@@ -399,13 +399,21 @@ CapsLock & v:: {
 ;
 ; Ctrl + Shift + v & Ctrl + v
 
-LCtrl & !:: {
-    if GetKeyState("d") {
-        Send "^!{d}" ; New Virtual Desktop.
-    }
-}
+<^!d:: Send "^#{d}" ; New Virtual Desktop.
 ;
 ; Ctrl + Win + d
+
+<^!Left:: Send "^#{Left}" ; Switch to Left Virtual Desktop.
+;
+; Ctrl + Win + ←
+
+<^!Right:: Send "^#{Right}" ; Switch to Right Virtual Desktop.
+;
+; Ctrl + Win + →
+
+<^!w:: Send "^#{F4}" ; Close Virtual Desktop.
+;
+; Ctrl + Win + w
 
 #+t:: Send "^+{t}" ; Restore tabs
 ;
@@ -416,7 +424,7 @@ LCtrl & !:: {
 ; Alt + d
 
 ;; Visual Studio Code only.
-#HotIf WinActive("ahk_exe Code.exe")
+#HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Antigravity IDE.exe")
 !Up:: Send "#{Up}" ; Swap the selection range up.
 ;
 ; Win + ↑
@@ -447,7 +455,7 @@ LCtrl & !:: {
 #HotIf
 
 ;; Visual Studio Code and CMD stop program command, revived clipboard.
-#HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
+#HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Antigravity IDE.exe") or WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
 CapsLock & c:: {
     ClipSaved := ClipboardAll()
     Send ("^{c}")
