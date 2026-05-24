@@ -1,16 +1,15 @@
-/*Repository:https://github.com/su-pull/wincoding */
-#UseHook
+/* Repository:https://github.com/refirst11/wincoding */
 
 ; IME switch.
 *~LAlt:: {
-	Send "{vk07}"
+	Send "{vkE8}"
 	KeyWait "LAlt"
 	if (A_PriorKey = "LAlt") {
 		Send "{vkF2sc070}{vkF3sc029}"
 	}
 }
 *~RAlt:: {
-	Send "{vk07}"
+	Send "{vkE8}"
 	KeyWait "RAlt"
 	if (A_PriorKey = "RAlt") {
 		Send "{vkF2sc070}"
@@ -321,7 +320,7 @@
 ;  alt + shift + t
 
 ;; Visual Studio Code only.
-#HotIf WinActive("ahk_exe Code.exe")
+#HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Antigravity IDE.exe")
 
 #Up:: Send "!{Up}" ; Swap the selection range up.
 ;
@@ -357,7 +356,7 @@
 #HotIf
 
 ;; Visual Studio Code and CMD stop program command, revived clipboard.
-#HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
+#HotIf WinActive("ahk_exe Code.exe") or WinActive("ahk_exe Antigravity IDE.exe") or WinActive("ahk_class CASCADIA_HOSTING_WINDOW_CLASS")
 ^c:: {
 	ClipSaved := ClipboardAll()
 	Send ("^{c}")
