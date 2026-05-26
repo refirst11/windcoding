@@ -35,6 +35,7 @@ SendSuppressedKeyUp(key) {
     if (A_PriorKey = "LWin") {
         Send "{vkF2sc070}{vkF3sc029}"
     }
+    Send "{vkE8}"
 }
 *~RWin:: {
     Send "{vkE8}"
@@ -42,6 +43,7 @@ SendSuppressedKeyUp(key) {
     if (A_PriorKey = "RWin") {
         Send "{vkF2sc070}"
     }
+    Send "{vkE8}"
 }
 
 ; CapsLock of remap.
